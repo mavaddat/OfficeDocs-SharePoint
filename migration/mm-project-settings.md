@@ -38,4 +38,6 @@ The settings are designed to support each cloud provider. Depending on what clou
 |Advanced|If you're migrating Google Sheets, this setting allows a scan to identify incompatible formulas and embedded links, which may affect the converted Excel files. Learn more: [**Scan Google Sheet spreadsheets**](mm-google-sheet-scan.md).<br> *Advanced features are being developed to include other cloud migrations.*|
 
 >[!Note]
->It's important to note that these settings are applied to all migrations unless you have customized individually. Changes won't be applied to migrations in progress.
+> - It's important to note that **Project settings** are applied at the project level to all migration tasks unless you have customized them individually by tasks.
+> - **Task settings** can be customized when the tasks are copied to the Migrations tab or in the *migratioin details* side panel of each task after being copied to the Migrations tab.
+> - Changes won't be applied to migrations in progress.
