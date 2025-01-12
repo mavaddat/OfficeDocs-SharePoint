@@ -71,3 +71,6 @@ As you plan your overall migration project, plan your tag strategy to align with
 
 
 ![Results from import tags](media/mm-import-tag-results.png)
+> [!NOTE]
+> For file share migration, the import tag limit is set at 1000 tasks. If you need to apply tags to more than 1000 tasks, you must divide them into multiple CSV files, each containing fewer than 1000 tasks. Proceed to apply these files sequentially.
+
