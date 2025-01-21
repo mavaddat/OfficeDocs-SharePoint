@@ -39,7 +39,7 @@ To manage app requests
 
 
 To approve an app    
-1. In the **App Requests** list, select a request.
+1. In the **Active Requests** list, select a request.
     
 1. On the app request form, add any comments in the **Comments** field.
     
