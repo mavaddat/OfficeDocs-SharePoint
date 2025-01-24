@@ -75,13 +75,10 @@ Below are all the URLs that will redirect to modern search profile pages on Micr
 `https://sfeur.delve.office.com`<br/>
 `https://sfnam.delve.office.com`
 
-## Where can users edit properties currently editable in Delve?
+## Where can users edit properties they used to edit in Delve?
 
-A new edit profile experience, tightly coupled with the profile card, is currently being developed and is targeted for release in November 2024. This will allow users to easily edit their profiles across Microsoft 365. Some properties that are viewable in Delve today aren't editable in Delve, but in the SharePoint edit profile experience.
-
-The same will be true for the new edit experience. Only properties that today are editable in the Delve edit profile experience will be editable in the profile cards. For other properties, for example custom user profile properties, users will have to go to the legacy edit profile experience in SharePoint.
-
-Visibility attributes follow the same pattern. Users won't be able to change them in the new edit experience and will have to go to the legacy edit profile experience in SharePoint. To make this effortless, a link to the legacy edit profile experience will be part of the new experience.
+A new edit profile experience, tightly coupled with the profile card, was released in December 2024. It allows users to easily edit their profiles across Microsoft 365. Only properties that were editable in Delve are editable in the new edit profile experience. For some properties, like custom user profile properties, user will have to go to the SharePoint edit profile experience. To make this effortless, a link to the SharePoint edit profile experience will be part of the new edit profile experience.
+For more information on the new edit profile experience, visit [Profile editor in Microsoft 365](https://support.microsoft.com/en-us/office/edit-your-profile-in-microsoft-365-e7056090-56d4-4b81-bb3f-b6af31089ebe).
 
 :::image type="content" source="media/delve-retirement-legacy-edit-experience-in-sharepoint.png" alt-text="Screenshot showing how to access the legacy edit experience in SharePoint.":::
 The link to the legacy SharePoint edit profile experience.
@@ -141,6 +138,8 @@ Delve will be retired on December 16, 2024. The extended profile card experience
 - Once released, validate that your users can solve their Delve tasks in the new edit profile experience, updated profile pages in modern search, people search in Microsoft365.com, and in the extended profile cards.
 
 ## More resources
+
+[Edit your profile in Microsoft 365](https://support.microsoft.com/en-us/office/edit-your-profile-in-microsoft-365-e7056090-56d4-4b81-bb3f-b6af31089ebe)
 
 [Alternatives to Delve in Microsoft 365](https://support.microsoft.com/office/alternatives-to-delve-in-microsoft-365-59e29736-de90-40ce-93ee-0bbe23902a42)
 

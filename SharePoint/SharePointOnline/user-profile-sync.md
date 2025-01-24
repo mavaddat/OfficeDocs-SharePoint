@@ -5,7 +5,7 @@ ms.author: ruihu
 author: maggierui
 manager: jtremper
 recommendations: true
-ms.date: 5/21/2020
+ms.date: 01/15/2025
 audience: Admin
 f1.keywords:
 - NOCSH
@@ -25,7 +25,7 @@ description: "This article describes the user profile sync process for SharePoin
 Microsoft SharePoint uses the Active Directory synchronization job to import user and group attribute information into the User Profile Application (UPA). When a new user is added to Microsoft Entra ID, the user account information is sent to the SharePoint directory store and the UPA sync process creates a profile in the User Profile Application based on a predetermined set of attributes. Once the profile has been created, any modifications to these attributes will be synced as part of regularly scheduled sync process.
 
 > [!NOTE]
-> The profile properties that are synced by the UPA sync process are not configurable. Synchronization times will vary based on workloads.
+> The profile properties that are synced by the UPA sync process aren't configurable. Synchronization times vary based on workloads.
 
 ## Sync process
 
@@ -38,9 +38,9 @@ There are four steps in the sync process.
 |3. SharePoint to UPA | The UPA sync process syncs user account information in SharePoint directory store to the User Profile Application (UPA).|
 |4. UPA to sites|User account information from the UPA is synced to SharePoint sites (previously called "site collections").|
 
-Typically, user profiles are created automatically for all accounts that are created in Microsoft 365. For organizations that have a Microsoft 365 Education subscription, user profiles are not created for new accounts by default. The user must access SharePoint once, at which time a basic stub profile will be created for the user account. The stub profile will be updated with all remaining data as part of the sync process.
+Typically, user profiles are created automatically for all accounts that are created in Microsoft 365. For organizations that have a Microsoft 365 Education subscription, user profiles aren't created for new accounts by default. The user must access SharePoint once, at which time a basic stub profile will be created for the user account. The stub profile will be updated with all remaining data as part of the sync process.
 
-If block sign-in is set on the user account in Microsoft Entra ID or disabled accounts are synced from Active Directory on premises, those user accounts will not be processed as part of the UPA sync process. The user must be enabled and licensed for changes to be processed.
+If block sign-in is set on the user account in Microsoft Entra ID or disabled accounts are synced from Active Directory on premises, those user accounts won't be processed as part of the UPA sync process. The user must be enabled and licensed for changes to be processed.
 
 ## Properties that are synced into SharePoint user profiles
 
@@ -63,18 +63,18 @@ The following Microsoft Entra user attributes are synced to the UPA.
 |Manager|Manager|User Manager for organization hierarchy|Yes|
 
 > [!NOTE]
-> To update additional or custom properties, see [Bulk update custom user profile properties](/sharepoint/dev/solution-guidance/bulk-user-profile-update-api-for-sharepoint-online).
+> To update more or custom properties, see [Bulk update custom user profile properties](/sharepoint/dev/solution-guidance/bulk-user-profile-update-api-for-sharepoint-online).
 > Some property names could differ between Azure AD Graph and Microsoft Graph, see [Property differences between Azure AD Graph and Microsoft Graph](/graph/migrate-azure-ad-graph-property-differences).
 
 ## Frequently asked questions (FAQs)
 
 ### How often are changes synced into the User Profile Application?
 
-User account attribute changes are collected in batches and processed for UPA synchronization. Times will vary based on the amount of changes requested in a single batch. The UPA synchronization is schedule to run at regular intervals.
+User account attribute changes are collected in batches and processed for UPA synchronization. Times vary based on the amount of changes requested in a single batch. The UPA synchronization is schedule to run at regular intervals.
 
 ### Will UPA synchronization overwrite existing properties in SharePoint user profiles?
 
-For the default properties that are synced by UPA synchronization, values will be overwritten to align with Microsoft Entra ID.
+For the default properties that are synced by UPA synchronization, values are overwritten to align with Microsoft Entra ID.
 
 ### Does UPA synchronization update only properties that have changed?
 

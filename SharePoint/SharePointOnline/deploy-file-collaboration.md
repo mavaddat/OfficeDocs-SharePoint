@@ -1,5 +1,5 @@
 ---
-ms.date: 08/07/2023
+ms.date: 01/22/2025
 title: Plan and deploy a file collaboration environment - SharePoint
 ms.reviewer: 
 ms.author: ruihu

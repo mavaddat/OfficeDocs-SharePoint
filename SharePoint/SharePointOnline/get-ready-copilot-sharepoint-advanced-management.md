@@ -75,17 +75,32 @@ Identify inactive sites, then take action to reduce your governance footprint an
 
 ### Step 4: Identify sites with potentially overshared content
 
-How do you quickly identify sites with potentially overshared content without looking at the actual site? Usually, if you see there's content on a site that is being shared with one of the following options: “**Everyone Except External Users**”, “**People in your organization**” and “**Anyone**”, there's a bigger chance that the content is overshared.  Currently, SharePoint Advanced Management activity based reports let you quickly identify most actively overshared sites, by running three individual reports:
+How do you quickly identify sites with potentially overshared content without looking at the actual site? You can run two sets of reports:
+
+- The site activity based reports
+- The permission based oversharing baseline report
+
+#### The site activity based reports
+
+Usually, if you see there's content on a site that is being shared with one of the following options: “**Everyone Except External Users**”, “**People in your organization**” and “**Anyone**”, there's a bigger chance that the content is overshared.  SharePoint Advanced Management activity based reports let you quickly identify most actively overshared sites, by running three individual reports:
 
 - [Usage of "Everyone Except External Users"](/sharepoint/data-access-governance-reports#content-shared-with-everyone-except-external-users-eeeu-reports) 
 - [Usage of “People in your organization" sharing links](/sharepoint/data-access-governance-reports#sharing-links-reports) 
-- [Usage of "Anyone" sharing links](/sharepoint/data-access-governance-reports#sharing-links-reports) 
+- [Usage of "Anyone" sharing links](/sharepoint/data-access-governance-reports#sharing-links-reports)
 
-Sites with these three types of usage are at a greater risk of oversharing compared to those without such usages. Once the report is generated, select the Get AI insights button to [get AI insights](/sharepoint/advanced-management#ai-insights) generated for the report to help you identify issues with the sites and possible actions to address these issues. 
- 
+Sites with these three types of usage are at a greater risk of oversharing compared to those without such usages. You can sort, filter or download the report, and identify the sites with potentially overshared content. Once the report is generated, select the Get AI insights button to [get AI insights](/sharepoint/advanced-management#ai-insights) generated for the report to help you identify issues with the sites and possible actions to address these issues. 
+
+#### The permission based oversharing baseline report
+
+In addition to the site activity reports, you can also run an oversharing baseline report to learn where content overexposure risk exists in all sites on your organization, regardless of site activities. This report is the "[Oversharing Baseline Report for Sites, OneDrive and Files](/sharepoint/data-access-governance-reports#setting-up-oversharing-baseline-with-permissions-based-report)” report. You can run the report using the [Data Access Governance (DAG) PowerShell commands](/sharepoint/powershell-for-data-access-governance#oversharing-baseline-report-using-permissions) in SharePoint Online PowerShell module. This report scans all sites in your organization, and lists sites that share content with more than a specified number of users (you specify the number). You [view and download this report](/sharepoint/powershell-for-data-access-governance#view-and-download-reports-using-powershell) with PowerShell commands.
+
 ### Step 5: Control access to content
 
-When you use Microsoft Copilot, the results come from content in Microsoft Graph, based on each individual user’s profile and permissions. In Step 3, you identify sites with potentially overshared content. Next, you want to ensure Copilot only has access to content when appropriate. Currently, you can initiate a Site Access Review for site owners to confirm overshared content and take remediation steps. Meanwhile, you as the SharePoint admin can use the Restricted Access Control Policy to restrict access to a site with overshared content.
+When you use Microsoft Copilot, the results come from content in Microsoft Graph, based on each individual user’s profile and permissions. In Step 3, you identify sites with potentially overshared content. Next, you want to ensure Copilot only has access to content when appropriate. To do this, as the SharePoint admin, you can:
+
+- Initiate a [Site Access Review](/sharepoint/site-access-review) for site owners to confirm overshared content and take remediation steps.
+- Use the [Restricted Access Control Policy](/sharepoint/restricted-access-control) to restrict access to a site with overshared content.
+- Use the [Restricted Access Control Policy](/sharepoint/restricted-access-control) to further control accidental content discovery.
 
 #### Site access reviews by site owners
 
@@ -98,11 +113,16 @@ When you use Microsoft Copilot, the results come from content in Microsoft Graph
 
 Until the Site Access Review is complete, you as the SharePoint Admin can take action to mitigate oversharing risks. To restrict access to a site with overshared content, the SharePoint Admin can set up a [Restricted Access Control Policy](/sharepoint/restricted-access-control). As a result, all access to the site is restricted to only the group of users specified in the policy. Accordingly, the content from this site is visible in Microsoft 365 Copilot *only for this restricted group of users*. You can restrict access to individual sites or OneDrive.
 
+#### Restricted Content Discovery policy
+
+The other policy you can set up as the SharePoint admin to mitigate oversharing risks is the [Restricted Content Discovery policy](/sharepoint/restricted-content-discovery). Unlike the Restricted Access Control policy, the Restricted Content Discovery policy *leaves site access unchanged*, but prevents the site’s content from being surfaced in Microsoft 365 Copilot or organization-wide Search. The SharePoint Admin can [set Restricted Content Discovery on a site](/sharepoint/restricted-content-discovery#configure-restricted-content-discovery).
+
 ### Step 6: Take proactive measures on business-critical sites
 
 For business-critical sites, you want to take proactive measures to ensure the content is appropriately shared, and access to content is limited to the minimum level. You can lock down your most important sites with the following measures:
 
 - Use [Restricted Access Control (RAC)](/sharepoint/restricted-access-control) to proactively protect against oversharing. Even better: as part of your custom site provisioning process, configure RAC policy on new sites from the get-go and proactively avoid oversharing forever.
+- Use [Restricted Content Discovery](/sharepoint/restricted-content-discovery) to leave permissions in place, but prevent the content from being available to Microsoft 365 Copilot and Organization-wide search experiences.
 - Consider blocking downloads from selected sites via a block download policy. Or specifically [block the download of Teams meeting recordings and transcripts](/microsoftteams/block-download-meeting-recording).
 - Finally, consider applying encryption action with "extract rights" enforced on business-critical office documents. Learn more [here](/purview/ai-microsoft-purview).
 
@@ -110,22 +130,6 @@ For business-critical sites, you want to take proactive measures to ensure the c
 
 > [!IMPORTANT]
 > The following policies are currently in preview and will soon be generally available. [*Sign up to participate in the preview by following instructions here*](https://forms.office.com/pages/responsepage.aspx?id=v4j5cvGGr0GRqy180BHbRw8ueKeaH4JIsskRInqtJE5UNjhYVkg5NDRNWkMxRlI0TFVDR0FYSUNGUi4u&route=shorturl). 
-
-### Use the Oversharing Baseline Report for Sites, OneDrive, and Files policy to identify oversharing risks
-
-In Step 4, we discussed how to run three usage reports to identify potentially overshared content. Coming soon, you're able to Run a single report to learn where content overexposure risk exists in all sites on your organization, regardless of site activities.
-
-- You're able to start with running an “Oversharing Baseline Report for Sites, OneDrive and Files” report from the Data Access Governance (DAG) PowerShell commands in SharePoint Online PowerShell module. This report scans all sites in your organization, and lists sites that share content with more than a specified number of users (you specify the number).
-
-- You can sort, filter or download the report, and identify the sites with potentially overshared content.
-
-### Use the Restricted Content Discoverability policy to further control accidental content discoverability 
-
-In Step 5 — **control access to content**, we suggest you begin with the Site Access Review policy to verify if the potentially overshared content identified in Step 3 is truly overshared. Following this, apply the Restricted Access Control policy to limit access to designated user groups. Soon, a new policy, the Restricted Content Discoverability policy, will be available to further control accidental content discoverability.
-
-In addition, in Step 6, to further protect content on your business-critical sites, you can use Restricted Content Discoverability to leave permissions in place, but prevent the content from being available to Microsoft 365 Copilot and Organization-wide search experiences.
-
-The Restricted Content Discoverability policy leaves site access unchanged but prevents the site’s content from being surfaced in Microsoft 365 Copilot or organization-wide Search. The SharePoint Admin can set Restricted Content Discoverability on that site.
 
 ### Use AI Powered Semantic matching to find similar sites
 

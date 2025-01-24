@@ -30,7 +30,8 @@ This video provides a brief overview of the upgrade process for SharePoint 2013 
   
 **Watch the SharePoint 2013 Upgrade: Overview video**
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/4b45db6c-59b8-43c0-ac63-2a05ecacd1b7?autoplay=false]
+> [!VIDEO 5847e3bd-b5c5-42da-9e2e-1d89b75b083d]
+
 ### Related resources
 
 |**Resource**|**Description**|
@@ -43,7 +44,8 @@ This video provides a quick explanation of how to create a farm for use in an up
   
 **Watch the SharePoint 2013 Upgrade: Phase 1 video**
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/08375e2a-bf70-44f9-b25e-569e4ac3e303?autoplay=false]
+> [!VIDEO e3e50c93-6422-42e9-b934-053c11727823]
+
 ### Related resources
 
 |**Resource**|**Description**|
@@ -56,7 +58,8 @@ This video provides a quick explanation of how to copy SharePoint 2010 databases
   
 **Watch the SharePoint 2013 Upgrade: Phase 2 video**
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/203a3d15-131a-4ba4-883d-30c42db4777b?autoplay=false]
+> [!VIDEO 17b8663d-b68e-4589-afea-b1cc44e8935a]
+
 ### Related resources
 
 |**Resource**|**Description**|
@@ -69,7 +72,8 @@ This video provides a quick explanation of how to upgrade service applications t
   
 **Watch the SharePoint 2013 Upgrade: Phase 3 video**
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/9651647c-a16e-4d0c-8b5b-2b323cb6133f?autoplay=false]
+> [!VIDEO 5c7767aa-1fff-4140-b2f1-53876e847e30]
+
 ### Related resources
 
 |**Resource**|**Description**|
@@ -82,7 +86,8 @@ This video provides a quick explanation of how to upgrade content databases to S
   
 **Watch the SharePoint 2013 Upgrade: Phase 4 video**
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/e7caff67-2a76-44ad-9795-42cef5467d0c?autoplay=false]
+> [!VIDEO 9bc77a40-3007-4928-826c-d5462f90fdbb]
+
 ### Related resources
 
 |**Resource**|**Description**|
@@ -96,7 +101,8 @@ This video provides a quick explanation of how to upgrade site collections to Sh
   
 **Watch the SharePoint 2013 Upgrade: Phase 5 video**
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/b45eae11-becb-44b5-9fec-f7b03fef1b7b?autoplay=false]
+> [!VIDEO c308331a-0cee-419d-a512-ab5ab70196e2]
+
 ### Related resources
 
 |**Resource**|**Description**|
