@@ -13,5 +13,5 @@ ms.topic:    # Add the ms.topic value
 ms.date:     01/25/2025
 ---
 
-# Migrate with Certificate Based Authentication
+# Migration Manager with Certificate Based Authentication
 
