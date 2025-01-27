@@ -49,15 +49,16 @@ The modern search experiences on Microsoft365.com, Office.com, and in SharePoint
 `https://www.microsoft365.com/search/overview?pp=<User.aadObjectId@TenantId>|UPN`<br/>
 `https://www.microsoft365.com/search/overview?pp=11111111-1111-4a21-acea-db38b244ac46%4022222222-2222-49c2-99e6-c5c0f6f8ead1%7CAdeleV%40M365x14029536.OnMicrosoft.com`<br/>
 
-  :::image type="content" source="media/delve-retirement-microsoft365-links.png" alt-text="Screenshot showing an example link syntax for Microsoft 365.":::
-
 - For Office.com:
 
-  :::image type="content" source="media/delve-retirement-office-links.png" alt-text="Screenshot showing an example link syntax for Office.com.":::
+`https://www.office.com/search/overview? pp=<User.aadObjectId@TenantId>|UPN`<br/>
+`https://www.office.com/search/overview?pp=11111111-1111-4a21-acea-db38b244ac46%4022222222-2222-49c2-99e6-c5c0f6f8ead1%7CAdeleV%40M365x14029536.OnMicrosoft.com`<br/>
+
 
 - For SharePoint:
 
-  :::image type="content" source="media/delve-retirement-sharepoint-links2.png" alt-text="Screenshot showing an example link syntax for SharePoint.":::
+`https://<tenant>.sharepoint.com/_layouts/15/search.aspx/overview? pp=<User.aadObjectId@TenantId>|UPN`<br/>
+`https://<tenantname>.sharepoint.com/_layouts/15/search.aspx/overview?pp=11111111-1111-4a21-acea-db38b244ac46%4022222222-2222-49c2-99e6-c5c0f6f8ead1%7CAdeleV%40M365x14029536.OnMicrosoft.com`<br/>
 
 ## What happens to existing URLs pointing to Delve or SharePoint profiles?
 
