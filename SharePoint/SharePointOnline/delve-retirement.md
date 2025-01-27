@@ -46,6 +46,8 @@ The modern search experiences on Microsoft365.com, Office.com, and in SharePoint
 ### Example links
 
 - For Microsoft365.com:
+`https://www.microsoft365.com/search/overview?pp=<User.aadObjectId@TenantId>|UPN`<br/>
+`https://www.microsoft365.com/search/overview?pp=11111111-1111-4a21-acea-db38b244ac46%4022222222-2222-49c2-99e6-c5c0f6f8ead1%7CAdeleV%40M365x14029536.OnMicrosoft.com`<br/>
 
   :::image type="content" source="media/delve-retirement-microsoft365-links.png" alt-text="Screenshot showing an example link syntax for Microsoft 365.":::
 
