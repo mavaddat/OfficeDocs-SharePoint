@@ -121,7 +121,7 @@ The OneDrive GPOs work by setting registry keys on the computers in your domain.
 
 - (EnableAutoStart) [Start OneDrive automatically when signing in to Windows](use-group-policy.md#always-start-onedrive-automatically-when-signing-in-to-windows)
 
-- (EnableFeedbackAndSupport) [Allow users to contact Microsoft for feedback and support](use-group-policy.md#allow-users-to-contact-Microsoft-for-feedback-and-support)
+- (EnableFeedbackAndSupport) [Allow users to contact Microsoft for feedback and support](use-group-policy.md#allow-users-to-contact-microsoft-for-feedback-and-support)
 
 - (EnableHoldTheFile) [Allow users to choose how to handle Office file sync conflicts](use-group-policy.md#allow-users-to-choose-how-to-handle-office-file-sync-conflicts)
 
