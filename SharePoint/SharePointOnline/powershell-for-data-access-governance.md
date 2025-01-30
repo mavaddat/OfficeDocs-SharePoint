@@ -42,13 +42,13 @@ Use the **Start-SPODataAccessGovernanceInsight** command to generate [all report
 
 ### Oversharing baseline report using permissions
 
-The definition of 'oversharing' can be different for different customers. Data access governance considers 'number of users' as one possible pivot to establish a baseline and then track key contributors of potential 'oversharing' such as sharing links created and sharing to large groups such as 'Everyone Except External users' in the last 28 days. You can define your threshold of 'number of users' and generate a report of sites that many users access, at the time of report generation. This report is considered a 'snapshot' report.
+The definition of 'oversharing' can be different for different customers. Data access governance considers 'number of users' as one possible pivot to establish a baseline and then track key contributors of potential 'oversharing' such as sharing links created and sharing to large groups such as 'Everyone Except External users' in the last 28 days. You can generate a report of all sites in your tenant with unique number of users having permissions to content of that site, at the time of report generation. This report is considered a 'snapshot' report.
 
 ```powershell
-Start-SPODataAccessGovernanceInsight -ReportEntity PermissionedUsers -ReportType Snapshot -Workload SharePoint -CountOfUsersMoreThan 100 -Name "ReportForTestingLatestFixes"
+Start-SPODataAccessGovernanceInsight -ReportEntity PermissionedUsers -ReportType Snapshot -Workload SharePoint -Name "ReportForTestingLatestFixes"
 ```
 
-This command generates a list of all sites where more than 100 users can access any content within the site. More information about the list of sites and how to interpret the results is provided [here](data-access-governance-reports.md#understanding-the-oversharing-baseline-report).
+This command generates a list of all sites where atleast 1 user can access any content within the site. More information about the list of sites and how to interpret the results is provided [here](data-access-governance-reports.md#understanding-the-oversharing-baseline-report).
 
 > [!NOTE]
 > Currently the report consists of both SharePoint sites and OneDrive accounts and can generate up to 1M sites and/or accounts.
