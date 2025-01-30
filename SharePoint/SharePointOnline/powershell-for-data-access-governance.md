@@ -34,7 +34,7 @@ While [Data access governance](data-access-governance-reports.md) is available i
 > PowerShell support for Data access governance is available from module "Microsoft.Online.SharePoint.PowerShell" and version "16.0.25409" onwards.
 
 > [!IMPORTANT]
-> Run the ‘Connect-SPOService’ command WITHOUT the **Credential** parameter. We do NOT support login using the **Credential** parameter inline with the latest security practices.
+> Run the ‘Connect-SPOService’ command WITHOUT the **Credential** parameter. We do NOT support sign-in using the **Credential** parameter inline with the latest security practices.
 
 ## Creating reports using PowerShell
 
@@ -48,7 +48,7 @@ The definition of 'oversharing' can be different for different customers. Data a
 Start-SPODataAccessGovernanceInsight -ReportEntity PermissionedUsers -ReportType Snapshot -Workload SharePoint -Name "ReportForTestingLatestFixes"
 ```
 
-This command generates a list of all sites where atleast 1 user can access any content within the site. More information about the list of sites and how to interpret the results is provided [here](data-access-governance-reports.md#understanding-the-oversharing-baseline-report).
+This command generates a list of all sites where atleast one user can access any content within the site. More information about the list of sites and how to interpret the results is provided [here](data-access-governance-reports.md#understanding-the-oversharing-baseline-report).
 
 > [!NOTE]
 > Currently the report consists of both SharePoint sites and OneDrive accounts and can generate up to 1M sites and/or accounts.
@@ -94,7 +94,7 @@ Start-SPODataAccessGovernanceInsight -ReportEntity EveryoneExceptExternalUsersAt
 ```
 
 > [!NOTE]
-> Currently report for OneDriveForBusiness with EEEU at the site level is not supported.
+> Currently report for OneDriveForBusiness with EEEU at the site level isn't supported.
 
 #### Items shared with Everyone except external users in last 28 days
 
@@ -123,12 +123,12 @@ Start-SPODataAccessGovernanceInsight -ReportEntity SensitivityLabelForFiles -Wor
 ```
 
 > [!NOTE]
-> Currently, the report for 'OneDriveForBusiness' accounts with labelled files is not supported.
+> Currently, the report for 'OneDriveForBusiness' accounts with labeled files isn't supported.
 
 ## Tracking reports using PowerShell
 
 > [!IMPORTANT]
-> All report creations will result in a GUID as output which could be used to track the report status
+> All report creations result in a GUID as output which could be used to track the report status
 
 ```powershell
 Start-SPODataAccessGovernanceInsight -ReportEntity SensitivityLabelForFiles -Workload SharePoint -ReportType Snapshot -FileSensitivityLabelGUID "a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1" -FileSensitivityLabelName Secret
