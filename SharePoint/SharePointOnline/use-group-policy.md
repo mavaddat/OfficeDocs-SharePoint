@@ -121,6 +121,8 @@ The OneDrive GPOs work by setting registry keys on the computers in your domain.
 
 - (EnableAutoStart) [Start OneDrive automatically when signing in to Windows](use-group-policy.md#always-start-onedrive-automatically-when-signing-in-to-windows)
 
+- (EnableFeedbackAndSupport) [Allow users to contact Microsoft for feedback and support](use-group-policy.md#allow-users-to-contact-Microsoft-for-feedback-and-support)
+
 - (EnableHoldTheFile) [Allow users to choose how to handle Office file sync conflicts](use-group-policy.md#allow-users-to-choose-how-to-handle-office-file-sync-conflicts)
 
 - (EnableODIgnoreListFromGPO) [Exclude specific kinds of files from being uploaded](use-group-policy.md#exclude-specific-kinds-of-files-from-being-uploaded)
@@ -216,6 +218,13 @@ This policy sets the following registry key:
 where "1111-2222-3333-4444" is the [tenant ID](find-your-office-365-tenant-id.md).
   
 This setting takes priority over [Block syncing OneDrive accounts for specific organizations](use-group-policy.md#block-syncing-onedrive-accounts-for-specific-organizations). Don't enable both settings at the same time.
+
+### Allow users to contact Microsoft for feedback and support
+This setting specifies whether users can contact Microsoft through user experiences in the app.
+
+If you enable or do not configure this setting, users can use the experiences in the OneDrive app to contact Microsoft directly for feedback and support.
+
+If you disable this setting, users will be unable to contact Microsoft for support, feedback, or suggestions within the app. Users will still have access to help content and self-help tools.
 
 ### Block file downloads when users are low on disk space
 
