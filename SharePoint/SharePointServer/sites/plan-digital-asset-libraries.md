@@ -1,10 +1,10 @@
 ---
 title: "Plan digital asset libraries in SharePoint Server 2013"
 ms.reviewer: 
-ms.author: serdars
-author: SerdarSoysal
-manager: serdars
-ms.date: 7/13/2017
+ms.author: ruihu    
+author: maggierui
+manager: jtremper
+ms.date: 12/2/2024
 audience: ITPro
 f1.keywords:
 - NOCSH
@@ -152,7 +152,7 @@ Depending on the type of digital asset files that will be stored in the asset li
   
 The video renditions feature lets users upload multiple renditions of a video. The video renditions can have different codecs and formats, or different bit rates. A user can choose the rendition to play. By default, the video with the lowest bit rate is chosen. 
   
-If you will be using the asset library to serve audio and video files to users, we recommend that you always enable the BLOB cache, and that you enable Bit Rate Throttling on the server. Bit Rate Throttling controls the rate at which audio and video files are downloaded to the client so that overall performance on the site is not affected. For more information about the disk-based cache, see [Plan for caching and performance (SharePoint Server 2010)](../administration/caching-and-performance-planning.md). For information about how to enable and configure Bit Rate Throttling, see [Bit Rate Throttling Readme](/iis/media/iis-media-services/iis-media-services-readme) (https://go.microsoft.com/fwlink/p/?LinkId=154962). 
+If you will be using the asset library to serve audio and video files to users, we recommend that you always enable the BLOB cache, and that you enable Bit Rate Throttling on the server. Bit Rate Throttling controls the rate at which audio and video files are downloaded to the client so that overall performance on the site is not affected. For more information about the disk-based cache, see [Plan for caching and performance (SharePoint Server 2010)](../administration/caching-and-performance-planning.md). For information about how to enable and configure Bit Rate Throttling, see [Bit Rate Throttling](/shows/iis-net-site-videos/bit-rate-throttling).
   
 ## Plan for metadata and Search
 <a name="Section5"> </a>

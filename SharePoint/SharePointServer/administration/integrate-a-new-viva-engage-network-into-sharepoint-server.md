@@ -39,7 +39,7 @@ Viva Engage is included in many Microsoft 365 subscriptions, which means that yo
   
 ## Step 2: Create your Viva Engage network
 
-To set up a Viva Engage network, see [Viva Engage admin help](/viva/engage/viva-engage-landing-page).
+To set up a Viva Engage network, see [Viva Engage admin help](/viva/engage/eac-overview).
   
 When you set up your network, [enforce Microsoft 365 identity for Viva Engage users](/viva/engage/configure-your-viva-engage-network/enforce-office-365-identity).
   
@@ -47,9 +47,9 @@ For information about how users are managed in Viva Engage Enterprise, see [Mana
   
 ## Step 3: Set up directory synchronization
 
-Microsoft 365 uses Azure Active Directory for identity management, and Viva Engage can be set up to enforce Microsoft 365 identity. If you're using an on-premises directory, in order to manage users in one place, you need to sync your on-premises directory with Azure Active Directory by using Azure Active Directory Connect. 
+Microsoft 365 uses Microsoft Entra ID for identity management, and Viva Engage can be set up to enforce Microsoft 365 identity. If you're using an on-premises directory, in order to manage users in one place, you need to sync your on-premises directory with Microsoft Entra ID by using Microsoft Entra Connect. 
   
-For more information, see [Plan for directory synchronization for Microsoft 365](/microsoft-365/enterprise/plan-for-directory-synchronization) and [Integrate your on-premises directories with Azure Active Directory](/azure/active-directory/hybrid/whatis-hybrid-identity).
+For more information, see [Plan for directory synchronization for Microsoft 365](/microsoft-365/enterprise/plan-for-directory-synchronization) and [Integrate your on-premises directories with Microsoft Entra ID](/azure/active-directory/hybrid/whatis-hybrid-identity).
   
 ## Step 4: Disable default SharePoint Server social features
 
@@ -71,5 +71,3 @@ After you disable the default SharePoint Server social features, you should [use
 [Manage Viva Engage users across their life cycle from Microsoft 365](/viva/engage/manage-viva-engage-users/manage-users-across-their-lifecycle)
 
 [Viva Engage - Admin Help](/viva/engage)
-
-

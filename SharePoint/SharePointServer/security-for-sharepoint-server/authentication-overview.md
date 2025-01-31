@@ -53,13 +53,15 @@ SharePoint Server supports Windows, forms-based, Security Assertion Markup Langu
   
 **Windows claims authentication in SharePoint Server 2013 and 2016 video**
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/9627c892-e5c8-410c-8f26-4964a5292801?autoplay=false]
+> [!VIDEO 045e5789-e639-491e-ab00-e29609c768e8]
+
 **Forms-based claims authentication in SharePoint Server 2013 and 2016 video**
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/8bafab78-092f-4ece-8b0b-6fb1aa7e315e?autoplay=false]
+> [!VIDEO dd1fb151-368d-4f47-b6b7-91a97241fdd9]
+
 **SAML-based claims authentication in SharePoint Server 2013 and 2016 video**
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/a4ab580d-ac9f-4c4d-8c23-9ddfea7603cf?autoplay=false]
+> [!VIDEO acebcd84-1f22-478b-a585-b19a32ae741f]
 
 For more information, see [Plan for user authentication methods in SharePoint Server](plan-user-authentication.md).
   

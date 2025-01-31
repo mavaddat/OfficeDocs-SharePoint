@@ -2,15 +2,14 @@
 ms.date: 01/21/2021
 title: "Step 2: Scan and assess file shares using Migration Manager"
 ms.reviewer: 
-ms.author: jhendr
-author: JoanneHendrickson
-manager: serdars
+ms.author: heidip
+author: MicrosoftHeidi
+manager: jtremper
 audience: ITPro
 f1.keywords:
 - NOCSH
 ms.topic: article
-ms.service: sharepoint-online
-ms.subservice: sharepoint-migration
+ms.service: microsoft-365-migration
 ms.localizationpriority: high
 ms.collection:
 - m365solution-migratefileshares
@@ -19,6 +18,7 @@ ms.collection:
 - M365-collaboration
 - SPMigration
 - highpri
+- m365initiative-migratetom365
 search.appverid: MET150
 description: "Step 2:  Scan and assess file shares using Migration Manager."
 ---
@@ -56,7 +56,3 @@ A table summary appears at the top to give you an at-a-glance overview of your u
 1. From the menu bar, select **Download summary report** to have a local copy of the summary view.
 2. Highlight a single row and select  **Download scan log** from the menu bar, to troubleshoot the details of individual files. 
 
->[!NOTE]
->Migration Manager Box isn't available for users of Office 365 operated by 21Vianet in China.
->
-> This feature is also not supported for users of the Government Cloud, including GCC, Consumer, GCC High, or DoD.

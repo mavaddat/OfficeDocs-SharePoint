@@ -1,10 +1,10 @@
 ---
 title: "Test Lab Guide Configure SharePoint Server 2013 in a three-tier farm"
 ms.reviewer: 
-ms.author: serdars
-author: SerdarSoysal
-manager: serdars
-ms.date: 7/10/2017
+ms.author: ruihu
+author: maggierui
+manager: jtremper
+ms.date: 12/2/2024
 audience: ITPro
 f1.keywords:
 - NOCSH
@@ -19,9 +19,7 @@ description: "Learn how to install and configure SharePoint Server 2013 on multi
 
 [!INCLUDE[appliesto-2013-xxx-xxx-xxx-xxx-md](../includes/appliesto-2013-xxx-xxx-xxx-xxx-md.md)] 
   
-This document is the [Test Lab Guide](https://go.microsoft.com/fwlink/p/?LinkId=202817) version of the procedures that are described in [Install SharePoint Server 2016 across multiple servers](../install/install-sharepoint-server-2016-across-multiple-servers.md).
-  
-This document contains instructions for the following:
+This document contains instructions for:
   
 1. Configuring the Base Configuration test lab.
     
@@ -37,9 +35,9 @@ This document contains instructions for the following:
     
 7. Demonstrating the facilities of the default Contoso team site on WFE1.
     
-**Watch the configure SharePoint Server 2013 in a three-tier farm test lab guide overview video**
+**Watch the "Configure SharePoint Server 2013 in a three-tier farm test lab guide overview" video**
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/47259e75-5973-4296-8d2a-e86c64efe5a2?autoplay=false]
+> [!VIDEO c99c2407-6b0c-4cdb-ba54-85b302c9b23f]
 
 For information about how to configure this test lab in Hyper-V, see [Hosting the SharePoint Server 2013 Three-Tier Test Lab with Windows Server 2012 Hyper-V](https://social.technet.microsoft.com/wiki/contents/articles/16339.hosting-the-sharepoint-server-2013-three-tier-test-lab-with-windows-server-2012-hyper-v.aspx).
   
@@ -49,10 +47,11 @@ For information about how to configure this test lab in Hyper-V, see [Hosting th
   
 ## See also
 
-#### Concepts
+### Concepts
 
 [Install SharePoint Server 2016 across multiple servers](../install/install-sharepoint-server-2016-across-multiple-servers.md)
-#### Other Resources
 
-[Test Lab Guides](https://go.microsoft.com/fwlink/p/?LinkId=202817)
+### Other Resources
+
+[Test Lab Guides](/sharepoint/administration/test-lab-guides)
 

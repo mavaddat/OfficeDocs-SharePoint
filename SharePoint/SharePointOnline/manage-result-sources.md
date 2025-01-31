@@ -2,9 +2,9 @@
 ms.date: 07/11/2018
 title: "Manage result sources"
 ms.reviewer: 
-ms.author: serdars
-author: SerdarSoysal
-manager: serdars
+ms.author: ruihu
+author: maggierui
+manager: jtremper
 recommendations: true
 audience: End User
 f1.keywords:
@@ -26,7 +26,7 @@ description: "Result sources limit searches to certain content or to a subset of
 
 Result sources limit searches to certain content or to a subset of search results. You can also use result sources to send queries to external providers such as Bing. 
   
-A Global Administrator or SharePoint Administrator can manage result sources for all site collections and sites in the tenant. A site collection administrator or a site owner can manage result sources for a site collection or a site, respectively. 
+A [SharePoint Administrator](/sharepoint/sharepoint-admin-role) or [above](/microsoft-365/admin/add-users/about-admin-roles) can manage result sources for all site collections and sites in the tenant. A site collection administrator or a site owner can manage result sources for a site collection or a site, respectively. 
 
 SharePoint has both a classic and a modern search experience. The modern search experience gets results from the default result source. If you change the default result source, this impacts both the classic and modern search experiences. [Learn more about the differences between the classic and modern search experiences in SharePoint](differences-classic-modern-search.md).
   
@@ -47,19 +47,22 @@ For the classic search experience, you can create your own result sources, or us
 2. On the **Manage Result Sources** page, select **New Result Source**.
     
 3. In the **General Information** section, type a name and a description for the new result source. 
-    
-4. In the **Protocol** section, select one of the following protocols for retrieving search results: 
-    
+
+4. In the **Protocol** section, select one of the following protocols for retrieving search results:
+        
    - **Local SharePoint**, the default protocol, provides results from the search index of this tenant (Search Service).
+     
+   - **Remote SharePoint** (retired) provides results from the index of a search service in a different farm (external source). In the **Remote Service URL** box, type the address of the root site collection of the remote SharePoint farm. 
     
-   - **Remote SharePoint** provides results from the index of a search service in a different farm (external source). In the **Remote Service URL** box, type the address of the root site collection of the remote SharePoint farm. 
-    
-   - **OpenSearch 1.0/1.1** provides results from a search engine that uses the OpenSearch 1.0/1.1 protocol. 
+   - **OpenSearch 1.0/1.1** (retired) provides results from a search engine that uses the OpenSearch 1.0/1.1 protocol. 
     
    - **Exchange** provides results from Microsoft Exchange Server. Select **Use AutoDiscover** to have the search system find an Exchange Server endpoint automatically, or type the URL of the Exchange web service to retrieve results from — for example, https://contoso.com/ews/exchange.asmx 
+
+> [!IMPORTANT]
+> As of September 2024, for SharePoint Online Microsoft 365 Result Sources, the OpenSearch and Remote SharePoint protocol options have been retired and will soon be removed from the Result Source configuration UI.  Any SharePoint Online Result Source currently configured to use these options will have zero results returned.    
     
-    > [!NOTE]
-    >  The Exchange Web Services Managed API must be installed on the computer where the search service is running. 
+> [!NOTE]
+>  The Exchange Web Services Managed API must be installed on the computer where the search service is running. 
   
 5. If you choose **Local SharePoint** or **Remote SharePoint** for protocol, choose a **Type**:
     
@@ -91,7 +94,7 @@ For the classic search experience, you can create your own result sources, or us
 | Choose this option | To do this |
 |:-----|:-----|
 |Sort results  |Define sorting for results. The **Sort by** list contains managed properties that are set as sortable in the search schema.  <br/> Select a property to sort by, and then select **Descending** or **Ascending**. To sort by relevance, select **Rank**.  <br/> Click **Add sort level** if you want to specify more levels of sorting.  |
-|Dynamic ordering  |Click **Add dynamic ordering rule** to specify additional ranking by adding rules that change the order of results within the result block when certain conditions are met. You can add conditions by choosing from the lists that appears.  |
+|Dynamic ordering  |Click **Add dynamic ordering rule** to specify additional ranking by adding rules that change the order of results within the result block when certain conditions are met. You can add conditions by choosing from the lists that appear.  |
    
 ### The TEST tab
 

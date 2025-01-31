@@ -38,7 +38,8 @@ When you upgrade from SharePoint 2010 Products to SharePoint 2013, you must use 
   
 **Watch the SharePoint 2013 Upgrade: Phase 3 video:**
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/9651647c-a16e-4d0c-8b5b-2b323cb6133f?autoplay=false]
+> [!VIDEO 5c7767aa-1fff-4140-b2f1-53876e847e30]
+
 ## Before you begin
 <a name="begin"> </a>
 

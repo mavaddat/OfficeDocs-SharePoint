@@ -24,16 +24,16 @@ description: "Learn to configure scheduled data refresh in Power Pivot for Share
   
 In this article, we'll take a look at configuring scheduled data refresh in SQL Server 2012 Power Pivot for SharePoint 2013 by using an account that you specify.
   
-We recommend [using Secure Store to store your data refresh credentials](data-refresh-using-secure-store.md), but if Secure Store is not available or if you working in a test or pre-production environment, this article will show you how to easily configure the account of your choice for scheduled data refresh.
+We recommend [using Secure Store to store your data refresh credentials](data-refresh-using-secure-store.md), but if Secure Store isn't available or if you're working in a test or preproduction environment, this article will show you how to easily configure the account of your choice for scheduled data refresh.
   
 ## Before you begin
 <a name="begin"> </a>
 
-Before starting, you will need:
+Before starting, you'll need:
   
 - An Active Directory account that you can use to access the data sources used in your report. We'll refer to this as the data access account. We'll look at how to configure the account for access to your data sources in this article, so you just need the account itself to get started.
     
-- Contribute access to the SharePoint document library that you will be using.
+- Contribute access to the SharePoint document library that you'll be using.
     
 Additionally, be sure that [Excel Services](excel-services-overview.md) is configured in your SharePoint Server 2013 farm. 
   
@@ -44,7 +44,8 @@ This video shows the steps involved in configuring scheduled data refresh in SQL
   
 **Video: Configure scheduled data refresh for Power Pivot by using a specified account**
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/384b0f75-6882-4324-84c2-ac72edf3f230?autoplay=false]
+> [!VIDEO 6d05d2b5-c525-45ed-96a4-72dac5898064]
+
 ## Configure access to your data source
 <a name="proc1"> </a>
 
@@ -145,7 +146,7 @@ Now that the workbook has been saved to a SharePoint document library, let's con
     
 You can test if data refresh is working properly by making some changes to your data, and then setting the workbook to refresh right away by using the **Also refresh as soon as possible** option. 
   
-Note that anytime you make changes to the data refresh settings page, such as selecting the **Also refresh as soon as possible** check box, you'll need to reenter the password of the data access account. 
+Anytime you make changes to the data refresh settings page, such as selecting the **Also refresh as soon as possible** check box, you'll need to reenter the password of the data access account. 
   
 ## See also
 <a name="ver"> </a>

@@ -1,10 +1,10 @@
 ---
 title: "Overview of SQL Server in a SharePoint Server 2013 environment"
 ms.reviewer: 
-ms.author: serdars
-author: SerdarSoysal
-manager: serdars
-ms.date: 3/9/2018
+ms.author: ruihu
+author: maggierui
+manager: jtremper
+ms.date: 12/2/2024
 audience: ITPro
 f1.keywords:
 - NOCSH
@@ -25,7 +25,7 @@ SharePoint Server 2013 supports several versions of SQL Server. Depending on the
 > [!NOTE]
 > SharePoint Foundation 2013 does not support BI features, which require SharePoint Server 2013. 
   
-The minimum requirements for a database server in SharePoint Server 2013 are SQL Server 2008 R2 with Service Pack 1 (SP1) or SQL Server 2012, or SQL Server 2014 64-bit versions. Note that to use the business intelligence (BI) tools in SharePoint Server 2013 you must install SQL Server 2012 with Service Pack 1 (SP1) or SQL Server 2014, 64-bit version. For more information, see [Hardware and software requirements for SharePoint Server 2016](../install/hardware-and-software-requirements.md).
+The minimum requirements for a database server in SharePoint Server 2013 are SQL Server 2008 R2 with Service Pack 1 (SP1) or SQL Server 2012, or SQL Server 2014 64-bit versions. To use the business intelligence (BI) tools in SharePoint Server 2013 you must install SQL Server 2012 with Service Pack 1 (SP1) or SQL Server 2014, 64-bit version. For more information, see [Hardware and software requirements for SharePoint Server 2016](../install/hardware-and-software-requirements.md).
   
     
 ## SharePoint Server 2013 and the SQL Server database engine
@@ -46,9 +46,9 @@ For a full list of all of the databases that support SharePoint Server, see [Dat
 
 The databases that support SharePoint Server 2013 are either created automatically with the SharePoint Products Configuration Wizard or by database administrators when they manually configure SharePoint Server 2013.
   
-Microsoft does not support directly querying or modifying the databases that support SharePoint Server. In SharePoint Server the Usage and Health Data Collection database does support schema modifications.
+Microsoft doesn't support directly querying or modifying the databases that support SharePoint Server. In SharePoint Server the Usage and Health Data Collection database does support schema modifications.
   
-The SQL Server databases that support SharePoint Server 2013 are subject to sizing limitations and to configuration recommendations that are not standard for SQL Server. For more information, see [Storage and SQL Server capacity planning and configuration (SharePoint Server)](storage-and-sql-server-capacity-planning-and-configuration.md).
+The SQL Server databases that support SharePoint Server 2013 are subject to sizing limitations and to configuration recommendations that aren't standard for SQL Server. For more information, see [Storage and SQL Server capacity planning and configuration (SharePoint Server)](storage-and-sql-server-capacity-planning-and-configuration.md).
   
 ## SQL Server 2008 R2 with Service Pack 1 (SP1)
 <a name="sqlserverr2"> </a>
@@ -63,7 +63,7 @@ SQL Server 2008 R2 Reporting Services supports two types of SharePoint integrati
 > [!NOTE]
 > Reporting Services supports SharePoint integrated mode using SharePoint Server 2013 only. 
   
-When you setup Reporting Services with SharePoint Server 2013 you create a report server. The report server is the central component of Reporting Services. This component contains two processing engines and a set of unique extensions that handle authentication, data processing, rendering, and delivery operations. 
+When you set up Reporting Services with SharePoint Server 2013, you create a report server. The report server is the central component of Reporting Services. This component contains two processing engines and a set of unique extensions that handle authentication, data processing, rendering, and delivery operations. 
   
 > [!NOTE]
 > When you configure a report server to run with SharePoint Server 2013 in integrated mode you must install the SQL Server 2012 Reporting Services add-in or later on a SharePoint front-end web server. > SQL Server 2008 R2 is the minimum version and is not supported when you use SQL Server 2012 Reporting Services or SQL Server 2014 Reporting Services. 
@@ -133,7 +133,7 @@ When you install SQL Server 2012 Analysis Services (SSAS) and SQL Server 2012 Re
 The xVelocity in-memory analytics engine in SQL Server 2012 supports both self-service BI and corporate BI. For more information, see [xVelocity in SQL Server 2012](/previous-versions/sql/sql-server-2012/hh922900(v=sql.110)).
   
 
-For more information, see [Guidance for Using SQL Server BI Features in a SharePoint Farm](https://technet.microsoft.com/library/hh231680.aspx), [Install SQL Server BI Features with SharePoint 2013 (SQL Server 2012 SP1)](/sharepoint/administration/overview-of-sql-server-in-a-sharepoint-server-2013-environment#sql-server-2012-and-sql-server-2014), and [Install SQL Server BI Features with SharePoint (PowerPivot and Reporting Services)](/previous-versions/sql/sql-server-2016/hh231671(v=sql.130)).
+For more information, see [Best practices for SQL Server in a SharePoint Server farm](/sharepoint/administration/best-practices-for-sql-server-in-a-sharepoint-server-farm), [Install SQL Server BI Features with SharePoint 2013 (SQL Server 2012 SP1)](/sharepoint/administration/overview-of-sql-server-in-a-sharepoint-server-2013-environment#sql-server-2012-and-sql-server-2014), and [Install SQL Server BI Features with SharePoint (PowerPivot and Reporting Services)](/previous-versions/sql/sql-server-2016/hh231671(v=sql.130)).
 
 For more information, see [Install SQL Server BI Features with SharePoint (PowerPivot and Reporting Services)](/previous-versions/sql/sql-server-2016/hh231671(v=sql.130)).
 
@@ -141,7 +141,7 @@ For more information, see [Install SQL Server BI Features with SharePoint (Power
 ### Power Pivot for SharePoint 2013
 <a name="PP"> </a>
 
-SQL Server 2012 with SP1 is required to deploy Power Pivot for SharePoint 2013. Power Pivot for SharePoint 2013 is a SharePoint Server service application that becomes available when Analysis Services runs in SharePoint mode. This provides a server that hosts Power Pivot data in a SharePoint farm. SQL Server 2012 Analysis Services provides three modes for analysis, Multidimensional, Tabular, and Power Pivot for SharePoint. Note that each server mode is independent of the others, and each supports a type of analytical database that only runs in that modality. For more information about SQL Server 2012 Analysis Services (SSAS), see [Analysis Services](/previous-versions/sql/sql-server-2012/bb522607(v=sql.110)). For more information about SQL Server 2014 Analysis Services, see [Analysis Services](/sql/analysis-services/analysis-services?view=sql-server-2014&preserve-view=true). The server that hosts Power Pivot for SharePoint 2013 can be outside a SharePoint Server 2013 farm.
+SQL Server 2012 with SP1 is required to deploy Power Pivot for SharePoint 2013. Power Pivot for SharePoint 2013 is a SharePoint Server service application that becomes available when Analysis Services runs in SharePoint mode. This provides a server that hosts Power Pivot data in a SharePoint farm. SQL Server 2012 Analysis Services provides three modes for analysis, Multidimensional, Tabular, and Power Pivot for SharePoint. Each server mode is independent of the others, and each supports a type of analytical database that only runs in that modality. For more information about SQL Server 2012 Analysis Services (SSAS), see [Analysis Services](/previous-versions/sql/sql-server-2012/bb522607(v=sql.110)). For more information about SQL Server 2014 Analysis Services, see [Analysis Services](/sql/analysis-services/analysis-services?view=sql-server-2014&preserve-view=true). The server that hosts Power Pivot for SharePoint 2013 can be outside a SharePoint Server 2013 farm.
   
 To configure Power Pivot for SharePoint you can use the SharePoint Central Administration website, the Power Pivot for SharePoint 2013 Configuration tool, or Microsoft PowerShell cmdlets. The following table lists each method and describes the process: 
   

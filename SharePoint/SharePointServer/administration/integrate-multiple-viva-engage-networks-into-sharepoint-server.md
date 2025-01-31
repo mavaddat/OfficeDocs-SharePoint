@@ -1,10 +1,10 @@
 ---
 title: "Integrate multiple Viva Engage networks into SharePoint Server"
 ms.reviewer: 
-ms.author: serdars
-author: SerdarSoysal
-manager: serdars
-ms.date: 9/7/2018
+ms.author: ruihu
+author: maggierui
+manager: jtremper
+ms.date: 12/02/2024
 audience: ITPro
 f1.keywords:
 - NOCSH
@@ -22,7 +22,7 @@ description: "Learn how to integrate multiple active Viva Engage networks togeth
 This scenario describes the prerequisites and recommended steps to integrate multiple active Viva Engage networks together with your SharePoint Server environment.
 
 > [!NOTE]
-> Multiple active Viva Engage networks on one account are no longer supported after October 26, 2018. For more info, see [FAQ: Consolidating multiple Viva Engage networks](/viva/engage/configure-your-viva-engage-network/faq-consolidate-multiple-viva-engage-networks).
+> Multiple active Viva Engage networks on one account are no longer supported after October 26, 2018. For more info, see [Network migration - Consolidate multiple Viva Engage networks](/viva/engage/configure-your-viva-engage-network/consolidate-multiple-networks).
   
 ## Scenario prerequisites
 
@@ -38,18 +38,18 @@ For this scenario, we assume that:
 
 When you integrate an email domain that has an existing Viva Engage network into a larger parent network, it's called a network merge. A network merge is a valid option when an organization has multiple business units or subsidiaries that want to take advantage of the collaboration and administrative features of Viva Engage but that don't share a common email domain.
   
-For example, say Contoso.com is an international company with subsidiaries in locations around the world. Each subsidiary has different product lines to serve the unique needs of customers in the area. Employee email addresses reflect the name of their subsidiary, like @contoso-europe.com and @contoso-asia.com. In a network merge, all subsidiary domains merge into the parent Viva Engage network, @contoso.com, and users who have subsidiary email addresses would be routed to the parent Viva Engage network when they sign in.
+For example, say Contoso.com is an international company with subsidiaries in locations around the world. Each subsidiary has different product lines to serve the unique needs of customers in the area. User email addresses reflect the name of their subsidiary, like @contoso-europe.com and @contoso-asia.com. In a network merge, all subsidiary domains merge into the parent Viva Engage network, @contoso.com, and users who have subsidiary email addresses would be routed to the parent Viva Engage network when they sign in.
   
 > [!CAUTION]
 > When you do a network merge, the data in all subsidiary networks is permanently deleted. 
   
-For more information about administering Viva Engage, see [Viva Engage - Admin help](/viva-engage/).
+For more information about administering Viva Engage, see [Viva Engage - Admin help](/viva/engage/overview).
   
 ## Step 1: Merge multiple Viva Engage networks
 
 Merging Viva Engage networks merges the users, but not the data. Before doing the merge, tell users whose networks will be merged with the parent network the date, time, and effects of the merge. Additionally, share the reasons for the merge, highlight the benefits, and provide instructions for archiving private message data, notes, files, and so on. Let users know that all data in the child networks will be permanently deleted.
   
-When you are ready to merge networks:
+When you're ready to merge networks:
   
 - Follow the directions in [Combine multiple Viva Engage networks](/viva/engage/configure-your-viva-engage-network/consolidate-multiple-viva-engage-networks).
     
@@ -60,9 +60,9 @@ When you are ready to merge networks:
   
 ## Step 2: Set up directory synchronization
 
-Microsoft 365 uses Azure Active Directory for identity management, and Viva Engage can be set up to [Enforce Microsoft 365 identity for Viva Engage users](/viva/engage/configure-your-viva-engage-network/enforce-office-365-identity). If you're using an on-premises directory, in order to manage users in one place, you need to sync your on-premises directory with Azure Active Directory by using Azure Active Directory Connect. 
+Microsoft 365 uses Microsoft Entra ID for identity management, and Viva Engage can be set up to [Enforce Microsoft 365 identity for Viva Engage users](/viva/engage/configure-your-viva-engage-network/enforce-office-365-identity). If you're using an on-premises directory, in order to manage users in one place, you need to sync your on-premises directory with Microsoft Entra ID by using Microsoft Entra Connect. 
   
-For more information, see [Plan for directory synchronization for Microsoft 365](/microsoft-365/enterprise/plan-for-directory-synchronization) and [Integrate your on-premises directories with Azure Active Directory](/azure/active-directory/hybrid/whatis-hybrid-identity).
+For more information, see [Plan for directory synchronization for Microsoft 365](/microsoft-365/enterprise/plan-for-directory-synchronization) and [Integrate your on-premises directories with Microsoft Entra ID](/azure/active-directory/hybrid/whatis-hybrid-identity).
   
 ## Step 3: Disable default SharePoint Server social features
 

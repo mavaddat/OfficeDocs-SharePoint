@@ -1,9 +1,9 @@
 ---
 ms.date: 05/21/2020
 title: How to think about your intelligent intranet
-ms.author: matteva
-author: MattEEvans
-manager: pamgreen
+ms.author: ruihu
+author: maggierui
+manager: jtremper
 recommendations: true
 audience: Admin
 f1.keywords:
@@ -115,7 +115,7 @@ Signals your organization can benefit from modern:
 
 ## More modern resources
 
-[Modern inspiration in the SharePoint look book](https://lookbook.microsoft.com/)
+[Modern inspiration in the SharePoint Look Book](https://adoption.microsoft.com/sharepoint-look-book)
 
 [Information architecture in modern SharePoint](./information-architecture-modern-experience.md)
 

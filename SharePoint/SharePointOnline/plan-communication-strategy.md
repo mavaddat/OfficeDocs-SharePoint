@@ -2,14 +2,14 @@
 ms.date: 07/26/2021
 title: "Plan your communication strategy"
 ms.reviewer: 
-ms.author: hokavian
-author: Holland-ODSP
-manager: pamgreen
+ms.author: ruihu
+author: maggierui
+manager: jtremper
 recommendations: true
 audience: Admin
 ms.topic: article
 ms.service: sharepoint-online
-localization_priority: Normal
+ms.localizationpriority: medium
 search.appverid: MET150
 ms.collection: 
   - m365solution-corpcomms

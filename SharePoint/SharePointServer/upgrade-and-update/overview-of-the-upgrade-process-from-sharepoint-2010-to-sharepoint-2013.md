@@ -35,7 +35,8 @@ This article helps you understand the upgrade sequence so that you can plan an u
   
 **Watch the SharePoint 2013 Upgrade: Overview video**
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/4b45db6c-59b8-43c0-ac63-2a05ecacd1b7?autoplay=false]
+> [!VIDEO 5847e3bd-b5c5-42da-9e2e-1d89b75b083d]
+
 ## Create the SharePoint 2013 farm
 <a name="CreateFarm"> </a>
 

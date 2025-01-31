@@ -58,7 +58,7 @@ This video shows a walkthrough of configuring sites features.
   
 **Video: Configure hybrid sites features**
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/9097e969-aff1-479b-bcbf-3fc963051465?autoplay=false]
+> [!VIDEO 565b81aa-f624-4c88-b5bf-57190a84e9ef]
 
 ## See also
 
