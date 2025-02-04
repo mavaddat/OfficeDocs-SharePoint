@@ -355,15 +355,13 @@ Enabling this policy sets the following registry key value to 1:
 
 ### Hide the messages to sync Consumer OneDrive files
 
-This setting determines whether a user will be prompted to sync their Consumer files using a detected known Microsoft Account (MSA).
+This setting determines whether a user will be prompted to sync their Consumer files when a Microsoft Account (MSA) is detected on the device.
 
-**Enable**: Enable this setting if you want to suppress the messages from being displayed to your users; yet, allow them to manually configure their Consumer accounts to sync with their OneDrive Consumer files.
-
-Enabling this policy sets the following registry key value to 1:
+If you enable this setting, users will not be prompted to sign in with their MSA and sync their Consumer files. Users can still manually configure their Consumer accounts to sync their OneDrive Consumer files. Enabling this policy sets the following registry key value to 1:
 
 `[HKLM\SOFTWARE\Policies\Microsoft\OneDrive]"DisableNewAccountDetection"=dword:00000001`
 
-**Disable**: Disable this setting or don't configure it, to allow your users to be prompted to sync their Consumer files.
+If you disable this setting or do not configure it, users will be prompted to sign in with their MSA and sync their Consumer files.
 
 ### Limit the sync app upload rate to a percentage of throughput
 
