@@ -87,7 +87,7 @@ When a report is ready, select the name of the report to view the data. Each sha
 You can also download the reporting as a CSV file for up to 10,000 sites.
 
 > [!IMPORTANT]
-> You can download reporting for up to 1 million sites if you have a SharePoint SharePoint Premium - SharePoint Advanced Management license and your tenant is a non-government cloud environment.
+> You can download reporting for up to 1 million sites if you have a SharePoint Premium - SharePoint Advanced Management license and your tenant is a non-government cloud environment.
 
 ## Sensitivity labels for files reports
 
