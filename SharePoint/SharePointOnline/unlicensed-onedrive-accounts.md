@@ -98,8 +98,8 @@ For newly unlicensed OneDrive accounts, it will be after 93 days of the license 
 
 - If the OneDrive account has been set to read-only, administrators have multiple options to access the content:
 
-  - [Add a license](/SharePoint/unlicensed-onedrive-accounts)
-  
+  - [Add a license](/SharePoint/unlicensed-onedrive-accounts#assign-license-to-unlicensed-onedrive-account)
+    
   - [Use PowerShell to unlock the site](/sharepoint/manage-lock-status) 
   
 > [!NOTE]
@@ -200,13 +200,14 @@ An education tenant is any tenant with more than 50% education licenses. Any ten
 
 **License Removal:**
 
-- Go to the SharePoint admin center.
+- Go to the Microsoft 365 admin center.
+
 - Expand Billing and select **Your Products**.
 - Select the subscription and select **Remove licenses**.
 
 **User Deletion:**
 
-- In the SharePoint admin center, expand **Users** and select **Active users**.
+- In the Microsoft 365 admin center, expand **Users** and select **Active users**.
 - Delete the user.
 
 For more information on deleting users, see [Delete a user from your organization](/microsoft-365/admin/add-users/delete-a-user).
