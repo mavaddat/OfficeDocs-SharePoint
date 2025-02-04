@@ -128,7 +128,7 @@ Start-SPODataAccessGovernanceInsight -ReportEntity SensitivityLabelForFiles -Wor
 ## Tracking reports using PowerShell
 
 > [!IMPORTANT]
-> All report creations result in a GUID as output which could be used to track the report status
+> All report creations result in a GUID as output which could be used to track the report status.
 
 ```powershell
 Start-SPODataAccessGovernanceInsight -ReportEntity SensitivityLabelForFiles -Workload SharePoint -ReportType Snapshot -FileSensitivityLabelGUID "a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1" -FileSensitivityLabelName Secret
