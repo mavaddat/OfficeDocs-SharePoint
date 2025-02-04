@@ -1,5 +1,5 @@
 ---
-ms.date: 05/20/2024
+ms.date: 01/30/2025
 title: Restrict access to a user's OneDrive content to people in a group
 ms.reviewer: nibandyo
 ms.author: mactra
@@ -72,7 +72,7 @@ It might take up to one hour for command to take effect.
 Each OneDrive can be assigned up to 10 Microsoft Entra security groups. Once a security group is added, only users in the groups have access to content in that OneDrive that has been shared with them. You can use [dynamic security groups](/azure/active-directory/enterprise-users/groups-create-rule) if you want to base group membership on user properties.
 
 > [!IMPORTANT]
-> The owner of the OneDrive must be included in one of the security groups that you specify or they will lose access to their OneDrive and its contents.
+> The owner of the OneDrive must be included in one of the security groups that you specify or they'll lose access to their OneDrive and its contents.
 
 To manage access restriction for OneDrive, use the following commands:
 
@@ -84,6 +84,91 @@ To manage access restriction for OneDrive, use the following commands:
 |View security group     |`Get-SPOSite -Identity <siteurl> Select RestrictedAccessControl, RestrictedAccessControlGroups`         |
 |Remove security group     |`Set-SPOSite -Identity <siteurl> -RemoveRestrictedAccessControlGroups <comma separated group GUIDS>`         |  
 |Reset site access restriction  |`Set-SPOSite -Identity <siteurl> -ClearRestrictedAccessControl`         |
+
+## Sharing of sites with Restricted site access policy
+
+Sharing of SharePoint sites and its content can be blocked with users and groups who aren't allowed as per the Restricted access control policy.
+
+The sharing control functionality is disabled by default. To enable it, run the following PowerShell command in SharePoint Online Management Shell as an Administrator:
+
+```powershell
+Set-SPOTenant -AllowSharingOutsideRestrictedAccessControlGroups $false 
+```
+
+### Sharing with users
+
+Sharing is only allowed with users who are part of restricted access control groups. Sharing will be blocked with anyone outside of the restricted access control groups as shown below:
+
+![The screenshot of sharing with users.](media/rac-spac/rac-share-with-users.png)
+
+### Sharing with groups
+
+Sharing is allowed with Microsoft Entra Security or Microsoft 365 groups which are part of the restricted access control groups list. Thus, sharing with all other groups including Everyone except external users or SharePoint groups won’t be allowed.
+
+![The screenshot of sharing with groups.](media/rac-spac/rac-share-with-groups.png)
+
+> [!NOTE]
+> At present, sharing of a site and its content won't be allowed for the nested security groups that are part of the restricted access control groups. This support will be added in the next release iteration.
+
+## Configure learn more link for access denial error page
+
+Configure your learn more link to inform users who were denied access to a SharePoint site due to the restricted site access control policy. With this customizable error link, you can provide more information and guidance to your users.
+
+> [!NOTE]
+> The learn more link is a tenant-level setting that applies to all sites that have restricted access control policy enabled.  
+
+To configure the link, run the following command in SharePoint PowerShell:
+
+```powershell
+Set-SPOTenant -RestrictedAccessControlForSitesErrorHelpLink “<Learn more URL>” 
+```
+
+To fetch the value of the link, run the following command:
+
+```powershell
+Get-SPOTenant | select RestrictedAccessControlForSitesErrorHelpLink 
+```
+
+The configured learn more link is launched when the user selects the **Know more about your organization’s policies here** link.
+
+![Screenshot that shows learn more link for restricted access control](media/rac-spac/2-rac-learn-more-link.png)
+
+## Restricted site access policy insights
+
+As an IT administrator, you can view the following reports to gain more insight about SharePoint sites protected with restricted site access policy:
+
+- Sites protected by restricted site access policy (RACProtectedSites)
+- Details of access denials due to restricted site access (ActionsBlockedByPolicy)
+
+> [!NOTE]
+> It can take a few hours to generate each report.
+
+### Sites protected by restricted site access policy report
+
+You can run the following commands in SharePoint PowerShell to generate, view, and download the reports:
+
+| Action  | PowerShell command | Description |
+|---------|---------|---------|
+|Generate report     |`Start-SPORestrictedAccessForSitesInsights -RACProtectedSites`| Generates a list of sites protected by restricted site access policy|
+|View report |`Get-SPORestrictedAccessForSitesInsights -RACProtectedSites -ReportId <Report GUID>`| The report shows the top 100 sites with the highest page views that are protected by the policy.|
+|Download report   |`Get-SPORestrictedAccessForSitesInsights -RACProtectedSites -ReportId <Report GUID> -Action Download`| This command must be run as an administrator. The downloaded report is located on the path where the command was run.|
+|Percentage of site protected with restricted site access report|`Get-SPORestrictedAccessForSitesInsights -RACProtectedSites -ReportId <Report GUID> -InsightsSummary`|This report shows the percentage of sites that are protected by the policy out of the total number of sites|
+
+### Access denials due to restricted site access policy
+
+You can run the following commands to create, fetch, and view report for access denials due to restricted site access reports:
+
+| Action  | PowerShell command | Description |
+|---------|---------|---------|
+|Create access denials report    |`Start-SPORestrictedAccessForSitesInsights -ActionsBlockedByPolicy`| Creates a new report for fetching access denial details|
+|Fetch access denials report status |`Get-SPORestrictedAccessForSitesInsights -ActionsBlockedByPolicy`| Fetches the status of the generated report.|
+|Latest access denials in the past 28 days|`Get-SPORestrictedAccessForSitesInsights -ActionsBlockedByPolicy -ReportId <Report ID> -Content AllDenials`| Gets a list of the most recent 100 access denials that occurred in the past 28 days|
+|View list of top users who were denied access| `Get-SPORestrictedAccessForSitesInsights -ActionsBlockedByPolicy -ReportId <Report ID> -Content TopUsers`|Gets a list of the top 100 users who received the most access denials|
+|View list of top sites that received the most access denials|`Get-SPORestrictedAccessForSitesInsights -ActionsBlockedByPolicy -ReportId <Report ID> -Content TopSites`| Gets a list of the top 100 sites that had the most access denials|
+|Distribution of access denials across different types of sites|`Get-SPORestrictedAccessForSitesInsights -ActionsBlockedByPolicy -ReportId <Report ID> -Content SiteDistribution`|Shows the distribution of access denials across different types of sites|
+
+> [!NOTE]
+> To view up to 10,000 denials, you must download the reports. Run the download command as an administrator and the downloaded reports are located on the path from where command was run.
 
 ## Auditing
 
