@@ -30,19 +30,19 @@ description: "Learn how to allow only users in specified security groups to acce
 
 [!INCLUDE[Advanced Management](includes/advanced-management.md)]
 
-You can restrict access to an individual user's OneDrive content to users in a security group by using a OneDrive access restriction policy. Users not in the specified group can't access the content, even if they had prior permissions or shared link.
+You can restrict access to an individual user's OneDrive content to users in a security group or Microsoft 365 group by using a site access restriction policy. Users not in the specified group can't access the content, even if they had prior permissions or shared link.
 
-The policy is applied using [Microsoft Entra security groups](/azure/active-directory/fundamentals/how-to-manage-groups) that contain the people who should be able to access files in that OneDrive.
+The policy is applied using [Microsoft Entra security groups](/azure/active-directory/fundamentals/how-to-manage-groups) or Microsoft 365 groups that contain the people who should be able to access files in that OneDrive.
 
-When the policy is applied, the people in the security group aren't granted permissions to any files directly. The OneDrive owner must share the content as they normally would. The OneDrive access restriction policy prevents anyone who isn't in the security group from accessing the OneDrive content even if it's shared with them.
+When the policy is applied, the people in the specified groups aren't granted permissions to any files directly. The OneDrive owner must share the content as they normally would. The site access restriction policy prevents anyone who isn't in the security group or the Microsoft 365 group from accessing the OneDrive content even if it's shared with them.
 
-Access restriction policies are applied when a user attempts to access a file. Users can still see files in search results if they have direct permissions to the file, but they won't be able to access the file if they're not part of the specified security group.
+Access restriction policies are applied when a user attempts to access a file. Users can still see files in search results if they have direct permissions to the file, but they won't be able to access the file if they're not part of the specified group.
 
 You can also restrict access to the OneDrive service itself to people in a security group. For more information, see [Restrict OneDrive access by security group](limit-access.md).
 
 ## Requirements
 
-The OneDrive access restriction policy requires [Microsoft SharePoint Premium - SharePoint Advanced Management](advanced-management.md).
+The site access restriction policy requires [Microsoft SharePoint Premium - SharePoint Advanced Management](advanced-management.md).
 
 ## Enable site access restriction for your organization
 
@@ -69,25 +69,25 @@ It might take up to one hour for command to take effect.
 
 ## Restrict access to a user's OneDrive content
 
-Each OneDrive can be assigned up to 10 Microsoft Entra security groups. Once a security group is added, only users in the groups have access to content in that OneDrive that has been shared with them. You can use [dynamic security groups](/azure/active-directory/enterprise-users/groups-create-rule) if you want to base group membership on user properties.
+Each OneDrive can be assigned up to 10 Microsoft Entra security or Microsoft 365 groups. Once a group is added, only users in the groups have access to content in that OneDrive that has been shared with them. You can use [dynamic security groups](/azure/active-directory/enterprise-users/groups-create-rule) if you want to base group membership on user properties.
 
 > [!IMPORTANT]
-> The owner of the OneDrive must be included in one of the security groups that you specify or they'll lose access to their OneDrive and its contents.
+> The owner of the OneDrive must be included in one of the security or Microsoft 365 groups that you specify or they'll lose access to their OneDrive and its contents.
 
 To manage access restriction for OneDrive, use the following commands:
 
 | Action  | PowerShell command |
 |---------|---------|
-|Enable access restriction for a given OneDrive. (Run this command before adding security groups.) |`Set-SPOSite -Identity <siteurl> -RestrictedAccessControl $true`|
-|Add security group |`Set-SPOSite -Identity <siteurl> -AddRestrictedAccessControlGroups <comma separated group GUIDS>`         |
-|Edit security group     |`Set-SPOSite -Identity <siteurl> -RestrictedAccessControlGroups <comma separated group GUIDS>`         |
-|View security group     |`Get-SPOSite -Identity <siteurl> Select RestrictedAccessControl, RestrictedAccessControlGroups`         |
-|Remove security group     |`Set-SPOSite -Identity <siteurl> -RemoveRestrictedAccessControlGroups <comma separated group GUIDS>`         |  
+|Enable access restriction for a given OneDrive. (Run this command before adding security or Microsoft 365 groups.) |`Set-SPOSite -Identity <siteurl> -RestrictedAccessControl $true`|
+|Add security/ Microsoft 365 group |`Set-SPOSite -Identity <siteurl> -AddRestrictedAccessControlGroups <comma separated group GUIDS>`         |
+|Edit security/ Microsoft 365 group     |`Set-SPOSite -Identity <siteurl> -RestrictedAccessControlGroups <comma separated group GUIDS>`         |
+|View security/Microsoft 365 group     |`Get-SPOSite -Identity <siteurl> Select RestrictedAccessControl, RestrictedAccessControlGroups`         |
+|Remove security/ Microsoft 365 group     |`Set-SPOSite -Identity <siteurl> -RemoveRestrictedAccessControlGroups <comma separated group GUIDS>`         |
 |Reset site access restriction  |`Set-SPOSite -Identity <siteurl> -ClearRestrictedAccessControl`         |
 
 ## Sharing of sites with Restricted site access policy
 
-Sharing of SharePoint sites and its content can be blocked with users and groups who aren't allowed as per the Restricted access control policy.
+Sharing of OneDrive sites can be blocked with users and groups who aren't allowed as per the Restricted access control policy.
 
 The sharing control functionality is disabled by default. To enable it, run the following PowerShell command in SharePoint Online Management Shell as an Administrator:
 
@@ -112,10 +112,10 @@ Sharing is allowed with Microsoft Entra Security or Microsoft 365 groups which a
 
 ## Configure learn more link for access denial error page
 
-Configure your learn more link to inform users who were denied access to a SharePoint site due to the restricted site access control policy. With this customizable error link, you can provide more information and guidance to your users.
+Configure your learn more link to inform users who were denied access to a OneDrive site due to the restricted site access control policy. With this customizable error link, you can provide more information and guidance to your users.
 
 > [!NOTE]
-> The learn more link is a tenant-level setting that applies to all sites that have restricted access control policy enabled.  
+> The learn more link is a tenant-level setting that applies to all OneDrive sites that have restricted access control policy enabled.  
 
 To configure the link, run the following command in SharePoint PowerShell:
 
@@ -135,7 +135,7 @@ The configured learn more link is launched when the user selects the **Know more
 
 ## Restricted site access policy insights
 
-As an IT administrator, you can view the following reports to gain more insight about SharePoint sites protected with restricted site access policy:
+As an IT administrator, you can view the following reports to gain more insight about OneDrive sites protected with restricted site access policy:
 
 - Sites protected by restricted site access policy (RACProtectedSites)
 - Details of access denials due to restricted site access (ActionsBlockedByPolicy)
