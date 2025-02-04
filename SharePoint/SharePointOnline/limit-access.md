@@ -68,21 +68,21 @@ To enable this feature:
 
 ## Configure learn more link for access denial error page
 
-Configure your learn more link to inform users who were denied access to a SharePoint site due to the restricted site access control policy. With this customizable error link, you can provide more information and guidance to your users.
+Configure your learn more link to inform users who were denied access to a OneDrive site due to the OneDrive access restriction policy. With this customizable error link, you can provide more information and guidance to your users.
 
 > [!NOTE]
-> The learn more link is a tenant-level setting that applies to all sites that have restricted access control policy enabled.  
+> The learn more link is a tenant-level setting that applies to all OneDrive sites.
 
 To configure the link, run the following command in SharePoint PowerShell:
 
 ```powershell
-Set-SPOTenant -RestrictedAccessControlForSitesErrorHelpLink “<Learn more URL>” 
+Set-SPOTenant -RestrictedAccessControlForOneDriveErrorHelpLink“<Learn more URL>” 
 ```
 
 To fetch the value of the link, run the following command:
 
 ```powershell
-Get-SPOTenant | select RestrictedAccessControlForSitesErrorHelpLink 
+Get-SPOTenant | select RestrictedAccessControlForOneDriveErrorHelpLink 
 ```
 
 The configured learn more link is launched when the user selects the **Know more about your organization’s policies here** link.
