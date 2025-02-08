@@ -44,7 +44,7 @@ To allow 'MigApp' to move content into all SharePoint sites, grant ‘Sites.Full
 - SharePoint API:
 
   - 'Sites.FullControl.All': Required for full control of all site collections.
-  
+    
   - Microsoft Graph API:
   
      - 'Sites.FullControl.All': Required for full control of all site collections.
@@ -53,12 +53,12 @@ Grant more permissions
 
 - Microsoft Graph API:
 
-   - 'User.Read.All': Required for resolving user mapping.
-   
-      - 'Group.Read.All': Required for resolving user mapping.
-      
-         - 'Organization.Read.All': Required for sending telemetry to the correct Geo location.
-         
+  - 'User.Read.All': Required for resolving user mapping.
+  
+  - 'Group.Read.All': Required for resolving user mapping.
+  
+  - 'Organization.Read.All': Required for sending telemetry to the correct Geo location.
+    
 ### 3. Upload certificate
 
 Go to **Certificates & secrets** page, and select **Certificates** tab.
@@ -66,4 +66,103 @@ Go to **Certificates & secrets** page, and select **Certificates** tab.
 - Upload the public key of your X.509 certificate that is issued by the Enterprise Public Key Infrastructure (PKI).
 
 - Copy the value in 'Thumbprint' for future use.
+
+## Grant destination site access permission
+
+If you set the SharePoint **Sites.Selected** permission for 'MigApp', you need to grant the application **FullControl** permissions for **all the migration destination sites** before the migration starts.
+
+## Grant the SharePoint Admin site Read permission
+
+You also need to grant the application **Read** permissions for **SharePoint Admin site** before the migration starts.
+
+
+
+## Install agent
+
+Prepare a configuration Json file with file with following content:
+
+
+```json
+{
+    "Thumbprint":"The client credential certificate thumbprint",
+    "TenantId":"Tenant ID",
+    "ClientId":"App registration Id",
+    "AdminUrl": "The SharePoint Admin site URL, example https://contoso-admin.sharepoint.com",
+}
+```
+
+Follow [the instructions](/sharepointmigration/mm-setup-clients) to install an agent. In the agent setup Welcome page, select the "Certificate Authentication" option and load the certificate auth config file which is prepared in the step above. Then follow the rest of the steps to complete the installation.
+
+- If the file is incorrectly formatted or contains incorrect attribute values, the agent displays an error message explaining the reason and disables the next button.
+
+- If 'MigApp' doesn't have sufficient permissions, the agent displays an error message reminding you to grant necessary permissions to the app.
+
+After the agents are launched successfully, you can start migrating your content on Migration Manager.
+
+## Steps to grant permission to a site
+
+### Use Graph API to grant permission to a site
+
+Follow the steps below to grant permissions to a given site using Microsoft Graph API.
+
+1. Obtain the site ID by calling [Get Site API](/graph/api/site-get).
+
+- Retrieve the site ID for the admin site, call GET /sites/contoso-admin.sharepoint.com
+
+- Retrieve the site ID for root site, call GET /sites/contoso.sharepoint.com.
+
+- For other sites, include the site's relative URL, call GET /sites/contoso.sharepoint.com:/sites/xxxx or GET /sites/contoso.sharepoint.com:/teams/xxxx.
+
+The **ID property** in the response body will contain three parts separated by commas; ensure you copy the entire string.
+
+2. Assign permissions to the site by calling [Create Permission API](/graph/api/site-post-permissions). Using the string copied from Step 1, call POST /sites/{**siteId**}/permissions with the request body below.
+
+- For assigning permissions to the admin site, set the roles as 'read'.
+
+- For any other site, set the roles as 'owner'.
+
+
+```json
+    {
+      "roles": ["read/write/owner"],
+      "grantedToIdentities": [{
+        "application": {
+          "id": "IdOfYourEntraApp",
+          "displayName": "NameOfYourEntraApp"
+        }
+      }]
+    }
+```
+
+### Use PowerShell PnP to grant permission to a site
+
+Follow the steps below to grant permission to a site using [PowerShell PnP](https://pnp.github.io/powershell/cmdlets/Grant-PnPAzureADAppSitePermission.html).
+
+1. Install Powershell7 and import required modules with the command below
+
+`Install-Module PnP.PowerShell -Force and Import-Module PnP.PowerShell`
+
+2. Run the command below to create an app that will be used as a proxy of PnP-PowerShell for granting permissions and copy the client Id from the execution result.
+
+`Register-PnPEntraIDAppForInteractiveLogin -ApplicationName "PnP PowerShell" -Tenant yourtenant.onmicrosoft.com -Interactive`    
+
+3. Set a variable PnPClientId with the client Id retrieved in the step above
+
+`$PnPClientId = <The client Id from the step above>`
+
+4. Run the command below to Connect SharePoint Admin site. The admin URL is in the format https://contoso-admin.sharepoint.com.
+
+`Connect-PnPOnline –interactive  –Url <AdminSiteUrl>  -ClientId <PnPClientId>`
+
+5. Grant your app the SharePoint Admin site access permission. The ClientId below is your entra app client Id.
+
+`Grant-PnPAzureADAppSitePermission -AppId <ClientId> -DisplayName <App name or a random name> -Permissions ``<Permission> -Site <DestinationSiteUrl>`
+
+- For grant your app the SharePoint Admin site Read permission, the command is
+
+`Grant-PnPAzureADAppSitePermission -AppId <ClientId> -DisplayName <App name or a random name> -Permissions `**`Read`** `-Site <`**`AdminSiteUrl`**`>`
+
+- For grant your app FullControl permission for the destination site, the command is
+
+`Grant-PnPAzureADAppSitePermission -AppId <ClientId> -DisplayName < App name or a random name > -Permissions `**`FullControl`** `-Site <`**`DestinationSiteUrl`**`>`
 
