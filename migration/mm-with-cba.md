@@ -21,11 +21,11 @@ Migration Manager allows customers to use Azure App Registrations with certifica
 
 ### 1. Register an application
 
-Follow [the instructions](/entra/identity-platform/quickstart-register-app?tabs=certificate) to register an application in the Microsoft Entra admin center. Let's name this application 'MigApp'.
+Follow [the instructions](/entra/identity-platform/quickstart-register-app?tabs=certificate) to register an application in the Microsoft Entra admin center. Let's name this application **MigApp**.
 
 ### 2. Grant permissions
 
-In the Entra admin center, go to **Application > App registrations** and select 'MigApp' from the **All applications** tab.
+In the Microsoft Entra admin center, go to **Application > App registrations** and select 'MigApp' from the **All applications** tab.
 
 Next, grant the necessary API permissions under **API Permissions** page.
 
@@ -79,7 +79,7 @@ You also need to grant the application **Read** permissions for **SharePoint Adm
 
 ## Install agent
 
-Prepare a configuration Json file with file with following content:
+Prepare a configuration Json file with following content:
 
 
 ```json
@@ -91,9 +91,9 @@ Prepare a configuration Json file with file with following content:
 }
 ```
 
-Follow [the instructions](/sharepointmigration/mm-setup-clients) to install an agent. In the agent setup Welcome page, select the "Certificate Authentication" option and load the certificate auth config file which is prepared in the step above. Then follow the rest of the steps to complete the installation.
+Install an agent by following [the instructions](/sharepointmigration/mm-setup-clients). In the agent setup Welcome page, select the "Certificate Authentication" option and load the certificate auth config file which is prepared in the preious step. Then complete the rest installation steps.
 
-- If the file is incorrectly formatted or contains incorrect attribute values, the agent displays an error message explaining the reason and disables the next button.
+- If the file contains incorrect attribute values, the agent displays an error message to explain the reason and disables the next button.
 
 - If 'MigApp' doesn't have sufficient permissions, the agent displays an error message reminding you to grant necessary permissions to the app.
 
@@ -103,23 +103,23 @@ After the agents are launched successfully, you can start migrating your content
 
 ### Use Graph API to grant permission to a site
 
-Follow the steps below to grant permissions to a given site using Microsoft Graph API.
+Follow the steps to grant permissions to a given site using Microsoft Graph API.
 
 1. Obtain the site ID by calling [Get Site API](/graph/api/site-get).
 
-- Retrieve the site ID for the admin site, call GET /sites/contoso-admin.sharepoint.com
+- To retrieve the site ID of the admin site, call GET /sites/contoso-admin.sharepoint.com
 
-- Retrieve the site ID for root site, call GET /sites/contoso.sharepoint.com.
+- To retrieve the site ID of root site, call GET /sites/contoso.sharepoint.com.
 
-- For other sites, include the site's relative URL, call GET /sites/contoso.sharepoint.com:/sites/xxxx or GET /sites/contoso.sharepoint.com:/teams/xxxx.
+- To retrieve the site ID of other sites, call GET /sites/contoso.sharepoint.com:/sites/{site relative url} or GET /sites/contoso.sharepoint.com:/teams/{site relative url}.
 
-The **ID property** in the response body will contain three parts separated by commas; ensure you copy the entire string.
+The **ID property** in the response body contains three parts separated by commas; ensure you copy the entire string.
 
-2. Assign permissions to the site by calling [Create Permission API](/graph/api/site-post-permissions). Using the string copied from Step 1, call POST /sites/{**siteId**}/permissions with the request body below.
+2. Assign permissions to the site by calling [Create Permission API](/graph/api/site-post-permissions). Using the string copied from Step 1, call POST /sites/{**siteId**}/permissions with the request body.
 
-- For assigning permissions to the admin site, set the roles as 'read'.
+- For assigning permissions to the admin site, set the roles as **read**.
 
-- For any other site, set the roles as 'owner'.
+- For any other site, set the roles as **owner**.
 
 
 ```json
@@ -136,25 +136,25 @@ The **ID property** in the response body will contain three parts separated by c
 
 ### Use PowerShell PnP to grant permission to a site
 
-Follow the steps below to grant permission to a site using [PowerShell PnP](https://pnp.github.io/powershell/cmdlets/Grant-PnPAzureADAppSitePermission.html).
+Follow the steps to grant permission to a site using [PowerShell PnP](https://pnp.github.io/powershell/cmdlets/Grant-PnPAzureADAppSitePermission.html).
 
-1. Install Powershell7 and import required modules with the command below
+1. Install Powershell7 and import required modules with the command
 
 `Install-Module PnP.PowerShell -Force and Import-Module PnP.PowerShell`
 
-2. Run the command below to create an app that will be used as a proxy of PnP-PowerShell for granting permissions and copy the client Id from the execution result.
+2. Run the command to create an app that plays as a proxy of PnP-PowerShell for granting permissions. Copy the client Id from the execution result.
 
 `Register-PnPEntraIDAppForInteractiveLogin -ApplicationName "PnP PowerShell" -Tenant yourtenant.onmicrosoft.com -Interactive`    
 
-3. Set a variable PnPClientId with the client Id retrieved in the step above
+3. Set a variable PnPClientId with the client Id retrieved in the previous step
 
 `$PnPClientId = <The client Id from the step above>`
 
-4. Run the command below to Connect SharePoint Admin site. The admin URL is in the format https://contoso-admin.sharepoint.com.
+4. Run the command to Connect SharePoint Admin site. The admin URL is in the format https://contoso-admin.sharepoint.com.
 
 `Connect-PnPOnline –interactive  –Url <AdminSiteUrl>  -ClientId <PnPClientId>`
 
-5. Grant your app the SharePoint Admin site access permission. The ClientId below is your entra app client Id.
+5. Grant your app the SharePoint Admin site access permission. The 'ClientId' is your entra app client Id.
 
 `Grant-PnPAzureADAppSitePermission -AppId <ClientId> -DisplayName <App name or a random name> -Permissions ``<Permission> -Site <DestinationSiteUrl>`
 
