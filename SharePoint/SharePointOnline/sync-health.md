@@ -54,6 +54,39 @@ Before getting started, be sure that you're familiar with the requirements neede
 
 In this section, you'll learn how to set up sync reports on Windows and macOS devices.
 
+# [Intune](#tab/intune)
+This tab provides how-to steps for enabling sync reports on Intune joined devices.
+
+1. Ensure you have the required role and app versions listed in the [previous section](#requirements).
+
+2. Go to [Microsoft 365 Apps admin center](https://config.office.com) and sign in as an Office App Administrator
+
+3. In the left navigation menu, select **Setup**
+
+4. Verify that a **Tenant Association Key** is present in the text field. If the field is empty, select **Generate new key**.
+
+    > [!NOTE]
+    > When you generate a new key for the first time, it can take up to 30 seconds for it to appear.
+
+5. Copy the **Tenant Association Key**
+
+6. Go to [Intune admin center](https://intune.microsoft.com/) and sign in as an Intune Administrator.
+
+7. From the left navigation menu, select **Devices** > **Configuration**
+
+8. Create a new policy, select **Windows 10 and later** or **macOS** for platform and **Settings catalog** for policy type.
+
+9. Name the new policy and give it a description then click next.
+
+10. Select **Add settings** and then navigate to **OneDrive**
+
+11. Check the box for **Enable sync health reporting for OneDrive** and check the box for **Sync Admin Reports**
+
+13. Under the **Sync Admin Reports** option, paste your **Tenant Association Key**
+14. Select **Next** and apply your scope tags
+15. Select **Next** and apply your assignments
+16. Select **Create**
+
 # [Windows](#tab/windows)
 
 This tab provides how-to steps for enabling sync reports on Windows devices.
@@ -142,15 +175,15 @@ This tab provides how-to steps for enabling sync reports on macOS devices.
 |**.plist location  <br/>**|/Library/Preferences/com.microsoft.OneDrive.plist  <br/> |/Library/Containers/com.microsoft.OneDrive-mac/Data/Library/Preferences/com.microsoft.OneDrive-mac.plist  <br/> |
 |**Domain <br/>**|com.microsoft.OneDrive  <br/> |com.microsoft.OneDrive-mac  <br/> |
 
-9. Use the Terminal app to deploy the EnableSyncAdminReports setting onto your local computer.
+8. Use the Terminal app to deploy the EnableSyncAdminReports setting onto your local computer.
 
     Enter the following preference key to enable the setting:
 <br/>\<key\>EnableSyncAdminReports\</key\>
 </br>\<integer\>1\</integer\>
 
-10. Refresh the preferences cache.
+9. Refresh the preferences cache.
 
-11. On the next start of OneDrive, the new setting will be picked up.
+10. On the next start of OneDrive, the new setting will be picked up.
 
 > [!IMPORTANT]
 > After you enable the EnableSyncAdminReports setting on devices, it takes up to three days for reports to be available.

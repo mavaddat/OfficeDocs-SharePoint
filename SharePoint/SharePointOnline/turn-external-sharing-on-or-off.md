@@ -64,7 +64,7 @@ For information on how to enable or disable Microsoft Entra B2B integration, see
 
 This video shows how the settings on the <a href="https://go.microsoft.com/fwlink/?linkid=2185222" target="_blank">**Sharing** page in the SharePoint admin center</a> affect the sharing options available to users.
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4yw9m?autoplay=false]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=e809d51b-9cf6-47d3-b34d-296ab0ad8310]
 
 ## Change the organization-level external sharing setting
 <a name="__turn_external_sharing"> </a>

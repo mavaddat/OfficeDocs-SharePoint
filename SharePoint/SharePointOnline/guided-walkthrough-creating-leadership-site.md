@@ -25,7 +25,7 @@ description: "Learn how to create a SharePoint leadership site for your organiza
 
 In this article, we show you elements of an example leadership site to inspire you, and help you learn how to create similar sites for your own organization. In this example, the leadership site provides your organization insight into the goals and priorities of the leadership team. Watch this video to see how to build it, or read the following article.
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4xd93]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=4b95af84-58c9-47f4-ae5c-96022b364684]
 
 ## Let's get started
 
@@ -262,4 +262,3 @@ For more details on using the Text web part, see [Add text and tables to your pa
 Get inspired with more examples in the [SharePoint look book](https://adoption.microsoft.com/sharepoint-look-book).
 
 See other [guided walkthroughs](https://support.microsoft.com/office/guided-walkthroughs-creating-sites-for-your-organization-7cc52ac9-394e-417e-85fe-33070e0cd13c?ui=en-us&rs=en-us&ad=us) for creating sties for your organization.
-

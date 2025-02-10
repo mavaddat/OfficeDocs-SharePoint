@@ -64,7 +64,7 @@ Each team is connected to a Microsoft 365 group in Microsoft Entra ID where the 
 
 <br>
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4Txae?autoplay=false]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=e4f94dfb-42ef-4616-9ded-3d3cd7040d2f]
 
 ## When do Teams and SharePoint get connected?
 

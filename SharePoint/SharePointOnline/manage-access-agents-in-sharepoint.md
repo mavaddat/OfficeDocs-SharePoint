@@ -1,5 +1,5 @@
 ---
-ms.date: 11/19/2024
+ms.date: 01/20/2025
 title: Manage access to SharePoint agents
 ms.reviewer:
 ms.author: ruihu
@@ -43,7 +43,7 @@ Currently, users with a [Microsoft 365 Copilot license](/copilot/microsoft-365/m
 Admins can choose to edit the service plans under the Copilot license to specifically allow or block users from using Copilot experiences on SharePoint. Under the [license details page for Microsoft 365 Copilot](https://admin.microsoft.com/Adminportal/Home?#/licensedetailpage/639dec6b-bb19-468b-871c-c5c441c4b0cb) on the Microsoft 365 admin center, admins can turn *'Microsoft 365 Copilot for SharePoint'* on or off on a per-user basis. For example, a user could be allowed to use Microsoft 365 Copilot on Teams but not use any agents on SharePoint alone. This will also disable Copilots on OneDrive and the SharePoint page authoring Copilot for that user. 
 
 > [!NOTE]
-> From January 6, 2025, to June 30, 2025, enterprise tenants with 50 or more Microsoft 365 Copilot licenses will receive 10,000 free SharePoint agents queries for unlicensed users every month as a trial. Users with a role of SharePoint administrator or higher can [check the trial promotion status](/powershell/module/sharepoint-online/get-spocopilotpromooptinstatus) and [set trial promotion](/powershell/module/sharepoint-online/set-spocopilotpromooptinstatus) using PowerShell cmdlets. Please see the terms of trial usage [here](/legal/microsoft-365/in-app-trials-terms-of-service). 
+> From January 6, 2025, to June 30, 2025, enterprise tenants with 50 or more Microsoft 365 Copilot licenses will receive 10,000 free SharePoint agents queries for unlicensed users every month as a trial. Users with a role of SharePoint administrator or higher can [check the trial promotion status](/powershell/module/sharepoint-online/get-spocopilotpromooptinstatus) and [set trial promotion](/powershell/module/sharepoint-online/set-spocopilotpromooptinstatus) using PowerShell cmdlets. See the terms of trial usage [here](/legal/microsoft-365/in-app-trials-terms-of-service). 
 
 ## Manage what information a user can access through the agents
 
@@ -75,7 +75,7 @@ Agents created in SharePoint aren't automatically listed or published anywhere. 
 
 ### Turn off agents on sites with restricted content discovery
 
-You as a SharePoint Admin can turn off all agent-related features on individual sites with the [restricted content discovery](/sharepoint/restricted-content-discovery). Once a site is flagged with restricted content discovery, users can't see the Copilot icon on the upper right of the site. Therefore, they don’t have access to use the ready-made agent, create new agents, or add content from that site to any other agents. The restricted content discovery policy leaves site access unchanged but prevents the site's content from being surfaced in Microsoft 365 Copilot or organization-wide search for all users. 
+You as a SharePoint Admin can turn off all agent-related features on individual sites with the [restricted content discovery](/sharepoint/restricted-content-discovery). Once a site is flagged with restricted content discovery, users can't see the Copilot icon on the upper right of the site. Therefore, they don’t have access to use the ready-made agent, create new agents, or add content from that site to any other agents. The restricted content discovery policy leaves site access unchanged but prevents the site's content from being surfaced in Microsoft 365 Copilot or organization-wide search for all users.
 
 ## More resources
 

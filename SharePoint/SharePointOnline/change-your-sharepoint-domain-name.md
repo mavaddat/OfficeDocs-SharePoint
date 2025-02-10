@@ -39,7 +39,7 @@ When you first signed up for Microsoft 365, you created an onmicrosoft.com domai
 
 If your organization is going through a rebranding, merger, or acquisition and needs to change the domain in your SharePoint and OneDrive URLs, you can do this using PowerShell. For example, if your organization name changed from Contoso to Fabrikam, you can change your SharePoint URLs from `contoso.sharepoint.com` to `fabrikam.sharepoint.com`.
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWOnwY]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=929a7177-9508-4970-b74f-4ff19627f2ca]
 
 >[!IMPORTANT]
 > - When the rename operation begins, all sites in the tenant are queued for individual renames to the new domain. While this is happening, sites that are on the original domain would be temporarily inaccessible. Once each site is renamed to the new domain, it will become accessible again.

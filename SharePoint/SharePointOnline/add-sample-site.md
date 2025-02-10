@@ -28,7 +28,7 @@ Discover the modern experiences you can build with Microsoft SharePoint.
 Use the SharePoint [Look Book adoption page](https://adoption.microsoft.com/sharepoint-look-book) to find inspiring samples of communication sites and team sites that look great on the web and on mobile devices. Then, add one or more sample sites to your organization. You can customize the sample to use for your own site or use the site for learning or showing to your colleagues. You can add a sample site by first [browsing and selecting templates](https://adoption.microsoft.com/sharepoint-look-book) then applying [the custom PnP site templates](/sharepoint/dev/solution-guidance/applying-pnp-templates).</br>
 </br>
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4wDLk]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=c91087f4-d17d-4f5e-87fe-ff199e2e32fc]
 
 What's included in a sample? You get:
 
@@ -62,4 +62,3 @@ To use this service, you need to be signed in as a [SharePoint Administrator](./
 [Create and use modern pages](https://support.office.com/article/b3d46deb-27a6-4b1e-87b8-df851e503dec)
 
 [SharePoint Design Guidance](https://spdesign.azurewebsites.net/)
-

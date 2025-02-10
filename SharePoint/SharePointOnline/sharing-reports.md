@@ -1,5 +1,5 @@
 ---
-ms.date: 01/25/2024
+ms.date: 01/13/2025
 title: Report on file and folder sharing in a SharePoint site
 ms.reviewer: srice
 ms.author: ruihu

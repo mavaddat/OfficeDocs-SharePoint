@@ -33,6 +33,10 @@ items:
         href: sharepoint-view-in-edge.md
       - name: Business requirements
         href: business-requirements.md
+      - name: Terms of Service for Microsoft 365 pay-as-you-go
+        href: microsoft-365-pay-as-you-go-terms-of-service.md
+      - name: Microsoft 365 pay-as-you-go services pricing with Azure subscription
+        href: microsoft-365-pay-as-you-go-pricing.md
       - name: Hybrid
         href: hybrid.md
       - name: Sync
@@ -97,10 +101,14 @@ items:
             href: restricted-sharepoint-search-admin-scripts.md
       - name: SharePoint agents
         items:
+        - name: Get started with SharePoint agents
+          href: get-started-sharepoint-agents.md
         - name: Manage Access
           href: manage-access-agents-in-sharepoint.md
         - name: Trial access to SharePoint agents with PowerShell
           href: manage-trial-agents-sharepoint-powershell.md
+        - name: Use agents with pay-as-you-go billing
+          href: sharepoint-agents-azure-billing.md
   - name: Classic to modern
     items:
     - name: Publishing

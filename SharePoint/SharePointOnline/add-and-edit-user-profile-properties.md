@@ -1,5 +1,5 @@
 ---
-ms.date: 07/11/2018
+ms.date: 01/16/2025
 title: "Add and edit user profile properties in SharePoint"
 ms.reviewer: waynewin
 ms.author: ruihu
@@ -53,7 +53,7 @@ If your organization uses the cloud identity model, your user accounts are store
 7. In the **Type** list, select the data type for the property.
 
     > [!NOTE]
-    >  If you select **string (Multi Value)**, the property will be permanently set as a multi-valued property. You cannot change this setting after you select **OK**. You can only delete the property and add it again as a new single-value property.
+    >  If you select **string (Multi Value)**, the property will be permanently set as a multi-valued property. You can't change this setting after you select **OK**. You can only delete the property and add it again as a new single-value property.
   
 8. If you selected binary, HTML, or string, use the **Length** box to enter the maximum number of characters allowed for property values.
 
@@ -98,7 +98,7 @@ If your organization uses the cloud identity model, your user accounts are store
     
  ## Synchronize custom properties
 
-Custom properties from Active Directory or Microsoft Entra ID are not synchronized with SharePoint. For info about bulk updating custom user profile properties by using PowerShell, see [Call the import API from PowerShell](/sharepoint/dev/solution-guidance/bulk-user-profile-update-api-for-sharepoint-online#call-the-import-api-from-powershell).
+Custom properties from Active Directory or Microsoft Entra ID aren't synchronized with SharePoint. For info about bulk updating custom user profile properties by using PowerShell, see [Call the import API from PowerShell](/sharepoint/dev/solution-guidance/bulk-user-profile-update-api-for-sharepoint-online#call-the-import-api-from-powershell).
 
 ## Need more help?
 
