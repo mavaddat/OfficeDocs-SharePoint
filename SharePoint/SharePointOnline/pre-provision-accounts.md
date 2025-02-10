@@ -90,44 +90,49 @@ To verify that OneDrive has been created for your users, see [Get a list of all 
 ## Pre-provision OneDrive for all licensed users in your organization
 
 The following code snippet will pre-provision OneDrive in batches of 199.
+> [!NOTE]
+> You need to provide your Microsoft 365 Tenant ID. For more information, see [Find IDs and domain names](/partner-center/account-settings/find-ids-and-domain-names).
 
 ```PowerShell
-$Credential = Get-Credential
-Connect-MgGraph -Credential $Credential
-Connect-SPOService -Credential $Credential -Url https://contoso-admin.sharepoint.com
+Param(
+    [Parameter(Mandatory = $True)]
+    [String]
+    $SharepointURL,
+    [Parameter(Mandatory = $True)]
+    [String]
+    $tenantID
+)
 
-$list = @()
-#Counters
-$i = 0
-$j = 0
+$scope = 'User.Read.All'
+Connect-MgGraph -TenantId $tenantId -Scopes $scope
+Connect-SPOService -Url $SharepointURL;
+
+$list = @() #list of UPN to pass to the SP command
+$Totalusers = 0 #total user provisioned.
 
 #Get licensed users
-$users = Get-MgUser -All | Where-Object { $_.islicensed -eq $true }
-#total licensed users
-$count = $users.count
+$users = Get-MgUser -Filter 'assignedLicenses/$count ne 0' -ConsistencyLevel eventual -CountVariable licensedUserCount -All -Select UserPrincipalName
 
 foreach ($u in $users) {
-    $i++
-    $j++
-    Write-Host "$j/$count"
+    $Totalusers++
+    Write-Host "$Totalusers/$($users.Count)"
+    $list += $u.userprincipalname
 
-    $upn = $u.userprincipalname
-    $list += $upn
-
-    if ($i -eq 199) {
+    if ($list.Count -eq 199) {
         #We reached the limit
         Write-Host "Batch limit reached, requesting provision for the current batch"
         Request-SPOPersonalSite -UserEmails $list -NoWait
         Start-Sleep -Milliseconds 655
         $list = @()
-        $i = 0
     }
 }
 
-if ($i -gt 0) {
+if ($list.Count -gt 0) {
     Request-SPOPersonalSite -UserEmails $list -NoWait
 }
-Write-Host "Completed OneDrive Provisioning for $j users"
+Disconnect-SPOService
+Disconnect-MgGraph
+Write-Host "Completed OneDrive Provisioning for $Totalusers users"
 ```
 
 ## Related topics

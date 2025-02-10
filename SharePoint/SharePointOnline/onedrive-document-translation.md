@@ -4,7 +4,7 @@ ms.author: mactra
 author: MachelleTranMSFT
 manager: jtremper
 ms.reviewer: karlha
-ms.date: 12/18/2024
+ms.date: 01/23/2025
 audience: admin
 ms.topic: conceptual
 ms.service: one-drive
@@ -30,7 +30,7 @@ OneDrive, powered by Microsoft Syntex, allows you to manually translate document
 
 ## Key features
 
-- **Multiple points of access**: OneDrive document translation can be accessed via **My files** in OneDrive or using the viewer after opening the document.  If you want to access the document translation feature for SharePoint Online libraries, you can also access that feature through OneDrive's **Quick access** section. For more information about document translation for SharePoint Online, see [Overview of document translation in Microsoft Syntex](/microsoft-365/syntex/translation-overview).
+- **Multiple points of access**: OneDrive document translation can be accessed via **My files** in OneDrive or using the viewer after opening the document. If you want to access the document translation feature for SharePoint Online libraries, you can also access that feature through OneDrive's **Quick access** section. For more information about document translation for SharePoint Online, see [Overview of document translation in Microsoft Syntex](/microsoft-365/syntex/translation-overview).
 - **Request multiple languages per translation**: You can select up to 10 languages per document translation.
 - **Translation of different file types**: Translate various file types. [Supported file types](#supported-file-types) include .docx, .pdf, .pptx, and more.
 - **Video transcripts and captions**: The translation feature also supports translating video transcripts and closed caption files. For more information, see [Transcript Translations in Stream for SharePoint](https://support.microsoft.com/office/microsoft-syntex-pay-as-you-go-transcript-translations-in-stream-for-sharepoint-2e34ad1b-e213-47ed-a806-5cc0d88751de).
@@ -82,7 +82,7 @@ Sign in to [OneDrive](https://go.microsoft.com/fwlink/p/?LinkID=2119709) with yo
 The translated file is saved in the same location as the file you selected to translate.
 
 > [!NOTE]
-> It might take up to several hours to generate the translated file(s).
+> It might take up to several hours to generate the translated files.
 
 ---
 
@@ -101,7 +101,7 @@ For legacy file formats, the translated copy is created in the modern equivalent
 - `.ppt` → `.pptx`
 
 > [!NOTE]
-> SharePoint site pages are not supported for translation at this time.
+> SharePoint site pages aren't supported for translation at this time.
 
 ### Supported file size
 
@@ -120,7 +120,6 @@ Translation in Syntex is available for all [supported languages and dialects](/a
 - **Images**: Text embedded in images within documents isn't translated.
 - **Encrypted files**: Encrypted files can't be translated.
 - **Password-protected files**: Password-protected files aren't eligible for translation.
-- **On-demand translation for folders**: Folders in OneDrive aren't eligible for translation.
 
 ---
 
