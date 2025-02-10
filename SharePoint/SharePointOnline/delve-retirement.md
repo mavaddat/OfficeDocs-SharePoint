@@ -41,7 +41,7 @@ Starting December 2024, properties currently surfaced in Delve, including custom
 
 ## Direct links to profile cards
 
-The modern search experiences on Microsoft365.com, Office.com, and in SharePoint include profile pages built on the same data as profile cards. They have a unique link and can be used in documentation, email signatures, etc. Starting December 16, we'll handle redirects from Delve profiles to these profile pages on Microsoft365.com. Although there are three URLs that offer the same experience and will continue to work for some time, we suggest you start using the new domain, m365.cloud.microsoft.
+The modern search experiences on Microsoft365.com, Office.com, and in SharePoint include profile pages built on the same data as profile cards. They have a unique link and can be used in documentation, email signatures, and other related resources. Starting December 16, we'll handle redirects from Delve profiles to these profile pages on Microsoft365.com. Although there are three URLs that offer the same experience and will continue to work for some time, we suggest you start using the new domain, m365.cloud.microsoft.
 
 ### Example links
 
