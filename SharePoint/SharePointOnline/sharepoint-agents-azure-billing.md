@@ -56,8 +56,8 @@ After setting up an Azure resource group for SharePoint agents, you can set up p
 To monitor your organization’s consumption of agents with the pay-as-you-go, you can create a budget in Azure Cost Management with [Bicep](/azure/cost-management-billing/costs/quick-create-budget-bicep) and [ARM template](/azure/cost-management-billing/costs/quick-create-budget-template). Budget helps you inform others about their spending to proactively manage costs and monitor how spending progresses over time. You can also set up various types of cost alerts to monitor the consumption. 
 Furthermore, you can view your organization’s consumption by:
 
-1.	Going to [Azure Cost Management](https://portal.azure.com/#view/Microsoft_Azure_CostManagement/Menu/~/overview/openedBy/AzurePortal). 
-1.	If needed, change the scope to select the subscription that is being used for agents in SharePoint.
+1. Going to [Azure Cost Management](https://portal.azure.com/#view/Microsoft_Azure_CostManagement/Menu/~/overview/openedBy/AzurePortal). 
+1. If needed, change the scope to select the subscription that is being used for agents in SharePoint.
 
 #### Adjusting consumption
 

@@ -1,5 +1,5 @@
 ---
-ms.date: 12/06/2024
+ms.date: 01/24/2025
 title: Get started with SharePoint agents
 ms.reviewer:
 ms.author: ruihu
@@ -32,8 +32,8 @@ description: "Learn how admins can get started with SharePoint agents, including
 
 | **Action**          | **Requirements for the user**                                                                                       |
 |---------------------|--------------------------------------------------------------------------------------------------------|
-| **Set up an agent** | - Assigned with a Copilot license or your organization has the pay-as-you-go billing set up<br>- Ability to add new files to a SharePoint site    |
-| **Use an agent**    | - Assigned with a Copilot license or your organization has the pay-as-you-go billing set up                                                       |
+| **Create and configure an agent** | - Assigned with a Copilot license or your organization has the pay-as-you-go billing set up<br>- Ability to add new files to a SharePoint site    |
+| **Interact with an agent**    | - Assigned with a Copilot license or your organization has the pay-as-you-go billing set up                                                       |
 
 > [!IMPORTANT]
 > If your organization hasn’t adopted Microsoft 365 Copilot, it’s recommended to review the requirements and learn how to adopt it for your organization. [Learn more](/copilot/microsoft-365/microsoft-365-copilot-overview).  
@@ -44,51 +44,16 @@ Users can use SharePoint agents after being [assigned a Copilot license](/copilo
 
 ## Use agents with pay-as-you-go billing
 
-### Set up SharePoint agents as an Azure resource
+To use pay-as-you-go billing, you need to first set up SharePoint agents  as a resource in Azure. That resource is used whenever a user without a Microsoft 365 Copilot license uses a SharePoint agent. For more information, see [Use agents with pay-as-you-go billing](/sharepoint/sharepoint-agents-azure-billing).
 
-To use pay-as-you-go billing, you need to first set up SharePoint agents  as a resource in Azure. That resource is used whenever a user without a Microsoft 365 Copilot license uses a SharePoint agent.
+## Comparison of Copilot licenses, pay-as-you-go billing, and the trial promotion
 
-#### Prerequisites to set up SharePoint agents as a resource in Azure
+What does the user get with pay-as-you-go billing, a Copilot license and the trial promotion? Here is a comparison:
 
-- Have at least a SharePoint administrator role
-- Have Owner or Contributor Azure roles to a pay-as-you-go Azure subscription
-- Have Owner or Contributor Azure roles to an Azure resource group linked to the same Azure subscription
-
-> [!NOTE]
-> - The Owner or Contributor Azure roles are only needed in the time windows where you set up billing.
-> -	To grant an owner or Contributor Azure role, follow the instructions [here](/azure/role-based-access-control/role-assignments-portal). 
-
-
-To set up SharePoint agents as an Azure resource:
-
-1. If you haven’t, [create an Azure subscription](https://azure.microsoft.com/pricing/offers/ms-azr-0003p/) with the pay-as-you-go offer. 
-1. [Create an Azure resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups) for SharePoint agents.
-
-### Set up pay-as-you-go billing for SharePoint agents
-
-After setting up an Azure resource group for SharePoint agents, you can set up pay-as-you-go billing for SharePoint agents in the Microsoft 365 admin center. Here's how:
-
-1. Go to the Microsoft 365 admin center, Org settings, and then pay-as-you-go services (formerly Microsoft Syntex).
-1. Under Billing, select agents in SharePoint.
-1. Select the Azure subscription and resource group that you want to use. Then select the region where you want the agents in SharePoint resource to be created.
-1. Accept the pay-as-you-go billing terms of service.
-1. Select Save.
-
-
-### Monitor consumption in Azure Cost Management
-
-
-To monitor your organization’s consumption of agents with the pay-as-you-go, you can create a budget in Azure Cost Management with [Bicep](/azure/cost-management-billing/costs/quick-create-budget-bicep) and [ARM template](/azure/cost-management-billing/costs/quick-create-budget-template). Budget helps you inform others about their spending to proactively manage costs and monitor how spending progresses over time. You can also set up various types of cost alerts to monitor the consumption. 
-Furthermore, you can view your organization’s consumption by:
-
-1.	Going to [Azure Cost Management](https://portal.azure.com/#view/Microsoft_Azure_CostManagement/Menu/~/overview/openedBy/AzurePortal)
-1.	If needed, change the scope to select the subscription that is being used for agents in SharePoint.
-
-### Adjusting consumption
-
-Using pay-as-you-go billing means that each user is responsible for their own consumption. Work with people in your organization to ensure the efficient use of agents in SharePoint. For example, restrict access to SharePoint sites with agents to only those who need to use them.
-
-### Paying your invoice
-
-Your organization receives an invoice for all Azure services used at the end of each month. You can pay these invoices under the Invoices section in the subscription that you use for agents in SharePoint.
-
+| [Licensed for Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-licensing) | [Pay-as-you-go](/sharepoint/sharepoint-agents-azure-billing) Enabled | [Trial promotion access](/sharepoint/manage-trial-agents-sharepoint-powershell#what-is-the-trial-access-to-sharepoint-agents) opted In | What does the user get? |
+|-----------------------------------------|-----------------------|-----------------------------|-------------------------|
+| No                                      | No                    | No                          | Cannot create or use agents |
+| No                                      | Yes                   | No                          | All unlicensed users get to create and use agents and are billed per pay-as-you-go billing. |
+| No                                      | Yes                   | Yes                         | All unlicensed users can create and use agents up to 10,000 queries per month and then pay-as-you-go kicks in once the user exceeds the 10,000 queries limit for the month; or once the six-month promotion is over. |
+| Yes                                     | Yes                   | Yes                         | - Licensed users can create and use agents without using the trial promotion or pay-as-you-go billing. <br>- Unlicensed users can create and use agents up to 10,000 queries per month and then pay-as-you-go kicks in once the user exceeds the 10,000 queries limit for the month; or once the six-month promotion is over. |
+| Yes                                     | No                    | No                          | - Licensed users can create and use agents. <br>- Unlicensed users can't create or use agents. |
