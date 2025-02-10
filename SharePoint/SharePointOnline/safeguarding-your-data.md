@@ -5,7 +5,7 @@ manager: jtremper
 recommendations: true
 ms.author: ruihu
 author: maggierui
-ms.date: 5/25/2018
+ms.date: 01/13/2025
 audience: Admin
 f1.keywords:
 - NOCSH
@@ -89,7 +89,7 @@ Our datacenters are geo-distributed within the region and fault tolerant. Data i
   
 Metadata backups are kept for 14 days and can be restored to any point in time within a five-minute window. 
   
-In the case of a ransomware attack, you can use Version history ([Enable and configure versioning for a list or library](https://support.office.com/article/1555d642-23ee-446a-990a-bcab618c7a37)) to roll back, and the recycle bin or site collection recycle bin to restore ([Restore deleted items from the site collection recycle bin](https://support.office.com/article/5fa924ee-16d7-487b-9a0a-021b9062d14b)). If an item is removed from the site collection recycle bin, you can call support within 14 days to access a backup. For information about the new Files Restore feature that lets users restore an entire OneDrive to any point within the past 30 days, see [Restore your OneDrive](https://support.office.com/article/fa231298-759d-41cf-bcd0-25ac53eb8a15.aspx).
+In the case of a ransomware attack, you can use Version history ([Enable and configure versioning for a list or library](https://support.office.com/article/1555d642-23ee-446a-990a-bcab618c7a37)) to roll back, and the recycle bin or site collection recycle bin to restore ([Restore deleted items from the site collection recycle bin](https://support.office.com/article/5fa924ee-16d7-487b-9a0a-021b9062d14b)). If an item is removed from the site collection recycle bin, you can call support within 14 days to access a backup. For information about the new Files Restore feature that lets users restore an entire OneDrive to any point within the past 30 days, see [Restore your OneDrive](https://support.office.com/article/fa231298-759d-41cf-bcd0-25ac53eb8a15).
   
 ## Continuously validated
  
@@ -99,7 +99,7 @@ After we have an inventory, we can monitor and remediate the health of machines.
   
 We have an automated workflow to identify machines that don't meet policies and queue them for replacement.
   
-The Microsoft 365 "Red Team" within Microsoft is made up of intrusion specialists. They look for any opportunity to gain unauthorized access. The "Blue Team" is made up of defense engineers who focus on prevention, detection, and recovery. They build intrusion detection and response technologies. To keep up with the learnings of the security teams at Microsoft, see [Security, Privacy, and Compliance Blog](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/bg-p/securityprivacycompliance).
+The Microsoft 365 "Red Team" within Microsoft is made up of intrusion specialists. They look for any opportunity to gain unauthorized access. The "Blue Team" is made up of defense engineers who focus on prevention, detection, and recovery. They build intrusion detection and response technologies. To keep up with the learnings of the security teams at Microsoft, see [Security, Compliance, and Identity Blog](https://techcommunity.microsoft.com/category/security-compliance-and-identity/blog/microsoftsecurityandcompliance).
   
 To monitor and observe activity in your Microsoft 365 subscription:
   
@@ -117,6 +117,6 @@ To meet your regulatory requirements:
   
 - Audit Microsoft 365 activity in the Security &amp; Compliance Center: [Search the audit log in the Microsoft 365 Security &amp; Compliance Center](/office365/securitycompliance/search-the-audit-log-in-security-and-compliance).
     
-- Create eDiscovery cases: [Manage eDiscovery cases in the Microsoft 365 Security &amp; Compliance Center](/office365/SecurityCompliance/ediscovery-cases)
+- Create eDiscovery cases: [Manage eDiscovery cases in the Microsoft 365 Security &amp; Compliance Center](/office365/SecurityCompliance/ediscovery-cases).
     
 - Apply retention policies: [Create and apply information management policies](https://support.office.com/article/eb501fe9-2ef6-4150-945a-65a6451ee9e9).

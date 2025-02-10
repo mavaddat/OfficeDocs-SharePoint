@@ -126,7 +126,7 @@ We can also see that the `TargetExpirationDate` is set for April 19, 2023, at 18
 
 Before you start your analysis, you should update the `TargetExpirationDate` column in your report file to the dates that you want, like the versions to be expired. Again, if you choose a date that is in the past for a version, then that version will be treated as "version that had already expired" and will be deleted right away after you start the trim.  
 
-You can manually update the dates in `TargetExpirationDate` by editing the csv file. However, you may have too many rows to update by hand. To bulk update the column, you can use Excel formulas, or you can also use one of the PowerShell scripts we have provided in [Tutorial: Run 'What-If' analysis](tutorial-run-what-if-analysis.md). Specifically, you may choose a trimming mode, run the corresponding script to get a updated csv file with `TargetExpirationDate` filled out based on that trimming mode, and continue from there.
+You can manually update the dates in `TargetExpirationDate` by editing the csv file. However, you may have too many rows to update by hand. To bulk update the column, you can use Excel formulas, or you can also use one of the PowerShell scripts we have provided in [Tutorial: Run 'What-If' analysis](tutorial-run-what-if-analysis.md). Specifically, you may choose a trimming mode, run the corresponding script to get an updated csv file with `TargetExpirationDate` filled out based on that trimming mode, and continue from there.
 
 ### Option one: Analyze the report using Excel
 
@@ -138,7 +138,7 @@ Open the shared Excel workbook [AnalyzeReportFile_Template.xlsx](https://downloa
     - **Summary**: Analyze the current state of version storage for this site and deleted version distribution under the new settings.
     - **Impacted Users**: Review the users whose versions would be impacted under the new settings.
     - **Version Count**: A table and graph showing the numbers of versions that will be available over time under the current schedule and the number of versions that will be available under the new schedule.
-    - **Size of Versions Expired**: Compare the size of versions that will be deleted over time under the current schedule and the number of versions that will be available under the new schedule.
+    - **Version Size Analysis**: Compare the size of versions that will be deleted over time under the current schedule and the number of versions that will be available under the new schedule.
     - **File Level Analysis**: Review file level version deletions under the new settings.  
 
 Populate the workbook by following these steps:
@@ -155,12 +155,16 @@ Populate the workbook by following these steps:
 
     :::image type="content" source="media/version-history/analyze-version-step3.png" lightbox="media/version-history/analyze-version-step3.png" alt-text="Screenshot of analyze version data tab.":::
 
-4. On the **Calculations** worksheet, autofill the **Number of Versions** and **Number of Versions Remaining After Deletion** columns.
+4. On the **File Level Analysis** worksheet, autofill the **Number of Versions** and **Number of Versions Remaining After Deletion** columns.
 
     :::image type="content" source="media/version-history/analyze-version-step4-a.png" lightbox="media/version-history/analyze-version-step4-a.png" alt-text="Screenshot of calculations worksheet 1.":::
 
     :::image type="content" source="media/version-history/analyze-version-step4-b.png" lightbox="media/version-history/analyze-version-step4-b.png" alt-text="Screenshot of calculations worksheet 2.":::
-
+   
+   > [!TIP]
+   > You can select the cell with data and double click on the fill handle to complete autofill.
+   > :::image type="content" source="media/version-history/fill-handle.gif" lightbox="media/version-history/fill-handle.gif" alt-text="The icon for Excel fill handle.":::
+   
 5. On the **Impacted Users** worksheet, autofill the **Number of Versions Will be Deleted** column.
 
     :::image type="content" source="media/version-history/analyze-version-step5.png" lightbox="media/version-history/analyze-version-step5.png" alt-text="Screenshot of impacted users worksheet.":::

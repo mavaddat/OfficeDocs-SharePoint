@@ -70,7 +70,8 @@ In this scenario, you will learn how to:
     
 **Video: Watch a demonstration of the BCS hybrid scenario**
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/f62fa1b6-188e-4588-b029-a7e02f3e53da?autoplay=false]
+> [!VIDEO ce0b7a2b-4707-425d-b6cb-5326af94e3ba]
+
 ## How to use these procedures
 <a name="section3"> </a>
 

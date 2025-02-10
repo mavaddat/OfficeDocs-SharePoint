@@ -1,5 +1,5 @@
 ---
-ms.date: 09/19/2020
+ms.date: 01/15/2025
 title: "Information architecture models and examples"
 ms.reviewer: 
 ms.author: ruihu
