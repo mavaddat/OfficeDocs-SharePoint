@@ -112,7 +112,7 @@ To effectively manage permission scopes in SharePoint, follow these recommendati
 - Ensure folders that need unique permissions are shared before they exceed 100,000 items. 
 - For developers, regularly review and minimize unique permission scopes, use groups, and monitor performance to maintain optimal SharePoint performance. 
 - For end users, use default permission groups, review access requests, and conduct regular audits to keep SharePoint permissions clean and efficient. 
-- Use [SharePoint groups](/sharepoint/dev/general-development/authorization-users-groups-and-the-object-model-in-sharepoint#users-groups-and-principals) and [Microsoft Entra ID](/entra/fundamentals/what-is-entra) for managing user references and permissions efficiently. 
+- Use [SharePoint groups](/sharepoint/dev/general-development/authorization-users-groups-and-the-object-model-in-sharepoint#users-groups-and-principals) and [Microsoft Entra](/entra/fundamentals/what-is-entra) for managing user references and permissions efficiently. 
 
 ## Resources
 
