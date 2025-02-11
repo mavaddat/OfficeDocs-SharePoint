@@ -117,4 +117,3 @@ To effectively manage permission scopes in SharePoint, follow these recommendati
 ## Resources
 
 - [SharePoint Limits - Service Descriptions](/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits)
-- [Unique security scopes per list or library](/sharepoint/troubleshoot/lists-and-libraries/unique-security-scopes-per-list-or-library)
