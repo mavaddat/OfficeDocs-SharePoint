@@ -29,7 +29,7 @@ description: "In this article, you learn about effectively managing permission s
 Effectively managing permissions in SharePoint is essential for security and proper user access. As the number of documents in SharePoint sites increases, poor design and implementation can quickly lead to permission scope limits, negatively affecting performance. This article explains permission scopes and access control mechanisms, offering best practices for designing and managing permission scopes efficiently within SharePoint.
 First, let’s review some key components related to permission scopes. 
 
-## Key Concepts and components
+## Key concepts and components
 
 - Access Control List—An Access Control List (ACL) is composed of a set of Access Control Entries (ACEs). 
 - Access Control Entry—An Access Control Entry (ACE) in SharePoint is a combination of a principal and a rights mask (read, read/write). 
