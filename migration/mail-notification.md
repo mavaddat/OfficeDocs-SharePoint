@@ -48,7 +48,7 @@ To set up email notification for your cloud migration project:
 
 ## Notification content
 
-You will receive the following email notifications based on your configured schedule:
+You receive the following email notifications based on your configured schedule:
 
 **Email details**:
 - **Subject**: Your latest migration progress
@@ -61,5 +61,5 @@ You will receive the following email notifications based on your configured sche
 - Migration Statistics: Number of files and data volume (migrated and failed)
 
 >[!NOTE]
-> - Scheduled tasks are not included in the Migration Overview
+> - Scheduled tasks aren't included in the Migration Overview
 > - Migration Statistics show cumulative results from all migration transactions
