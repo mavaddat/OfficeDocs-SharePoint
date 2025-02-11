@@ -132,7 +132,7 @@ Items:
       - name: File versions
         href: file-versions.md
       - name: Email notification
-        href: email-notification.md
+        href: mail-notification.md
     - name: Migration time estimator
       href: mm-time-estimator.md
     - name: Reports and codes for cloud migrations
