@@ -36,7 +36,7 @@ First, let’s review some key components related to permission scopes.
 - Principal—A principal can be an individual user or a [group](/microsoft-365/admin/create-groups/compare-groups). If a group is present in an ACE within an ACL, all members of that group are granted the permission level specified by the ACE. 
 - Permission scope—A permission scope is a uniquely secured object. This means that its ACL can be set differently from its parent. Files and folders can have the same permissions if they're all part of the same directory tree. You can have up to 50,000 unique ACLs within a document library, but for best performance it’s recommended that you keep it under 5,000. 
 - Permission inheritance—By default, a site collection contains multiple sites. Each site can have one or more lists and document libraries, all of which inherit their permissions from the site collection. Similarly, folders, lists, and documents inherit permissions from the parent object that contains them. For more information, see [Customize permissions for a SharePoint list or library](https://support.microsoft.com/office/customize-permissions-for-a-sharepoint-list-or-library-02d770f3-59eb-4910-a608-5f84cc297782). 
-- Unique permissions—By default, a file, or folder inherits the permissions of the library or folder that contains it. When a file is assigned "unique permissions," it stops inheriting permissions from its parent and can have its permissions set independently. This means that the file or folder now has its own permission scope. 
+- Unique permissions—By default, a file or folder inherits the permissions of the library or folder that contains it. When a file is assigned "unique permissions," it stops inheriting permissions from its parent and can have its permissions set independently. This means that the file or folder now has its own permission scope. 
 
 ## Permission scope and permission inheritance
 
@@ -46,9 +46,9 @@ When a document library is created, it has a single permission scope, meaning al
 
 ### Breaking inheritance 
 
-Breaking inheritance on a file or folder creates a new permission scope, increasing the scope count. Breaking inheritance on a file or folder increases the scope count by 1. 
+Breaking inheritance on a file or folder creates a new permission scope, increasing the scope count by 1. 
 
-You can break the inheritance in two methods:
+You can break the inheritance using two methods:
 
 - You can [break inheritance manually](https://support.microsoft.com/office/customize-permissions-for-a-sharepoint-list-or-library-02d770f3-59eb-4910-a608-5f84cc297782#bkmk-break-inheritance) by going to the settings of the library.  
 - If you share a file or folder, this action breaks permission inheritance on the file or folder, allowing its ACL (and the content within the folder) to differ from its parent. 
@@ -112,7 +112,7 @@ To effectively manage permission scopes in SharePoint, follow these recommendati
 - Ensure folders that need unique permissions are shared before they exceed 100,000 items. 
 - For developers, regularly review and minimize unique permission scopes, use groups, and monitor performance to maintain optimal SharePoint performance. 
 - For end users, use default permission groups, review access requests, and conduct regular audits to keep SharePoint permissions clean and efficient. 
-- Use [SharePoint groups](/sharepoint/dev/general-development/authorization-users-groups-and-the-object-model-in-sharepoint#users-groups-and-principals) and [Microsoft Entra](/entra/fundamentals/what-is-entra) for managing user references and permissions efficiently. 
+- Use [SharePoint groups](/sharepoint/dev/general-development/authorization-users-groups-and-the-object-model-in-sharepoint#users-groups-and-principals) and [Microsoft Entra ID](/entra/fundamentals/what-is-entra) for managing user references and permissions efficiently. 
 
 ## Resources
 
