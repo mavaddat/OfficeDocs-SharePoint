@@ -1,10 +1,10 @@
 ---
 title: Hardware and software requirements for SharePoint 2013
 ms.reviewer: 
-ms.author: serdars
-author: SerdarSoysal
-manager: serdars
-ms.date: 3/7/2018
+ms.author: ruihu
+author: maggierui
+manager: jtremper
+ms.date: 12/2/2024
 audience: ITPro
 f1.keywords:
 - NOCSH
@@ -27,7 +27,9 @@ description: Lists the minimum hardware and software requirements to install and
   
     
 > [!IMPORTANT]
-> Some of the hardware requirement values in this article are based on test results from SharePoint 2010 Products and still apply to SharePoint 2013. This article will be updated with appropriate values and republished when new data becomes available. Hardware requirement values obtained from SharePoint 2010 Products that are listed in this article do not apply to search in SharePoint 2013. > This article links to SharePoint 2010 Products guidance where that guidance is still valid. The SharePoint 2010 Products guidance is not applicable for search in SharePoint 2013 because the search architecture has changed significantly. > The hardware and software requirements in this article refer to physical and virtual servers in a SharePoint farm. 
+> Some of the hardware requirement values in this article are based on test results from SharePoint 2010 Products and still apply to SharePoint 2013. This article will be updated with appropriate values and republished when new data becomes available. Hardware requirement values obtained from SharePoint 2010 Products that are listed in this article do not apply to search in SharePoint 2013.
+> This article links to SharePoint 2010 Products guidance where that guidance is still valid. The SharePoint 2010 Products guidance is not applicable for search in SharePoint 2013 because the search architecture has changed significantly.
+> The hardware and software requirements in this article refer to physical and virtual servers in a SharePoint farm. 
   
 ## Overview
 <a name="section1"> </a>
@@ -59,11 +61,11 @@ If you plan to use capabilities that are offered through SharePoint 2013 or thro
 ## Hardware requirements—location of physical servers
 <a name="hwLocServers"> </a>
 
-Some enterprises have data centers that are located in close proximity to one another and are connected by high-bandwidth fiber optic links. In this environment it is possible to configure the two data centers as a single farm. This distributed farm topology is called a stretched farm. Stretched farms for SharePoint 2013 are supported as of April 2013. 
+Some enterprises have data centers that are located in close proximity to one another and are connected by high-bandwidth fiber optic links. In this environment, it's possible to configure the two data centers as a single farm. This distributed farm topology is called a stretched farm. Stretched farms for SharePoint 2013 are supported as of April 2013. 
   
 For a stretched farm architecture to work as a supported high-availability solution, the following prerequisites must be met:
   
-- There is a highly consistent intra-farm latency of \<1ms one way, 99.9% of the time over a period of ten minutes. (Intra-farm latency is commonly defined as the latency between the front-end web servers and the database servers.)
+- There's a highly consistent intra-farm latency of \<1ms one way, 99.9% of the time over a period of ten minutes. (Intra-farm latency is commonly defined as the latency between the front-end web servers and the database servers.)
     
 - The bandwidth speed must be at least 1 gigabit per second. 
     
@@ -94,7 +96,7 @@ The requirements in the following table apply to database servers in environment
 |**Component**|**Minimum requirement**|
 |:-----|:-----|
 |Processor  <br/> | 64-bit, 4 cores for small deployments (fewer than 1,000 users)  <br/>  64-bit, 8 cores for medium deployments (between 1,000 to 10,000 users)  <br/> |
-|RAM  <br/> | 8 GB for small deployments (fewer than 1,000 users)  <br/>  16 GB for medium deployments (between 1,000 to 10,000 users)  <br/>  For large deployments over 10,000 users, see the "Estimate memory requirements" section in [Storage and SQL Server capacity planning and configuration (SharePoint Server 2010)](../administration/storage-and-sql-server-capacity-planning-and-configuration.md). This document does not apply to search in SharePoint 2013.  <br/>  These values are larger than those recommended as the minimum values for SQL Server because of the distribution of data that is required for a SharePoint 2013 environment. For more information about SQL Server system requirements, see [Hardware and Software Requirements for Installing SQL Server 2008 R2](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server).  <br/> |
+|RAM  <br/> | 8 GB for small deployments (fewer than 1,000 users)  <br/>  16 GB for medium deployments (between 1,000 to 10,000 users)  <br/>  For large deployments over 10,000 users, see the "Estimate memory requirements" section in [Storage and SQL Server capacity planning and configuration (SharePoint Server 2010)](../administration/storage-and-sql-server-capacity-planning-and-configuration.md). This document doesn't apply to search in SharePoint 2013.  <br/>  These values are larger than those recommended as the minimum values for SQL Server because of the distribution of data that is required for a SharePoint 2013 environment. For more information about SQL Server system requirements, see [Hardware and Software Requirements for Installing SQL Server 2008 R2](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server).  <br/> |
 |Hard disk  <br/> |80 GB for system drive  <br/> Hard disk space depends on how much content that you have in your deployment. For information about how to estimate the amount of content and other databases for your deployment, see [Storage and SQL Server capacity planning and configuration (SharePoint Server 2010)](../administration/storage-and-sql-server-capacity-planning-and-configuration.md).  <br/> |
    
 ## Software requirements
@@ -120,7 +122,7 @@ The Microsoft SharePoint Products Preparation Tool can assist you in the install
 > SQL Server 2014 requires the May 2014 Cumulative Update to be installed. To install the May 2014 Cumulative Update see [Updates to SharePoint 2013](/officeupdates/). 
   
 > [!NOTE]
-> At this time, SQL Server 2016 RTM is not supported. 
+> SQL Server 2016 or higher is not supported. 
   
 ### Minimum software requirements
 
@@ -143,7 +145,7 @@ Minimum requirements for a database server in a farm:
     
 - The SharePoint parsing process crashes in Windows Server 2008 R2 (KB 2554876)
     
-- FIX: IIS 7.5 configurations are not updated when you use the ServerManager class to commit configuration changes (KB 2708075)
+- FIX: IIS 7.5 configurations aren't updated when you use the ServerManager class to commit configuration changes (KB 2708075)
     
 - Hotfix: ASP.NET (SharePoint) race condition in .NET 4.5 RTM:
     
@@ -167,14 +169,14 @@ Minimum requirements for a single server with built-in database:
   - Windows Server 2012 R2 Standard or Datacenter
     
     > [!NOTE]
-    > Windows Server 2012 R2 is only supported on a SharePoint Server 2013 Service Pack 1 environment. For additional information about Windows Server 2012 R2 support, see [SharePoint 2013 SP1 support in Windows Server 2012 R2](https://support.microsoft.com/kb/2891274/).
+    > Windows Server 2012 R2 is only supported on a SharePoint Server 2013 Service Pack 1 environment. For more information about Windows Server 2012 R2 support, see [SharePoint 2013 SP1 support in Windows Server 2012 R2](https://support.microsoft.com/kb/2891274/).
     
     > [!NOTE]
     > Installing Office 2013 and SharePoint Server 2013 on the same computer is not supported.
   
 - The SharePoint parsing process crashes in Windows Server 2008 R2 (KB 2554876)
     
-- FIX: IIS 7.5 configurations are not updated when you use the ServerManager class to commit configuration changes (KB 2708075)
+- FIX: IIS 7.5 configurations aren't updated when you use the ServerManager class to commit configuration changes (KB 2708075)
     
 - Hotfix: ASP.NET (SharePoint) race condition in .NET 4.5 RTM: 
     
@@ -227,11 +229,11 @@ Minimum requirements for front-end web servers and application servers in a farm
   - Windows Server 2012 R2 Standard or Datacenter
     
     > [!NOTE]
-    > Windows Server 2012 R2 is only supported on a SharePoint Server 2013 Service Pack 1 environment. For additional information about Windows Server 2012 R2 support, see [SharePoint 2013 SP1 support in Windows Server 2012 R2](https://support.microsoft.com/kb/2891274/).
+    > Windows Server 2012 R2 is only supported on a SharePoint Server 2013 Service Pack 1 environment. For more information about Windows Server 2012 R2 support, see [SharePoint 2013 SP1 support in Windows Server 2012 R2](https://support.microsoft.com/kb/2891274/).
   
 - The SharePoint parsing process crashes in Windows Server 2008 R2 (KB 2554876) 
     
-- FIX: IIS 7.5 configurations are not updated when you use the ServerManager class to commit configuration changes (KB 2708075)
+- FIX: IIS 7.5 configurations aren't updated when you use the ServerManager class to commit configuration changes (KB 2708075)
     
 - Hotfix: ASP.NET (SharePoint) race condition in .NET 4.5 RTM: 
     
@@ -289,19 +291,19 @@ The following are the minimum SharePoint 2013 services and service applications 
 ## Optional software
 <a name="OptionalSoftware"> </a>
 
-The optional software in this section is supported but is not required to install or use SharePoint 2013. This software might be required by capabilities such as business intelligence. For more information about system requirements for other capabilities, see [Hardware and software requirements for other SharePoint 2013 capabilities](hardware-and-software-requirements.md).
+The optional software in this section is supported but isn't required to install or use SharePoint 2013. This software might be required by capabilities such as business intelligence. For more information about system requirements for other capabilities, see [Hardware and software requirements for other SharePoint 2013 capabilities](hardware-and-software-requirements.md).
   
 |**Environment**|**Optional software**|
 |:-----|:-----|
-|Single server with built-in database, front-end web servers, and application servers in a farm  <br/> | .NET Framework Data Provider for SQL Server (part of Microsoft .NET Framework)  <br/>  .NET Framework Data Provider for OLE DB (part of Microsoft .NET Framework)  <br/>  Workflow Manager  <br/>  You can install Workflow Manager on a dedicated computer.  <br/>  Microsoft SQL Server 2008 R2 Reporting Services Add-in for Microsoft SharePoint Technologies  <br/>  This add-in is used by Access Services for SharePoint Server 2016.  <br/>  Microsoft SQL Server 2012 Data-Tier Application (DAC) Framework 64-bit edition  <br/>  Microsoft SQL Server 2012 Transact-SQL ScriptDom 64-bit edition  <br/>  Microsoft System CLR Types for Microsoft SQL Server 2012 64-bit edition  <br/>  Microsoft SQL Server 2012 with Service Pack 1 (SP1) LocalDB 64-bit edition  <br/>  Microsoft Data Services for the .NET Framework 4 and Silverlight 4 (formerly ADO.NET Data Services)  <br/>  Exchange Web Services Managed API, version 1.2  <br/>  Microsoft SQL Server 2008 R2 Remote Blob Store which is part of the Microsoft SQL Server 2008 R2 Feature Pack  <br/>  SQL Server 2008 R2 Analysis Services ADOMD.NET  <br/>  KB 2472264  <br/>  If you are running a geo-distributed deployment and your servers are running Windows Server 2008 R2, then installing KB 2472264 can optimize network latency in a dedicated datacenter network. For more information, and to download the software, see [You cannot customize some TCP configurations by using the netsh command in Windows Server 2008 R2](https://go.microsoft.com/fwlink/p/?LinkId=254821).  <br/> |
-|Client computer  <br/> | Windows 7  <br/>  For information about how to use Windows 7 with SharePoint 2013 in a development environment, see [Start: Set up the development environment for SharePoint 2013](/sharepoint/dev/general-development/set-up-a-general-development-environment-for-sharepoint).  <br/>  Silverlight 3  <br/>  Office 2016  <br/>  Microsoft Office 2010 with Service Pack 2  <br/>  With [KB 2553248](https://go.microsoft.com/fwlink/p/?LinkID=254211) <br/>  Microsoft Office 2007 with Service Pack 2  <br/>  With [KB 2583910](https://go.microsoft.com/fwlink/p/?LinkID=254212) <br/>  Microsoft Office for Mac 2011 with Service Pack 1  <br/>  Microsoft Office 2008 for Mac version 12.2.9  <br/>  Support ends April 9, 2013.  <br/> |
+|Single server with built-in database, front-end web servers, and application servers in a farm  <br/> | .NET Framework Data Provider for SQL Server (part of Microsoft .NET Framework)  <br/>  .NET Framework Data Provider for OLE DB (part of Microsoft .NET Framework)  <br/>  Workflow Manager  <br/>  You can install Workflow Manager on a dedicated computer.  <br/>  Microsoft SQL Server 2008 R2 Reporting Services Add-in for Microsoft SharePoint Technologies  <br/>  This add-in is used by Access Services for SharePoint Server 2016.  <br/>  Microsoft SQL Server 2012 Data-Tier Application (DAC) Framework 64-bit edition  <br/>  Microsoft SQL Server 2012 Transact-SQL ScriptDom 64-bit edition  <br/>  Microsoft System CLR Types for Microsoft SQL Server 2012 64-bit edition  <br/>  Microsoft SQL Server 2012 with Service Pack 1 (SP1) LocalDB 64-bit edition  <br/>  Microsoft Data Services for the .NET Framework 4 and Silverlight 4 (formerly ADO.NET Data Services)  <br/>  Exchange Web Services Managed API, version 1.2  <br/>  Microsoft SQL Server 2008 R2 Remote Blob Store which is part of the Microsoft SQL Server 2008 R2 Feature Pack  <br/>  SQL Server 2008 R2 Analysis Services ADOMD.NET  <br/>  KB 2472264  <br/>  If you're running a geo-distributed deployment and your servers are running Windows Server 2008 R2, then installing KB 2472264 can optimize network latency in a dedicated datacenter network. For more information, and to download the software, see [You can't customize some TCP configurations by using the netsh command in Windows Server 2008 R2](https://go.microsoft.com/fwlink/p/?LinkId=254821).  <br/> |
+|Client computer  <br/> | Windows 7  <br/>  For information about how to use Windows 7 with SharePoint 2013 in a development environment, see [Start: Set up the development environment for SharePoint 2013](/sharepoint/dev/general-development/set-up-a-general-development-environment-for-sharepoint).  <br/>  Silverlight 3  <br/>  Office 2016  <br/>  [Microsoft Office 2010 with Service Pack 2](https://support.microsoft.com/topic/description-of-office-2010-service-pack-2-5f8554ef-252d-2bf4-681f-0246c6112cde) <br/>  [Microsoft Office 2007 with Service Pack 2](https://support.microsoft.com/topic/description-of-office-compatibility-pack-service-pack-2-87a53160-a566-f027-c6c5-f09fbf61b0fb) <br/>  Microsoft Office for Mac 2011 with Service Pack 1  <br/>  Microsoft Office 2008 for Mac version 12.2.9  <br/>  Support ends April 9, 2013.  <br/> |
    
 ## Links to applicable software
 <a name="section5"> </a>
 
 To install Windows Server 2008 R2 SP1, Windows Server 2012, SQL Server, or SharePoint 2013, you can go to the web sites that are listed in this section. You can install most software prerequisites through the SharePoint 2013 Start page. The software prerequisites are also available from web sites that are listed in this section. You can enable the Web Server (IIS) role and the Application Server role in Server Manager.
   
-In scenarios where installing prerequisites directly from the Internet is not possible you can download the prerequisites and then install them from a network share. For more information, see [Install prerequisites for SharePoint Server from a network share](install-prerequisites-from-network-share.md).
+In scenarios where installing prerequisites directly from the Internet isn't possible you can download the prerequisites and then install them from a network share. For more information, see [Install prerequisites for SharePoint Server from a network share](install-prerequisites-from-network-share.md).
   
 - [Windows 7 and Windows Server 2008 R2 Service Pack 1 (SP1) (KB 976932)](https://go.microsoft.com/fwlink/p/?LinkId=214566)
     
@@ -313,11 +315,9 @@ In scenarios where installing prerequisites directly from the Internet is not po
     
 - [The SharePoint parsing process crashes in Windows Server 2008 R2 (KB 2554876)](https://go.microsoft.com/fwlink/p/?LinkId=258850)
     
-- [FIX: IIS 7.5 configurations are not updated when you use the ServerManager class to commit configuration changes (KB 2708075)](https://go.microsoft.com/fwlink/p/?LinkId=258851)
+- [FIX: IIS 7.5 configurations aren't updated when you use the ServerManager class to commit configuration changes (KB 2708075)](https://go.microsoft.com/fwlink/p/?LinkId=258851)
     
 - Hotfix: ASP.NET (SharePoint) race condition in .NET 4.5 RTM: 
-    
-  - [Windows Server 2008 R2 SP1 (KB 2759112)](https://go.microsoft.com/fwlink/p/?LinkId=267536)
     
   - [Windows Server 2012 and Windows 8 (KB 2765317)](/windows/compatibility/windows-8-introduction)
     
@@ -343,6 +343,10 @@ In scenarios where installing prerequisites directly from the Internet is not po
     
 - [Windows Identity Extensions for Windows Server 2008 R2](https://go.microsoft.com/fwlink/p/?linkid=252368)
     
+- [Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=235496)
+
+- [Cumulative Update Package 1 for Microsoft AppFabric 1.1 for Windows Server (KB 2671763)](https://go.microsoft.com/fwlink/?LinkId=251471)
+
 - [Microsoft SQL Server 2008 R2 Feature Pack](https://go.microsoft.com/fwlink/p/?LinkId=254815) which includes the Microsoft SQL Server 2008 R2 SP1 Native Client and the SQL Server Remote BLOB Store 
     
 - [Microsoft SQL Server 2008 R2 SP1 Feature pack](https://go.microsoft.com/fwlink/p/?linkid=238653) which includes Microsoft SQL Server 2008 R2 ADOMD.NET 
@@ -366,7 +370,7 @@ In scenarios where installing prerequisites directly from the Internet is not po
 ## Prerequisite installer operations and command-line options
 <a name="section7"> </a>
 
-The SharePoint 2013 prerequisite installer (prerequisiteinstaller.exe) installs the following software, if it has not already been installed on the target server, in this order:
+The SharePoint 2013 prerequisite installer (prerequisiteinstaller.exe) installs the following software, if it hasn't already been installed on the target server, in this order:
   
 1. Microsoft .NET Framework version 4.5
     
@@ -394,11 +398,11 @@ You can run prerequisiteinstaller.exe at a command prompt with the following opt
   
 - `/?` Display command-line options
     
-- `/continue` is used to tell the installer that it is continuing from a restart
+- `/continue` is used to tell the installer that it's continuing from a restart
     
 - `/unattended` No user interaction
     
-The installer installs from the file that you specify in the command-line options described in the following list. In this list, < _file_> signifies the file from which you want to install. If you do not specify the < _file_> option, the installer downloads the file from the Internet and installs it. If the option does not apply to the current operating system, it is ignored.
+The installer installs from the file that you specify in the command-line options described in the following list. In this list, < _file_> signifies the file from which you want to install. If you don't specify the < _file_> option, the installer downloads the file from the Internet and installs it. If the option doesn't apply to the current operating system, it's ignored.
   
 - **/SQLNCli:< _file_>** Install Microsoft SQL Server 2008 SP1 Native Client from <  _file_>
     

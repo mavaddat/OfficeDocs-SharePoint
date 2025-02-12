@@ -1,15 +1,15 @@
 ---
 ms.date: 08/06/2021
 title: "Distribute corporate news to your organization"
-ms.author: hokavian
-author: Holland-ODSP
-manager: pamgr
+ms.author: ruihu
+author: maggierui
+manager: jtremper
 recommendations: true
 audience: Admin
 f1.keywords:
 ms.topic: article
 ms.service: sharepoint-online
-localization_priority: Normal
+ms.localizationpriority: medium
 search.appverid:
 ms.collection:  
   - m365solution-corpcomms

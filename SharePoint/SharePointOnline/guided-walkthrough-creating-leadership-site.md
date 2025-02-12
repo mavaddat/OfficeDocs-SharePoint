@@ -2,9 +2,9 @@
 ms.date: 08/21/2020
 title: Guided walkthrough - Creating a leadership site for your organization
 ms.reviewer: 
-ms.author: matteva
-author: MattEEvans
-manager: pamgreen
+ms.author: ruihu
+author: maggierui
+manager: jtremper
 recommendations: true
 audience: Admin
 f1.keywords:
@@ -18,20 +18,20 @@ ms.collection:
 search.appverid:
 - SPO160
 - MET150
-description: "Learn how to create a SharePoint leadership site for your organization"
+description: "Learn how to create a SharePoint leadership site for your organization."
 ---
 
 # Guided walkthrough: Creating a leadership site for your organization
 
-In this article, we show you elements of an example leadership site to inspire you, and help you learn how to create similar sites for your own organization. In this example, the leadership site provides your organization insight into the goals and priorities of the leadership team. Watch this video to see how it's built, or read the article below.
+In this article, we show you elements of an example leadership site to inspire you, and help you learn how to create similar sites for your own organization. In this example, the leadership site provides your organization insight into the goals and priorities of the leadership team. Watch this video to see how to build it, or read the following article.
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4xd93]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=4b95af84-58c9-47f4-ae5c-96022b364684]
 
 ## Let's get started
 
 First, if you haven't already created a Communication site, check out the [Create your site](#create-your-site) section in this article.  If you need to learn how to add sections and web parts, check out the section [Add sections and web parts](#add-sections-and-web-parts) in this article.
 
-Once you have your created your site and know how to edit pages, you can use the steps below to add the elements shown.
+Once you have your created your site and know how to edit pages, you can use the following steps to add the elements shown.
 
 ## Example leadership site
 
@@ -101,7 +101,7 @@ You can change your header layout and logo when you select **Header** under **Ch
 
 ![Image of the site header options](media/gw-leadership/gw-7.png)
 
-Under Change the look, you can also find options for navigation (cascade or mega menu) and footer options. For more details on changing the look of your site, see [Change the look of your SharePoint site](https://support.microsoft.com/office/change-the-look-of-your-sharepoint-site-06bbadc3-6b04-4a60-9d14-894f6a170818).
+Under Change the look, you can also find options for navigation (cascade or mega menu) and footer options. For more information on changing the look of your site, see [Change the look of your SharePoint site](https://support.microsoft.com/office/change-the-look-of-your-sharepoint-site-06bbadc3-6b04-4a60-9d14-894f6a170818).
 
 [Back to top](#lets-get-started)
 
@@ -125,7 +125,7 @@ Start editing by clicking **Edit** on the top right of the page.
 
 ![Image of the edit button at the top of the page](media/gw-leadership/gw-9.png)
 
-The + symbol before or after a section will add a section using one of several layouts.
+The + symbol before or after a section adds a section using one of several layouts.
 
 ![Image of the page layout options](media/gw-leadership/gw-10.png)
 
@@ -259,7 +259,6 @@ For more details on using the Text web part, see [Add text and tables to your pa
 
 ## Want more?
 
-Get inspired with more examples in the [SharePoint look book](https://sharepointlookbook.azurewebsites.net/).
+Get inspired with more examples in the [SharePoint look book](https://adoption.microsoft.com/sharepoint-look-book).
 
 See other [guided walkthroughs](https://support.microsoft.com/office/guided-walkthroughs-creating-sites-for-your-organization-7cc52ac9-394e-417e-85fe-33070e0cd13c?ui=en-us&rs=en-us&ad=us) for creating sties for your organization.
-

@@ -1,10 +1,10 @@
 ---
-ms.date: 05/22/2019
+ms.date: 02/04/2025
 title: "Create an organization assets library"
-ms.reviewer: niwoon
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: serdars
+ms.reviewer: cathed
+ms.author: ruihu
+author: maggierui
+manager: jtremper
 recommendations: true
 audience: Admin
 f1.keywords:
@@ -49,6 +49,7 @@ If your organization needs to store and manage files for all your users to use, 
     >   - **Word**: .dotx. [Learn how to save a Word document in this format](https://support.microsoft.com/topic/create-a-template-86a1d089-5ae2-4d53-9042-1191bce57deb).
     >   - **PowerPoint**: .potx. [Learn how to save a PowerPoint file in this format](https://support.microsoft.com/office/ee4429ad-2a74-4100-82f7-50f8169c8aca).
     > - Users need at least read permissions on the root site for your organization for the organization assets library to appear in the desktop apps.
+    > - The **OnlineStorage** RegistryKey will block access to the organization assets library for the Word, Excel, or PowerPoint desktop app. To learn more about the **OnlineStorage** RegistryKey, check [here](/microsoft-365/troubleshoot/group-policy/block-onedrive-use-from-office#modify-the-registry).
 
     Organization fonts are supported on PowerPoint for the web. [Learn more about support for your organization fonts here.](support-for-organization-fonts-in-PowerPoint-for-the-web.md)
 
@@ -59,7 +60,10 @@ If your organization needs to store and manage files for all your users to use, 
     > [!NOTE]
     > All organization asset libraries must be on the same site.
 
-2. **Set the permissions on the site**. Add the people you want to be able to upload files as members or owners of the site or Microsoft 365 Group. Add "Everyone except external users" as visitors. If necessary, [customize the permissions for the library](https://support.office.com/article/02d770f3-59eb-4910-a608-5f84cc297782). You can customize the permissions of up to 100 files and folders in the library.
+2. **Set the permissions on the site**. Add the people you want to be able to upload files as members or owners of the site or Microsoft 365 Group.
+
+    >[!NOTE]
+    > Adding "Everyone except external users" as visitors is required. If necessary, [customize the permissions for the library](https://support.office.com/article/02d770f3-59eb-4910-a608-5f84cc297782). You can customize the permissions of up to 100 files and folders in the library.
 
 3. Upload the images or Office templates to a document library.
 
@@ -68,7 +72,7 @@ If your organization needs to store and manage files for all your users to use, 
     > [!NOTE]
     > If you installed a previous version of the SharePoint Online Management Shell, go to Add or remove programs and uninstall "SharePoint Online Management Shell."
 
-5. Connect to SharePoint as a [Global Administrator or SharePoint Administrator](./sharepoint-admin-role.md) in Microsoft 365. To learn how, see [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online).
+5. Connect to SharePoint as [at least a SharePoint Administrator](./sharepoint-admin-role.md) in Microsoft 365. To learn how, see [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online).
 
 6. Run the following command to designate the document library as an organization assets library:
 
@@ -77,7 +81,7 @@ If your organization needs to store and manage files for all your users to use, 
     ```
 
    - *LibraryURL* is the absolute URL of the library to be designated as a central location for organization assets.
-   - *ThumbnailURL* is the URL for the image file that you want to appear in the card's background in the file picker; this image must be on the same site as the library. The name publicly displayed for the library will be the name of the library on the SharePoint site.
+   - *ThumbnailURL* is the URL for the image file that you want to appear in the card's background in the file picker; this image must be on the same site as the library. The name publicly displayed for the library will be the organization's name.
    - *OrgAssetType* is either `ImageDocumentLibrary` or `OfficeTemplateLibrary`. If you don't specify the *OrgAssetType*, the library will be designated as an image library by default.
    - If you don't specify the *CdnType*, it will enable a private CDN by default.
 

@@ -1,11 +1,11 @@
 ---
 title: "Introduction to managed metadata"
-ms.reviewer: vrchowdh
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: serdars
+ms.reviewer: shrganguly
+ms.author: ruihu
+author: maggierui
+manager: jtremper
 recommendations: true
-ms.date: 5/22/2018
+ms.date: 09/23/2024
 audience: End User
 f1.keywords:
 - CSH
@@ -201,7 +201,8 @@ If your organization wants to use managed term sets to implement formal taxonomi
 ### Managing terms, term sets, and groups
 <a name="__toc262648181"> </a>
 
-The Term Store management tool provides a tree control that you can use to perform most tasks. Your user role for this tool determines the tasks that you can perform. To work on global terms in the Term Store management tool, you must be a Global Administrator or SharePoint Administrator in Microsoft 365, or a Term Store Administrator in SharePoint. To work on terms for a site, you can be a designated Group Manager or Contributor for term sets. 
+The Term Store management tool provides a tree control that you can use to perform most tasks. Your user role for this tool determines the tasks that you can perform. To work on global terms in the Term Store management tool, you must be a [SharePoint Administrator](/sharepoint/sharepoint-admin-role) and [above](/microsoft-365/admin/add-users/about-admin-roles) in Microsoft 365, or a Term Store Administrator in SharePoint. To work on terms for a site, you can be a designated Group Manager or Contributor for term sets.
+
   
 For more information, see [Create and manage groups and term sets](set-up-new-group-for-term-sets.md).
   
@@ -219,6 +220,8 @@ For example, if you are a Term Store Administrator or a Group Manager you can cr
 <a name="__toc325103946"> </a>
 
 At each level of the hierarchy, you can configure specific properties for a group, term set, or term by using the properties pane in the Term Store management tool. For example, if you are configuring a term set, you can specify information such as Name, Description, Owner, Contact, and Stakeholders in pane available on the **General** tab. You can also specify whether you want a term set to be open or closed to new submissions from users. Or, you can choose the **Intended Use** tab, and specify whether the term set should be available for tagging or site navigation. 
+> [!NOTE]
+> These characters are not allowed in Taxonomy property names: `[` `]` `;` `"`, `<` `>` `|` `&` `\` `t`.
   
 ![Term Store properties let you configure settings such as tagging](media/d2dc3643-9d66-4e74-8609-c12663436157.png)
 

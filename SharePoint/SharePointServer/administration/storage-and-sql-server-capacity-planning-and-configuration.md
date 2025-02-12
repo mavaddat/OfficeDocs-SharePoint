@@ -1,10 +1,10 @@
 ---
-ms.date: 03/13/2018
 title: Storage and SQL Server capacity planning and configuration (SharePoint Server)
 ms.reviewer:
-ms.author: serdars
-author: SerdarSoysal
-manager: serdars
+ms.author: ruihu    
+author: maggierui
+manager: jtremper
+ms.date: 12/2/2024
 audience: ITPro
 f1.keywords: NOCSH
 ms.topic: conceptual
@@ -748,7 +748,7 @@ Monitor the following counters to ensure the health of disks. The following valu
 
 - **Logical Disk: Avg. Disk Queue Length** This counter shows the average number of both read and write requests that were queued for the selected disk during the sample interval. The rule is that there should be two or fewer outstanding read and write requests per spindle. But this request-count can be difficult to measure because of storage virtualization and differences in RAID levels between configurations. Look for larger than average disk queue lengths in combination with larger than average disk latencies. This combination can indicate that the storage array cache is being overused or that spindle sharing with other applications is affecting performance.
 
-- **Logical Disk: Avg. Disk sec/Read** and **Logical Disk: Avg. Disk sec/Write** These counters show the average time, in seconds, of a read or write operation to the disk. Monitor these counters to make sure that they remain below 85 percent of the disk capacity. Disk access time increases exponentially if read or write operations are more than 85 percent of disk capacity. To determine the specific capacity for your hardware, refer to the vendor documentation or use the Diskspd Utility, storage testing tool to calculate it. For more information, see [Diskspd: A Robust Storage Performance Tool](https://gallery.technet.microsoft.com/DiskSpd-A-Robust-Storage-6ef84e62).
+- **Logical Disk: Avg. Disk sec/Read** and **Logical Disk: Avg. Disk sec/Write** These counters show the average time, in seconds, of a read or write operation to the disk. Monitor these counters to make sure that they remain below 85 percent of the disk capacity. Disk access time increases exponentially if read or write operations are more than 85 percent of disk capacity. To determine the specific capacity for your hardware, refer to the vendor documentation or use the Diskspd Utility, storage testing tool to calculate it. For more information, see [Use DISKSPD to test workload storage performance](/azure/azure-local/manage/diskspd-overview).
 
   - **Logical Disk: Avg. Disk sec/Read** This counter shows the average time, in seconds, of a read operation from the disk. On a well-tuned system, ideal values are from 1 through 5 ms for logs (ideally 1 ms on a cached array), and from 4 through 20 ms for data (ideally less than 10 ms). Higher latencies can occur during peak times. However, if high values occur regularly, you should investigate the cause.
 

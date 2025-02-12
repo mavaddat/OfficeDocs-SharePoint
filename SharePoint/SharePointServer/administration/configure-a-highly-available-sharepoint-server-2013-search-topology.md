@@ -1,10 +1,10 @@
 ---
 title: "Test Lab Guide Configure a highly available SharePoint Server 2013 Search topology"
 ms.reviewer: 
-ms.author: serdars
-author: SerdarSoysal
-manager: serdars
-ms.date: 12/29/2016
+ms.author: ruihu    
+author: maggierui
+manager: jtremper
+ms.date: 12/2/2024
 audience: ITPro
 f1.keywords:
 - NOCSH
@@ -19,7 +19,7 @@ description: "Learn how to configure search for high availability by using the c
 
 [!INCLUDE[appliesto-2013-xxx-xxx-xxx-xxx-md](../includes/appliesto-2013-xxx-xxx-xxx-xxx-md.md)]
   
-This document is the [Test Lab Guide](https://go.microsoft.com/fwlink/p/?LinkId=202817) version of the procedures that are described in [Test Lab Guide: Configure a highly available SharePoint Server 2013 Search topology](configure-a-highly-available-sharepoint-server-2013-search-topology.md).
+This document is the [Test Lab Guide](https://www.microsoft.com/en-us/download/details.aspx?id=30386) version of the procedures that are described in [Test Lab Guide: Configure a highly available SharePoint Server 2013 Search topology](configure-a-highly-available-sharepoint-server-2013-search-topology.md).
   
 This document contains instructions for the following tasks:
   
@@ -48,5 +48,5 @@ This document contains instructions for the following tasks:
 [Install SharePoint Server 2016 across multiple servers](../install/install-sharepoint-server-2016-across-multiple-servers.md)
 #### Other Resources
 
-[Test Lab Guides](https://go.microsoft.com/fwlink/p/?LinkId=202817)
+[Test Lab Guides](https://www.microsoft.com/en-us/download/details.aspx?id=30386)
 

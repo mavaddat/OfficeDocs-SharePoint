@@ -1,10 +1,10 @@
 ---
-ms.date: 04/27/2021
+ms.date: 06/04/2024
 title: "OneDrive sync reports in the Apps Admin Center"
-ms.reviewer: dmalayeri
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: serdars
+ms.reviewer: kangan
+ms.author: mactra
+author: MachelleTranMSFT
+manager: jtremper
 audience: Admin
 f1.keywords:
 - NOCSH
@@ -43,7 +43,7 @@ Before getting started, be sure that you're familiar with the requirements neede
 
 - OneDrive sync apps on the Insiders, Production, or Deferred ring. [Set the sync app update ring](use-group-policy.md#set-the-sync-app-update-ring).
 
-- [Global Administrator](/microsoft-365/admin/add-users/about-admin-roles), Office Apps Administrator or Microsoft 365 Administrator role access is required to enable and set up the dashboard for your organization. After the feature is enabled by one of these roles, one can also view the dashboard using [Global reader](/microsoft-365/admin/add-users/about-admin-roles) or Reports reader access. To learn more about administrator roles and permissions in Microsoft 365, visit [About Admin Roles](/microsoft-365/admin/add-users/about-admin-roles).
+- [Office Apps Administrator](/microsoft-365/admin/add-users/about-admin-roles) or Microsoft 365 Administrator role access is required to enable and set up the dashboard for your organization. After the feature is enabled by one of these roles, one can also view the dashboard using [Global Reader](/microsoft-365/admin/add-users/about-admin-roles), Security Administrator, Office Apps Administrator, or Reports Reader access. To learn more about administrator roles and permissions in Microsoft 365, visit [About Admin Roles](/microsoft-365/admin/add-users/about-admin-roles).
 
 - Devices in your organization should allow connections to `https://clients.config.office.net`.
 
@@ -54,16 +54,49 @@ Before getting started, be sure that you're familiar with the requirements neede
 
 In this section, you'll learn how to set up sync reports on Windows and macOS devices.
 
+# [Intune](#tab/intune)
+This tab provides how-to steps for enabling sync reports on Intune joined devices.
+
+1. Ensure you have the required role and app versions listed in the [previous section](#requirements).
+
+2. Go to [Microsoft 365 Apps admin center](https://config.office.com) and sign in as an Office App Administrator
+
+3. In the left navigation menu, select **Setup**
+
+4. Verify that a **Tenant Association Key** is present in the text field. If the field is empty, select **Generate new key**.
+
+    > [!NOTE]
+    > When you generate a new key for the first time, it can take up to 30 seconds for it to appear.
+
+5. Copy the **Tenant Association Key**
+
+6. Go to [Intune admin center](https://intune.microsoft.com/) and sign in as an Intune Administrator.
+
+7. From the left navigation menu, select **Devices** > **Configuration**
+
+8. Create a new policy, select **Windows 10 and later** or **macOS** for platform and **Settings catalog** for policy type.
+
+9. Name the new policy and give it a description then click next.
+
+10. Select **Add settings** and then navigate to **OneDrive**
+
+11. Check the box for **Enable sync health reporting for OneDrive** and check the box for **Sync Admin Reports**
+
+13. Under the **Sync Admin Reports** option, paste your **Tenant Association Key**
+14. Select **Next** and apply your scope tags
+15. Select **Next** and apply your assignments
+16. Select **Create**
+
 # [Windows](#tab/windows)
 
 This tab provides how-to steps for enabling sync reports on Windows devices.
 
 > [!NOTE]
-> The previous Group Policy HKLM\SOFTWARE\Policies\Microsoft\OneDrive\SyncAdminReports is still supported and will continue to be supported for 60 days after General Availability is announced. We recommend that admins deploy the GPO now, to ensure a smooth transition at that time.
+> The previous Group Policy HKLM\SOFTWARE\Policies\Microsoft\OneDrive\SyncAdminReports is no longer supported, and machines using that key will no longer appear in the sync health dashboard. Admins need to switch to the currently supported key (additional information below): HKLM\SOFTWARE\Policies\Microsoft\OneDrive\EnableSyncAdminReports.
 
 1. Ensure you have the required role and app versions listed in the [previous section](#requirements).
 
-2. Go to [Microsoft 365 Apps admin center](https://config.office.com) and sign in as a global admin or Office apps admin.
+2. Go to [Microsoft 365 Apps admin center](https://config.office.com) and sign in as an Office App Administrator.
 
 3. From the left navigation menu, select **Health** > **OneDrive Sync**.
 
@@ -125,7 +158,7 @@ This tab provides how-to steps for enabling sync reports on macOS devices.
 
 1. Ensure you have the required role and app versions listed in the [previous section](#requirements).
 
-2. Go to the [Microsoft 365 Apps admin center](https://config.office.com) and sign in as a global admin or Office apps admin.
+2. Go to the [Microsoft 365 Apps admin center](https://config.office.com) and sign in as an Office Apps Administrator.
 
 3. From the left navigation menu, select **Health** > **OneDrive Sync**.
 
@@ -135,22 +168,22 @@ This tab provides how-to steps for enabling sync reports on macOS devices.
 
 6. Before proceeding, ensure that the OneDrive application has been quit.
 
-7. Create a.plist file with the key **EnableSyncAdminReports**. You can also use a script to set the key. The key is the same whether you run the standalone or Mac App Store edition of the sync app. However, the .plist file name and domain name will be different. When you apply the setting, ensure that you target the appropriate domain depending on the edition of the sync app.
+7. Create a .plist file with the key **EnableSyncAdminReports**. You can also use a script to set the key. The key is the same whether you run the standalone or Mac App Store edition of the sync app. However, the .plist file name and domain name will be different. When you apply the setting, ensure that you target the appropriate domain depending on the edition of the sync app.
 
 || Standalone | Mac App Store |
 |:-----|:-----|:-----|
-|**.plist location  <br/>**|~/Library/Preferences/com.microsoft.OneDrive.plist  <br/> |~/Library/Containers/com.microsoft.OneDrive-mac/Data/Library/Preferences/com.microsoft.OneDrive-mac.plist  <br/> |
+|**.plist location  <br/>**|/Library/Preferences/com.microsoft.OneDrive.plist  <br/> |/Library/Containers/com.microsoft.OneDrive-mac/Data/Library/Preferences/com.microsoft.OneDrive-mac.plist  <br/> |
 |**Domain <br/>**|com.microsoft.OneDrive  <br/> |com.microsoft.OneDrive-mac  <br/> |
 
-9. Use the Terminal app to deploy the EnableSyncAdminReports setting onto your local computer.
+8. Use the Terminal app to deploy the EnableSyncAdminReports setting onto your local computer.
 
     Enter the following preference key to enable the setting:
 <br/>\<key\>EnableSyncAdminReports\</key\>
 </br>\<integer\>1\</integer\>
 
-10. Refresh the preferences cache.
+9. Refresh the preferences cache.
 
-11. On the next start of OneDrive, the new setting will be picked up.
+10. On the next start of OneDrive, the new setting will be picked up.
 
 > [!IMPORTANT]
 > After you enable the EnableSyncAdminReports setting on devices, it takes up to three days for reports to be available.
@@ -183,7 +216,7 @@ The **Overview** tab (the default view) shows a summary of devices that have at 
 
 ### Devices
 
-The **Devices** tab shows all users, their current health state, their known folders currently moved in OneDrive, their current app version and operating system version, a timestamp of the last time the app was fully up to date, and a timestamp of the last time the sync app reported health data to the dashboard. An icon and status in the **Errors** column indicate the state of each device.
+The **Devices** tab shows all users, their current health state, their known folders currently moved in OneDrive, their current app version and operating system version, a timestamp of the last time the app was fully up to date, and a timestamp of the last time the sync app reported health data to the dashboard. The last status reported timestamp (UTC) is updated every ~36 hours, or ~1 hour after the client starts up. An icon and status in the **Errors** column indicate the state of each device.
 
 This table provides a summary of the information found in each column of the **Devices** tab:
 
@@ -230,23 +263,18 @@ This section describes known limitations and considerations in sync reporting.
 
 **Folders in OneDrive:** Devices with folders in OneDrive will appear in reports as a device with 0-3 known folders. If a device has not enabled folders in OneDrive, it will appear in reports as a device that is **Not eligible** in the **Known Folders** section of the **Overview** tab. In the **Devices** tab, a hyphen ("-") will appear in the cell value of the **Known folders** table for devices that aren't applicable devices. This behavior is expected.
 
-**Sync app version: Mac App Store edition** For devices using the Mac App Store edition of the sync app, the version installed on each device is displayed in the **Devices** tab. The dashboard doesn't currently track whether or not the Mac App Store edition is the latest version of the sync app available in the Mac App Store. If any devices use this edition, they'll be excluded from the **Sync app version** section of the **Overview** tab and the number of excluded devices is displayed. This is the expected result.
+**Sync app version: Mac App Store edition:** For devices using the Mac App Store edition of the sync app, the version installed on each device is displayed in the **Devices** tab. The dashboard doesn't currently track whether or not the Mac App Store edition is the latest version of the sync app available in the Mac App Store. If any devices use this edition, they'll be excluded from the **Sync app version** section of the **Overview** tab and the number of excluded devices is displayed. This is the expected result.
 
 **Minimum time device is on for eligibility:** Devices need to be turned on for a minimum of five hours to be eligible for the report. Devices that are turned off frequently and not on for that amount of time might be missing from the dashboard, even if the group policy is set.
 
+**User sign-in:** Clients won't report status to the report if the user is signed out.
+
 **Considerations:**
 
-**Network Impact** *How is my network impacted when my organization enables Sync Reports?*
-
-There is negligible impact to a network after enabling the sync reports setting on devices.
-
-**Storage in the EU** *How is data stored in the EU geo?* 
-
-Microsoft continues its commitment to meet and exceed the requirements of EU data protection laws. All data storage is EU Data Boundary compliant. 
-
-**Microsoft Power BI** *Are there Power BI templates available?*
-
-There are no Power BI templates available for sync reports.
+- There is negligible impact to a network after enabling the sync reports setting on devices.
+- Microsoft continues its commitment to meet and exceed the requirements of EU data protection laws. All data storage is EU Data Boundary compliant.
+- There are no Power BI templates available for sync reports.
+- Admins will see errors based on the user's client language, not in the admin's configured language.
 
 ## Troubleshooting
 

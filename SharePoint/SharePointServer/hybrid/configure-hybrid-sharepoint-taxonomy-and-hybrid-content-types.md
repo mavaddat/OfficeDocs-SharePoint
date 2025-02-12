@@ -47,7 +47,7 @@ This video shows a walkthrough of configuring hybrid taxonomy and hybrid content
   
 **Video: Configure hybrid taxonomy and content types**
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/de549889-8831-4c29-a3f4-ffe8104dc0a5?autoplay=false]
+> [!VIDEO 1c9cd487-17a5-498c-acc9-d8f3af489156]
 
 ## Migrate your taxonomy from SharePoint Server
 

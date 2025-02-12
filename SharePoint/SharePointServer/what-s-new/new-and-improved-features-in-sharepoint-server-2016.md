@@ -1,10 +1,10 @@
 ---
-ms.date: 03/13/2018
 title: "New and improved features in SharePoint Server 2016"
 ms.reviewer: 
-ms.author: serdars
-author: SerdarSoysal
-manager: serdars
+ms.author: ruihu
+author: maggierui
+manager: jtremper
+ms.date: 12/2/2024
 audience: ITPro
 f1.keywords:
 - NOCSH
@@ -92,7 +92,7 @@ The following new Access features are available when you deploy Access Services 
 ### Central Administration is no longer provisioned on all servers by default
 <a name="access"> </a>
 
-SharePoint Server 2016 Central Administration is now provisioned on the first server in a farm by default when using the SharePoint Products Configuration Wizard. Central Administration is not provisioned on additional servers in a farm by default.
+SharePoint Server 2016 Central Administration is now provisioned on the first server in a farm by default when using the SharePoint Products Configuration Wizard. Central Administration isn't provisioned on other servers in a farm by default.
   
 You can provision or unprovision Central Administration on individual servers in a farm, no matter what the server role is by using the following methods:
   
@@ -226,8 +226,6 @@ Info about configuring and using this feature is documented in SharePoint and Mi
   
 - [Search for sensitive content in SharePoint and OneDrive documents](https://go.microsoft.com/fwlink/p/?LinkID=620221&amp;clcid=0x4809)
     
-- [Use DLP in SharePoint to identify sensitive data stored on sites](https://go.microsoft.com/fwlink/p/?LinkID=620288&amp;clcid=0x4809)
-    
 ### Image and video previews
 <a name="preview"> </a>
 
@@ -236,12 +234,12 @@ In SharePoint Server 2016, when you post images and videos to a document library
 ### Information Rights Management
 <a name="InfoRights"> </a>
 
-For more info, see [Secure and sync with Information Rights Management on OneDrive](https://go.microsoft.com/fwlink/p/?LinkID=620223&amp;clcid=0x4809) and [Apply Information Rights Management to a list or library](https://support.office.com/article/3bdb5c4e-94fc-4741-b02f-4e7cc3c54aa1).
+For more info, see [Secure and sync with Information Rights Management on OneDrive](https://go.microsoft.com/fwlink/p/?LinkID=620223&amp;clcid=0x4809) and [Apply Information Rights Management to a list or library](/purview/apply-irm-to-a-list-or-library).
   
 ### Large file support
 <a name="largefile"> </a>
 
-Previous versions of SharePoint did not support uploading or downloading files larger than 2,047 MB. SharePoint Server 2016 now allows you to upload or download larger files. You can configure the desired maximum file-size limit on a per-web application basis in your SharePoint farm.
+Previous versions of SharePoint didn't support uploading or downloading files larger than 2,047 MB. SharePoint Server 2016 now allows you to upload or download larger files. You can configure the desired maximum file-size limit on a per-web application basis in your SharePoint farm.
   
 ### MinRole farm topology
 <a name="minrole"> </a>
@@ -254,8 +252,8 @@ The role of a server is specified when you create a new farm or join a server to
 |**Application** <br/> |Service applications, services, and components that serve back-end requests, such as background jobs or search crawl requests, belong on Application servers. These servers are optimized for high throughput.  <br/> |
 |**Distributed Cache** <br/> |Service applications, services, and components that are required for a distributed cache belong on Distributed Cache servers.  <br/> |
 |**Search** <br/> |Service applications, services, and components that are required for search belong on Search servers.  <br/> |
-|**Custom** <br/> |Custom service applications, services, and components that do not integrate with MinRole belong on Custom servers. The farm administrator has full control over which service instances can run on servers assigned to the Custom role. MinRole does not control which service instances are provisioned on this role.  <br/> |
-|**Single-Server Farm** <br/> |Service applications, services, and components required for a single-machine farm belong on a Single-Server Farm. A Single-Server Farm is meant for development, testing, and very limited production use. A SharePoint farm with the Single-Server Farm role cannot have more than one SharePoint server in the farm.  <br/> **Important:** <br/> The Standalone Install mode is no longer available in SharePoint Server 2016. The Single-Server Farm role replaces the Standalone Install mode available in previous SharePoint Server releases. Unlike Standalone Install, the SharePoint admin must separately install and prepare Microsoft SQL Server for SharePoint. The SharePoint admin must also configure the SharePoint farm services and web applications, either manually or by running the Farm Configuration Wizard.  <br/> |
+|**Custom** <br/> |Custom service applications, services, and components that don't integrate with MinRole belong on Custom servers. The farm administrator has full control over which service instances can run on servers assigned to the Custom role. MinRole doesn't control which service instances are provisioned on this role.  <br/> |
+|**Single-Server Farm** <br/> |Service applications, services, and components required for a single-machine farm belong on a Single-Server Farm. A Single-Server Farm is meant for development, testing, and very limited production use. A SharePoint farm with the Single-Server Farm role can't have more than one SharePoint server in the farm.  <br/> **Important:** <br/> The Standalone Install mode is no longer available in SharePoint Server 2016. The Single-Server Farm role replaces the Standalone Install mode available in previous SharePoint Server releases. Unlike Standalone Install, the SharePoint admin must separately install and prepare Microsoft SQL Server for SharePoint. The SharePoint admin must also configure the SharePoint farm services and web applications, either manually or by running the Farm Configuration Wizard.  <br/> |
 |**Front-end with Distributed Cache** <br/> |Shared role that combines the Front-end and Distributed Cache roles on the same server.  <br/> **Note:** <br/> This shared role was introduced in the November Public Update for SharePoint Server 2016 (Feature Pack 1).  <br/> |
 |**Application with Search** <br/> |Shared role that combines the Application and Search roles on the same server.  <br/> **Note:** <br/> This shared role was introduced in the November Public Update for SharePoint Server 2016 (Feature Pack 1).  <br/> |
    
@@ -264,12 +262,12 @@ For more info about the MinRole feature, see [Overview of MinRole Server Roles i
 ### Mobile experience
 <a name="mobile"> </a>
 
-When you use a mobile device to access the home page for a SharePoint Server 2016 team site, you can tap tiles or links on the screen to navigate the site. You can also switch from the mobile view to PC view, which displays site pages as they are seen on a client computer. This view is also touch enabled.
+When you use a mobile device to access the home page for a SharePoint Server 2016 team site, you can tap tiles or links on the screen to navigate the site. You can also switch from the mobile view to PC view, which displays site pages as they're seen on a client computer. This view is also touch enabled.
   
 ### New controls for working with OneDrive
 <a name="newcontrols"> </a>
 
-You can sslect a control to create new Office documents, upload files, synchronize your files for offline use, and share your files. For more info, see "Simple controls" on [The OneDrive Blog](https://go.microsoft.com/fwlink/?LinkID=620285&amp;clcid=0x4809).
+You can select a control to create new Office documents, upload files, synchronize your files for offline use, and share your files. For more info, see [Get started creating, managing, and sharing files in OneDrive and SharePoint](https://support.microsoft.com/office/get-started-creating-managing-and-sharing-files-in-onedrive-and-sharepoint-123ff6b5-3c93-4a60-99d4-ca1bfb1734fe).
   
 ### Open Document Format (ODF) available for document libraries
 <a name="ODF"> </a>
@@ -285,7 +283,7 @@ Project Server 2016 for SharePoint Server 2016 has many new capabilities and fea
     
 - **Multiple Timelines**: Project and Portfolio managers can now create richer timelines that display multiple timelines in a single view. 
     
-- **Simpler administration**: Project Server now has multi-tenant storage capabilities and has combined data storage with SharePoint. This greatly reduces IT overhead by eliminating the dedicated Project Server database and improves backup and restore capabilities. 
+- **Simpler administration**: Project Server now has multitenant storage capabilities and has combined data storage with SharePoint. This greatly reduces IT overhead by eliminating the dedicated Project Server database and improves backup and restore capabilities. 
     
 - **Cloud grade performance and scale**: Many performance and scalability improvements that have been added to Project Online have also been added to Project Server 2016. 
     
@@ -371,7 +369,7 @@ You must assign a server certificate to the Central Administration IIS web site 
   
 If you specify port 443, it will automatically create an SSL binding instead of an HTTP binding even if you don't include the **SecureSocketsLayer** or **SSL** parameters. 
   
-The Central Administration public AAM URL will be automatically updated to use the appropriate protocol scheme, server name, and port number.
+The Central Administration public AAM URL is automatically updated to use the appropriate protocol scheme, server name, and port number.
   
 ### Site collection upgrades
 <a name="search"> </a>
@@ -417,14 +415,14 @@ sharepoint@contoso.com
 ### Site folders view
 <a name="folders"> </a>
 
-For more info, see "Site folders" in [The OneDrive Blog](https://go.microsoft.com/fwlink/?LinkID=620285&amp;clcid=0x4809).
+For more info, see [Change views on the OneDrive website](https://support.microsoft.com/office/change-views-on-the-onedrive-website-7465991b-6882-4f0d-9a0a-2b2a455798cc).
   
 ### Sites page pinning
 <a name="pin"> </a>
 
 You can now pin sites that you see on the sites page. A pinned site shows at the top of the list of sites that you're following.
   
-### Suite Navigation is themable
+### Apply themes to your Suite Navigation
 <a name="pin"> </a>
 
 You can now apply themes to your Suite Navigation.
@@ -432,7 +430,7 @@ You can now apply themes to your Suite Navigation.
 ### Use SMTP ports other than the default (25)
 <a name="smtpport"> </a>
 
-To configure SharePoint to use a non-default SMTP port open SharePoint Central Administration, browse to **System Settings** > **Configure outgoing email settings**, and set the **SMTP server port** to the port number of your SMTP server. To configure SharePoint to use a non-default SMTP port in PowerShell, use the  `Set-SPWebApplication` cmdlet with the **SMTPServerPort** \<port number\> parameter. For example:
+To configure SharePoint to use a nondefault SMTP port open SharePoint Central Administration, browse to **System Settings** > **Configure outgoing email settings**, and set the **SMTP server port** to the port number of your SMTP server. To configure SharePoint to use a nondefault SMTP port in PowerShell, use the  `Set-SPWebApplication` cmdlet with the **SMTPServerPort** \<port number\> parameter. For example:
   
 ```
 $WebApp = Get-SPWebApplication -IncludeCentralAdministration | ? { $_.IsAdministrationWebApplication -eq $true }
@@ -440,6 +438,6 @@ Set-SPWebApplication -Identity $WebApp -SMTPServer smtp.internal.contoso.com -SM
 sh  arepoint@contoso.com
 ```
 
-## Related Topics
+## Related articles
 
 [What is SharePoint?](https://support.office.com/article/97b915e6-651b-43b2-827d-fb25777f446f)

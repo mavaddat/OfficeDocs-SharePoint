@@ -1,11 +1,11 @@
 ---
 title: "Cloud data security measures in SharePoint & OneDrive"
 ms.reviewer: mswann
-manager: serdars
+manager: jtremper
 recommendations: true
-ms.author: mikeplum
-author: MikePlumleyMSFT
-ms.date: 5/25/2018
+ms.author: ruihu
+author: maggierui
+ms.date: 01/13/2025
 audience: Admin
 f1.keywords:
 - NOCSH
@@ -15,6 +15,7 @@ ms.localizationpriority: medium
 ms.collection:  
 - Strat_SP_admin
 - M365-collaboration
+- essentials-security
 ms.custom:
 - seo-marvel-mar2020
 search.appverid:
@@ -41,7 +42,7 @@ One of the most important things you can do to safeguard your data is to require
   
 Other things we recommend to increase security: 
   
-- Use Azure Active Directory device-based conditional access to block or limit access on unmanaged devices like airport or hotel kiosks. See [Control access from unmanaged devices](control-access-from-unmanaged-devices.md).
+- Use Microsoft Entra device-based conditional access to block or limit access on unmanaged devices like airport or hotel kiosks. See [Control access from unmanaged devices](control-access-from-unmanaged-devices.md).
 
 - Create policies to sign users out of Microsoft 365 web sessions after a period of inactivity. For information, see [Sign out inactive users](sign-out-inactive-users.md).
 
@@ -88,7 +89,7 @@ Our datacenters are geo-distributed within the region and fault tolerant. Data i
   
 Metadata backups are kept for 14 days and can be restored to any point in time within a five-minute window. 
   
-In the case of a ransomware attack, you can use Version history ([Enable and configure versioning for a list or library](https://support.office.com/article/1555d642-23ee-446a-990a-bcab618c7a37)) to roll back, and the recycle bin or site collection recycle bin to restore ([Restore deleted items from the site collection recycle bin](https://support.office.com/article/5fa924ee-16d7-487b-9a0a-021b9062d14b)). If an item is removed from the site collection recycle bin, you can call support within 14 days to access a backup. For information about the new Files Restore feature that lets users restore an entire OneDrive to any point within the past 30 days, see [Restore your OneDrive](https://support.office.com/article/fa231298-759d-41cf-bcd0-25ac53eb8a15.aspx).
+In the case of a ransomware attack, you can use Version history ([Enable and configure versioning for a list or library](https://support.office.com/article/1555d642-23ee-446a-990a-bcab618c7a37)) to roll back, and the recycle bin or site collection recycle bin to restore ([Restore deleted items from the site collection recycle bin](https://support.office.com/article/5fa924ee-16d7-487b-9a0a-021b9062d14b)). If an item is removed from the site collection recycle bin, you can call support within 14 days to access a backup. For information about the new Files Restore feature that lets users restore an entire OneDrive to any point within the past 30 days, see [Restore your OneDrive](https://support.office.com/article/fa231298-759d-41cf-bcd0-25ac53eb8a15).
   
 ## Continuously validated
  
@@ -98,13 +99,13 @@ After we have an inventory, we can monitor and remediate the health of machines.
   
 We have an automated workflow to identify machines that don't meet policies and queue them for replacement.
   
-The Microsoft 365 "Red Team" within Microsoft is made up of intrusion specialists. They look for any opportunity to gain unauthorized access. The "Blue Team" is made up of defense engineers who focus on prevention, detection, and recovery. They build intrusion detection and response technologies. To keep up with the learnings of the security teams at Microsoft, see [Security, Privacy, and Compliance Blog](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/bg-p/securityprivacycompliance).
+The Microsoft 365 "Red Team" within Microsoft is made up of intrusion specialists. They look for any opportunity to gain unauthorized access. The "Blue Team" is made up of defense engineers who focus on prevention, detection, and recovery. They build intrusion detection and response technologies. To keep up with the learnings of the security teams at Microsoft, see [Security, Compliance, and Identity Blog](https://techcommunity.microsoft.com/category/security-compliance-and-identity/blog/microsoftsecurityandcompliance).
   
 To monitor and observe activity in your Microsoft 365 subscription:
   
-- If you have an on-premises security operations center or SIEM, you can monitor activity with the Management Activity API. For information, see [Microsoft 365 Management APIs overview](/office/office-365-management-api/office-365-management-apis-overview). This will show you activity from across SharePoint, Exchange, Azure Active Directory, DLP, and more. If you don't have an on-premises security operations center or SIEM, you can use Cloud App Security. Cloud App Security uses the Management Activity API. For info, see [Overview of Microsoft 365 Cloud App Security](/office365/securitycompliance/office-365-cas-overview). Through Cloud App Security, you can report, search, and alert on activity.
+- If you have an on-premises security operations center or SIEM, you can monitor activity with the Management Activity API. For information, see [Microsoft 365 Management APIs overview](/office/office-365-management-api/office-365-management-apis-overview). This will show you activity from across SharePoint, Exchange, Microsoft Entra ID, DLP, and more. If you don't have an on-premises security operations center or SIEM, you can use Cloud App Security. Cloud App Security uses the Management Activity API. For info, see [Overview of Microsoft 365 Cloud App Security](/office365/securitycompliance/office-365-cas-overview). Through Cloud App Security, you can report, search, and alert on activity.
     
-- Use Azure Active Directory identity protection. This applies machine learning to detect suspicious account behavior, for example, simultaneous sign-ins from the same user in different parts of the world. You can configure identity protection to take action to block these sign-ins. For more info, see [Azure Active Directory Identity Protection](/azure/active-directory/identity-protection/overview).
+- Use Microsoft Entra ID Protection. This applies machine learning to detect suspicious account behavior, for example, simultaneous sign-ins from the same user in different parts of the world. You can configure identity protection to take action to block these sign-ins. For more info, see [Microsoft Entra ID Protection](/azure/active-directory/identity-protection/overview).
     
 - Use Secure Score to evaluate the security profile of your subscription against a known good baseline, and identify opportunities to increase protection. For more info, see [Microsoft Secure Score](/microsoft-365/security/mtp/microsoft-secure-score-new?preserve-view=true&view=o365-worldwide).
     
@@ -116,6 +117,6 @@ To meet your regulatory requirements:
   
 - Audit Microsoft 365 activity in the Security &amp; Compliance Center: [Search the audit log in the Microsoft 365 Security &amp; Compliance Center](/office365/securitycompliance/search-the-audit-log-in-security-and-compliance).
     
-- Create eDiscovery cases: [Manage eDiscovery cases in the Microsoft 365 Security &amp; Compliance Center](/office365/SecurityCompliance/ediscovery-cases)
+- Create eDiscovery cases: [Manage eDiscovery cases in the Microsoft 365 Security &amp; Compliance Center](/office365/SecurityCompliance/ediscovery-cases).
     
 - Apply retention policies: [Create and apply information management policies](https://support.office.com/article/eb501fe9-2ef6-4150-945a-65a6451ee9e9).

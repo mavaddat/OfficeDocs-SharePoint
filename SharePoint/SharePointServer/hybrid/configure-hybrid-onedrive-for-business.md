@@ -41,7 +41,8 @@ This video shows a walkthrough of configuring hybrid OneDrive.
   
 **Video: Configure hybrid OneDrive**
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/a65546fb-4981-4a66-a9b6-0659382b5efb?autoplay=false]
+> [!VIDEO 2a7fba00-2500-4aa9-bdb6-b8d9d594e378]
+
 > [!NOTE]
 > The SharePoint Migration Tool demonstrated in the video is currently in preview. It is only supported for SharePoint Server 2013. [Download the SharePoint Migration Tool](https://spmtreleasescus.blob.core.windows.net/install/default.htm).
   

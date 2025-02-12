@@ -1,10 +1,10 @@
 ---
-ms.date: 07/24/2018
 title: "New and improved features in SharePoint Server 2019"
 ms.reviewer: 
-ms.author: serdars
-author: SerdarSoysal
-manager: serdars
+ms.author: ruihu
+author: maggierui
+manager: jtremper
+ms.date: 12/2/2024
 audience: ITPro
 f1.keywords:
 - NOCSH
@@ -32,7 +32,7 @@ This section provides detailed descriptions of the new updated features in Share
 
 ### Access Services 2013 now supports Send Email
 
-The Access Services 2013 service application now supports the SendEmail action for sending email messages from apps. See [Introducing Send Email in Access 2013 web apps](https://www.microsoft.com/microsoft-365/blog/2015/01/12/introducing-send-email-access-2013-web-apps/) for more details.
+The Access Services 2013 service application now supports the SendEmail action for sending email messages from apps. See [Did you know you can "Send Email" through Access 2013 Web Apps?](https://techcommunity.microsoft.com/discussions/access/did-you-know-you-can-send-email-through-access-2013-web-apps/5446) for more details.
 
 ### Additional documentation links for Central Administration site
 

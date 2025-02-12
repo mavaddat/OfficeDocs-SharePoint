@@ -1,10 +1,10 @@
 ---
 title: "Mobile security and authentication in SharePoint 2013"
 ms.reviewer:
-ms.author: toresing
-author: tomresing
-manager: serdars
-ms.date: 7/20/2017
+ms.author: ruihu
+author: maggierui
+manager: jtremper
+ms.date: 12/2/2024
 audience: ITPro
 f1.keywords:
 - NOCSH
@@ -20,7 +20,7 @@ description: "Learn how to help secure a SharePoint mobile infrastructure, and l
 
 [!INCLUDE[appliesto-2013-xxx-xxx-xxx-xxx-md](../includes/appliesto-2013-xxx-xxx-xxx-xxx-md.md)]
 
-This article provides security guidance and recommendations to help ensure that access to SharePoint Server 2013 and specific data in SharePoint is not compromised on a mobile device. This article also details the supported authentication types for select devices, and authentication specifics for the SharePoint Newsfeed App.
+This article provides security guidance and recommendations to help ensure that access to SharePoint Server 2013 and specific data in SharePoint isn't compromised on a mobile device. This article also details the supported authentication types for select devices, and authentication specifics for the SharePoint Newsfeed App.
 
 ## Security for mobile devices
 <a name="section1"> </a>
@@ -31,14 +31,14 @@ General security considerations include the following:
 
 - Mobile devices can contain sensitive data or documents. Because mobile devices can be lost or stolen, we recommend that you set policies around mobile devices to help protect sensitive data and documents. This can include securing the mobile device by using a PIN or lock, and ensuring that you can remotely wipe the data on the mobile device. Available programs and features vary by mobile device. For more information about a possible method to implement these policies in your organization, see [Exchange ActiveSync](mobile-security-and-authentication.md#activesync) later in this article.
 
-- You can educate users about how they can help protect their user credentials. This can include signing out of sites when they have finished, not enabling any option that keeps them signed in or remembers their password, and frequently deleting cookies in the mobile browser. This can help prevent others from using their user credentials to log on to a SharePoint site if their mobile device is lost or stolen.
+- You can educate users about how they can help protect their user credentials. This can include signing out of sites when they have finished, not enabling any option that keeps them signed in or remembers their password, and frequently deleting cookies in the mobile browser. This can help prevent others from using their user credentials to sign in a SharePoint site if their mobile device is lost or stolen.
 
-- We recommend that you enable SSL to help secure communication between mobile browsers and the computer that is running SharePoint Server 2013. For more information about how to use a reverse proxy server, such as Forefront Unified Access Gateway (UAG), to help secure communication, see [Forefront Unified Access Gateway (UAG)](https://go.microsoft.com/fwlink/p/?LinkID=196384) in the Forefront Technical Library.
+- We recommend that you enable SSL to help secure communication between mobile browsers and the computer that is running SharePoint Server 2013. For more information about how to use a reverse proxy server, such as Forefront Unified Access Gateway (UAG), to help secure communication, see [Forefront Unified Access Gateway (UAG)](https://www.microsoft.com/download/details.aspx?id=7305&msockid=3e064700dc7b62dc1a665636dd5763c5) in the Forefront Technical Library.
 
 ### Exchange ActiveSync
 <a name="activesync"> </a>
 
-Microsoft Exchange ActiveSync is a communications protocol that enables mobile access, over the air, to e-mail messages, scheduling data, contacts, and tasks. Exchange ActiveSync is available on Windows Phone and third-party phones and slates that are enabled for Exchange ActiveSync such as the Apple iPhone. One of the benefits of implementing Exchange ActiveSync in your organization is device-side security, and administration through policy enforcement. If SharePoint Server 2013 is deployed in an extranet topology, mobile devices access the computer that is running SharePoint Server 2013 via a public-facing URL. If the mobile device were to become lost or stolen, it is necessary to ensure that SharePoint data is not compromised. For example, by using Exchange ActiveSync you can wipe data contents from the device remotely, such as SharePoint configurations, or enforce a complex password at the lock screen to help prevent unauthorized access.
+Microsoft Exchange ActiveSync is a communications protocol that enables mobile access, over the air, to e-mail messages, scheduling data, contacts, and tasks. Exchange ActiveSync is available on Windows Phone and third-party phones and slates that are enabled for Exchange ActiveSync such as the Apple iPhone. One of the benefits of implementing Exchange ActiveSync in your organization is device-side security, and administration through policy enforcement. If SharePoint Server 2013 is deployed in an extranet topology, mobile devices access the computer that is running SharePoint Server 2013 via a public-facing URL. If the mobile device were to become lost or stolen, it's necessary to ensure that SharePoint data isn't compromised. For example, by using Exchange ActiveSync you can wipe data contents from the device remotely, such as SharePoint configurations, or enforce a complex password at the lock screen to help prevent unauthorized access.
 
 The following table lists a selection of Exchange ActiveSync features and policies that you can apply to some devices.
 
@@ -46,7 +46,7 @@ The following table lists a selection of Exchange ActiveSync features and polici
 
 |Exchange ActiveSync policy |Description |
 |---|---|
-|Remote wipe (this is a feature and not an Exchange ActiveSync policy)|If a mobile phone is lost, stolen, or otherwise compromised, you can issue a remote wipe command from the Exchange computer or from any web browser by using Outlook Web App. This command restores the device to factory defaults. <p> **Important**: After a remote device wipe has occurred, data recovery is very difficult. However, no data removal process leaves a device as free from residual data as when it is new. Recovery of data from a device may still be possible using sophisticated tools.           |
+|Remote wipe (this is a feature and not an Exchange ActiveSync policy)|If a mobile phone is lost, stolen, or otherwise compromised, you can issue a remote wipe command from the Exchange computer or from any web browser by using Outlook Web App. This command restores the device to factory defaults. <p> **Important**: After a remote device wipe has occurred, data recovery is very difficult. However, no data removal process leaves a device as free from residual data as when it's new. Recovery of data from a device may still be possible using sophisticated tools.           |
 |Enforce password on device (DevicePasswordEnabled)|This setting enables the mobile phone password.|
 |Minimum password length (MinDevicePasswordLength)|This option specifies the length of the password for the mobile phone. The default length is 4 characters, but as many as 18 can be included.|
 |Require alphanumeric password (AlphanumericDevicePasswordRequired)|This setting requires that a password contains numeric and non-numeric characters.|
@@ -59,7 +59,7 @@ The following table lists a selection of Exchange ActiveSync features and polici
 ### Finding a lost device
 <a name="lostdevice"> </a>
 
-When a device is lost or stolen it may be useful to find the location of that device, and be able to wipe all data contents if it is necessary. There are various third-party services and solutions that can provide this functionality. An example is the Windows Phone Find My Phone service that can make it easier to recover your mobile device by locating it, or prevent someone from using it without your consent.
+When a device is lost or stolen it may be useful to find the location of that device, and be able to wipe all data contents if it's necessary. There are various third-party services and solutions that can provide this functionality. An example is the Windows Phone Find My Phone service that can make it easier to recover your mobile device by locating it, or prevent someone from using it without your consent.
 
 The functionality this service can provide includes the following:
 

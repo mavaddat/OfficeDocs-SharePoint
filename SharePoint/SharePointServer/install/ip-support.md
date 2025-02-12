@@ -1,10 +1,10 @@
 ---
 title: "IP support in SharePoint Server"
 ms.reviewer: 
-ms.author: serdars
-author: SerdarSoysal
-manager: serdars
-ms.date: 2/15/2018
+ms.author: ruihu
+author: maggierui
+manager: jtremper
+ms.date: 12/02/2024
 audience: ITPro
 f1.keywords:
 - NOCSH
@@ -71,6 +71,3 @@ The following list shows other important considerations about IPv6:
 
 For more information about IPv6 in Microsoft products, see the [IPv6 TechCenter](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd379473(v=ws.10)).
   
-## See also
-
-[IPv6 Survival Guide in the TechNet Wiki](https://go.microsoft.com/fwlink/p/?LinkId=237480)

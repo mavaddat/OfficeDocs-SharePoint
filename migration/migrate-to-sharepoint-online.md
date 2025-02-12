@@ -1,18 +1,17 @@
 ---
-ms.date: 
+ms.date: 06/28/2024
 title: "Migrate to Microsoft 365"
 ms.reviewer: 
-ms.author: jhendr
-author: JoanneHendrickson
-manager: serdars
+ms.author: heidip
+author: MicrosoftHeidi
+manager: jtremper
 recommendations: true
 audience: ITPro
 f1.keywords:
 - CSH
 ms.topic: conceptual
-ms.service: sharepoint-online
-ms.subservice: sharepoint-migration
-ms.localizationpriority: null
+ms.service: microsoft-365-migration
+ms.localizationpriority: Low
 search.appverid: MET150
 msCollection: 
 - SPMigration
@@ -29,37 +28,49 @@ description: "This article helps you understand which tool to use when migrating
 
 # Migrate your content to Microsoft 365
 
-Moving to Microsoft 365? **Migration Manager** will help you migrate your content easily and securely.
+Moving to Microsoft 365? **Migration Manager** helps you migrate your content easily and securely.
 
-## Mover retirement
+### Announcing the new Migration Admin role
 
->[!Important]
->**Mover is now retired for all Admin led migrations**. The ability to migrate from Google Drive, Box, Dropbox, and Egnyte has been fully integrated into Migration Manager. For full details see: [Mover retirement timeline](mover-retirement-timeline.md).  Migration Manager does not support the migration of Amazon S3 or Azure blob storage.
->
->All FastTrack-led migrations have transitioned to Migration Manager.
->
->**Tenant to tenant migration**. Cross-tenant OneDrive migration is now available outside of Migration Manager. Learn more here: [Cross-tenant OneDrive migration](/microsoft-365/enterprise/cross-tenant-onedrive-migration).  
->
->A cross tenant migration solution for SharePoint is currently being developed and in private preview.  To learn more, see [How to participate in the Cross-tenant SharePoint migration preview](/microsoft-365/enterprise/cross-tenant-sharepoint-migration).
+>[!Note]
+>This feature is currently in public preview, with full availability by June 2024.
 
+A Microsoft 365 Migration Administrator role is now available to provide access to Migration Manager within the Microsoft 365 Admin Center. Currently, your migration teams must be assigned the SharePoint admin role, giving more access than needed. With this new role, you limit usage to only what's required to migrate your content, reserving SharePoint Admin access to only users who need it.
 
->[!Tip]
->[**Individuals or students**: You may continue to use Mover. Learn how!](https://support.microsoft.com/en-us/office/move-your-school-files-when-you-graduate-7dbda93c-71e6-483f-8914-ad445554cd31)
+Learn more:  [**Migration Admin role**](mm-migration-admin-role.md)
 
 
 ## What's new
 
-- Check out what's new and coming soon to [Migration Manager](mm-whats-new.md).
+- What's new and coming soon to [Migration Manager](mm-whats-new.md).
 
-- Check out what's new and coming soon to [SharePoint Migration Tool (SPMT)](new-and-improved-features-in-the-sharepoint-migration-tool.md)
+- What's new and coming soon to [SharePoint Migration Tool (SPMT)](new-and-improved-features-in-the-sharepoint-migration-tool.md)
+
+#### Mover retirement
+
+**Mover is now retired for all Admin led migrations**. The ability to migrate from Google Drive, Box, Dropbox, and Egnyte is fully integrated into Migration Manager. All FastTrack-led migrations have transitioned to Migration Manager. Migration Manager doesn't support the migration of Amazon S3 or Azure blob storage.
+
+**Mover will be retired and not available for individual and students use after October 31, 2024.**
+
+- For migrating from Google Drive and Dropbox to your OneDrive (personal) account, download the OneDrive mobile app from [here](https://www.microsoft.com/microsoft-365/onedrive/download) and follow the [guidance](https://support.microsoft.com/office/import-other-cloud-files-using-the-onedrive-mobile-app-0e769bf6-934f-46f5-b57e-032d41210343).
+
+- For migrating from OneDrive (work or school) to your OneDrive (personal) account, follow the [guidance](https://support.microsoft.com/office/copy-transfer-or-import-files-to-your-personal-onedrive-7dbda93c-71e6-483f-8914-ad445554cd31).
+
+- For other migration scenarios to migrate your content to Microsoft 365, check Migration Manager [learn more](/sharepointmigration/migrate-to-sharepoint-online).
+
+### Cross-tenant migration
+
+Tenant to tenant migration for OneDrive is now available outside of Migration Manager.  To learn more:
+
+- [**Cross-tenant OneDrive migration**](/microsoft-365/enterprise/cross-tenant-onedrive-migration)  
+
+A cross tenant migration solution for SharePoint is currently in private preview.  To learn more, see:
+
+-  [**How to participate in the Cross-tenant SharePoint migration preview**](/microsoft-365/enterprise/cross-tenant-sharepoint-migration)
 
 ### Transform your classic SharePoint Server pages
 
-If you are onboarding your classic on-premises SharePoint Server pages to SharePoint Online, help is here!  Learn more at:  [**Transform classic pages to modern pages**](/sharepoint/dev/transform/modernize-userinterface-site-pages)
-
-## We're listening!
-
-Help us improve Migration Manager by sending your suggestions and reporting bugs you encounter. Just select the feedback button at the bottom of the page and filter on "Migration".  
+If you're onboarding your classic on-premises SharePoint Server pages to SharePoint Online, help is here!  Learn more at:  [**Transform classic pages to modern pages**](/sharepoint/dev/transform/modernize-userinterface-site-pages)
 
 
 ##  Where are you migrating from?
@@ -81,7 +92,7 @@ Help us improve Migration Manager by sending your suggestions and reporting bugs
 
 - **Microsoft FastTrack**.  Microsoft FastTrack services can help you get started with your migration to the cloud.|When you need assistance to help you get started on your migration project.</br>
 
-- **Azure Data Box**. Want to remove the dependency on your WAN link to transfer data?  The Microsoft Azure Data Box is a service that lets you order a device from the Microsoft Azure portal. You can then copy TBs of data from your servers to the device, ship it back to Microsoft, and your data is copied into Azure. Once your data is in Azure, use SPMT to migrate content to SharePoint. To learn more, see [Migrate using the Azure Data Box](how-to-migrate-file-share-content-to-SPO-using-AzureDataBox.md).</br>
+- **Azure Data Box**. Want to remove the dependency on your WAN link to transfer data?  The Microsoft Azure Data Box is a service that lets you order a device from the Microsoft Azure portal. You can then copy TBs of data from your servers to the device, ship it back to Microsoft, and your data is copied into Azure. Once your data's in Azure, use SPMT to migrate content to SharePoint. To learn more, see [Migrate using the Azure Data Box](how-to-migrate-file-share-content-to-SPO-using-AzureDataBox.md).</br>
 
 - **OneDrive sync app**  To migrate users' Windows known folders (Desktop, Documents, Pictures, Screenshots, and Camera Roll) to OneDrive, you can use [Known Folder Move](/onedrive/redirect-known-folders). If users want to move other files from their local computer or a network file share to OneDrive or SharePoint, it's often easiest for them to use the OneDrive sync app. Users drag their files or folders to a folder they're syncing.  
 
