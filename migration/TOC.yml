@@ -143,7 +143,7 @@ Items:
       items:
       - name: Prerequisites and endpoints
         href: mm-prerequisites.md
-      - name: Reports and error codes for file share migrations
+      - name: Reports and error codes
         href: mm-reports.md
       - name: Settings
         href: mm-settings.md
@@ -167,6 +167,8 @@ Items:
         href: mm-faqs.md
       - name: How to reinstall a Migration agent
         href: mm-reinstall-agent.md
+      - name: Use Certificate Based Authentication
+        href: mm-with-cba.md
     - name: Box Reference
       items:
       - name: FAQs
