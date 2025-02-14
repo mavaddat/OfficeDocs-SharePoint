@@ -41,7 +41,7 @@ Cloud Hybrid Search may be removed by deleting the Search Service Application.
 4. On the ribbon, select **Delete**.
 5. You may then create a new non-Cloud Search Service Application. For info about how to create and manage your Search Service Application, see the SharePoint Server documentation in [Search](../search/search.md).
 
-If you want to remove all hybrid documents from SharePoint Online search results,contact the support team for further guidance.
+If you want to remove all hybrid documents from SharePoint Online search results, contact the support team for further guidance.
 
 ## OneDrive and sites
 
