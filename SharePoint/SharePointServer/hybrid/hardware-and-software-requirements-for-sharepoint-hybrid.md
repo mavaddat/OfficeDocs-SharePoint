@@ -1,10 +1,10 @@
 ---
 title: "Hardware and software requirements for SharePoint hybrid"
 ms.reviewer: 
-ms.author: serdars
-author: SerdarSoysal
-manager: serdars
-ms.date: 2/5/2018
+ms.author: ruihu
+author: maggierui
+manager: jtremper
+ms.date: 12/2/2024
 audience: ITPro
 f1.keywords:
 - NOCSH
@@ -19,7 +19,7 @@ ms.collection:
 - SPO_Content
 ms.assetid: 43e52f2f-2586-451d-814d-edf43f3459ab
 
-description: "Learn what prerequisites you'll need to configure hybrid for SharePoint Server."
+description: "Learn what prerequisites you need to configure hybrid for SharePoint Server."
 ---
 
 # Hardware and software requirements for SharePoint hybrid
@@ -32,7 +32,7 @@ This article describes the prerequisites that are required to deploy a SharePoin
 
 - An operational, on-premises Active Directory Directory Services (AD DS) domain.
     
-- An operational SharePoint Server farm. Services must be running on the local farm - farms with federated services are not supported. For more information about setting up a farm, see [Install SharePoint Server](../install/install.md).
+- An operational SharePoint Server farm. Services must be running on the local farm - farms with federated services aren't supported. For more information about setting up a farm, see [Install SharePoint Server](../install/install.md).
     
 - A [properly configured Microsoft 365 organization](configure-office-365-for-sharepoint-hybrid.md) that is provisioned with SharePoint in Microsoft 365 with one of the following subscription plans: E1 supports [Display hybrid federated search results in SharePoint Server](display-hybrid-federated-search-results-in-sharepoint-server.md) only, E3, or E4. 
     
@@ -44,6 +44,7 @@ The default STS certificate in the SharePoint farm is used by the Hybrid Configu
 For more information, see [Replace the STS certificate](plan-server-to-server-authentication-m365.md).
   
 ## Inbound connectivity requirements
+
 <a name="CertReq"> </a>
 
 The following hybrid solutions require inbound connectivity from Microsoft 365 to SharePoint Server:
@@ -69,7 +70,7 @@ Inbound connectivity requires the following:
   
 ### Certificate requirements
 
-This section describes the certificates you'll need to configure a inbound connectivity from Microsoft 365 to SharePoint Server.
+This section describes the certificates you need to configure an inbound connectivity from Microsoft 365 to SharePoint Server.
   
 #### About the Secure Channel SSL certificate
 
@@ -77,7 +78,7 @@ This certificate provides authentication and encryption between the reverse prox
   
 #### About the on-premises SharePoint SSL certificate
 
-If you'll configure your primary web application to use SSL (which is the web application on the on-premises SharePoint farm that's configured for hybrid), you'll have to bind an SSL certificate to the primary web application.
+If you configure your primary web application to use SSL (which is the web application on the on-premises SharePoint farm that's configured for hybrid), you have to bind an SSL certificate to the primary web application.
   
 If this web application already exists and is configured for SSL, you're ready to go. Otherwise you have to either obtain or create one for this purpose. For production environments, this certificate should be issued by a public certification authority (CA). For test and development environments, it can be a self-signed certificate.
   
@@ -90,8 +91,8 @@ The following table lists the currently supported reverse proxy devices for Shar
 |**Supported reverse proxy devices**|**Configuration article**|**More information**|
 |:-----|:-----|:-----|
 |Windows Server 2012 R2 with Web Application Proxy (WA-P)  <br/> |[Configure Web Application Proxy for a hybrid environment](configure-web-application-proxy-for-a-hybrid-environment.md) <br/> |Web Application Proxy (WA-P) is a Remote Access service in Windows Server 2012 R2 that publishes web applications that users can interact with from many devices.  <br/> > [!IMPORTANT]> To use Web Application Proxy as a reverse proxy device in a hybrid SharePoint Server environment, you must also deploy AD FS in Windows Server 2012 R2. Earlier versions of Windows don't support Web Application Proxy           |
-|Forefront Threat Management Gateway (TMG) 2010  <br/> |[Configure Forefront TMG for a hybrid environment](configure-forefront-tmg-for-a-hybrid-environment.md) <br/> |Forefront TMG 2010 is a comprehensive, secure, web gateway solution that provides secure reverse proxy functionality.  <br/> Note that Forefront TMG 2010 is no longer sold by Microsoft but will be supported through 4/14/2020. For more information, see [Microsoft Support Lifecycle information for Forefront TMG 2010](/lifecycle/products/?alpha=Forefront+Threat+Management+Gateway+2010&Filter=FilterNO).           |
-|F5 BIG-IP  <br/> |[Enabling SharePoint 2013 Hybrid Search with the BIG-IP](https://devcentral.f5.com/articles/enabling-sharepoint-2013-hybrid-search-with-the-big-ip) <br/> |This is external content that's managed by F5 Networks.  <br/> |
+|Forefront Threat Management Gateway (TMG) 2010  <br/> |[Configure Forefront TMG for a hybrid environment](configure-forefront-tmg-for-a-hybrid-environment.md) <br/> |Forefront TMG 2010 is a comprehensive, secure, web gateway solution that provides secure reverse proxy functionality.  <br/> Forefront TMG 2010 is no longer sold by Microsoft but will be supported through 4/14/2020. For more information, see [Microsoft Support Lifecycle information for Forefront TMG 2010](/lifecycle/products/?alpha=Forefront+Threat+Management+Gateway+2010&Filter=FilterNO).           |
+|F5 BIG-IP  <br/> |[Enabling SharePoint 2013 Hybrid Search with the BIG-IP](https://community.f5.com/kb/technicalarticles/enabling-sharepoint-2013-hybrid-search-with-the-big-ip/282467) <br/> |This is external content that's managed by F5 Networks.  <br/> |
    
 #### General reverse proxy requirements
 

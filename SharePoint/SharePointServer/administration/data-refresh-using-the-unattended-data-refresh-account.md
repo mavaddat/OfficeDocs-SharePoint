@@ -44,7 +44,8 @@ This video shows the steps involved in configuring scheduled data refresh in SQL
   
 **Video: Configure scheduled data refresh for Power Pivot by using the unattended data refresh account**
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/e6d852d5-c321-4703-a5a5-8b8f37a8ffa7?autoplay=false]
+> [!VIDEO 2568759a-fe8b-4373-8db6-68c9e8143c0c]
+
 ## Configure access to your data source
 <a name="proc1"> </a>
 

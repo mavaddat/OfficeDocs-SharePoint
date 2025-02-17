@@ -2,9 +2,9 @@
 ms.date: 09/19/2018
 title: "Why move from publishing sites to communication sites? - SharePoint"
 ms.reviewer: 
-ms.author: loreenl
-author: loreenla
-manager: pamgreen
+ms.author: ruihu
+author: maggierui
+manager: jtremper
 recommendations: true
 audience: Admin
 f1.keywords:
@@ -28,7 +28,7 @@ description: "Learn about how to move from publishing sites to communication sit
 
 Being able to communicate broadly using attractive sites and pages is a key feature of organization intranets. For example, you might have an HR department home page that serves up important communication to hundreds or thousands of employees.
 
-In the modern SharePoint experience, communication sites fulfill the same purpose as traditional publishing sites: to communicate broadly to a large audience while maintaining a level of control on the creation side. Communication sites support most of the same scenarios as publishing sites, and more capabilities are coming soon. Best of all, communication sites are easier to build and maintain and include new features such as a modern authoring canvas. They allow you to share news, reports, statuses, and other information in a visually compelling format. To sum up: you can quickly create beautiful pages that look great on mobile devices and that are accessible by default - all without heavy developer investment. You can get inspired with some great examples in the [SharePoint look book](https://sharepointlookbook.azurewebsites.net/).
+In the modern SharePoint experience, communication sites fulfill the same purpose as traditional publishing sites: to communicate broadly to a large audience while maintaining a level of control on the creation side. Communication sites support most of the same scenarios as publishing sites, and more capabilities are coming soon. Best of all, communication sites are easier to build and maintain and include new features such as a modern authoring canvas. They allow you to share news, reports, statuses, and other information in a visually compelling format. To sum up: you can quickly create beautiful pages that look great on mobile devices and that are accessible by default - all without heavy developer investment. You can get inspired with some great examples in the [SharePoint Look Book](https://adoption.microsoft.com/sharepoint-look-book).
 
 Traditionally, sites and pages like this have been designed and built using the publishing features of Microsoft SharePoint – either team sites with publishing enabled or fully structured publishing sites. You could specify page layouts, design pages, and set up content approval workflows. Publishing features allowed for a tight level of control by a small number of people while allowing broad communication to many people. But with traditional design and deployment of publishing sites, developer involvement is usually required for customization of site functionality, navigation elements, and included investment in master pages, CSS, JavaScript, and web parts. Additionally, traditional site types designed for a PC browser may not work well or look attractive on mobile devices, and design and development efforts are needed to provide proper interaction with tools like screen readers or high-contrast color schemes. With all this, it commonly takes more time and resourcing to build, test, and deploy when using the classic publishing infrastructure.
 
@@ -167,7 +167,7 @@ Modern pages use modern web parts. Modern web parts are designed to be easier to
 
 To learn about all of the modern web parts, see [Using web parts on SharePoint pages](https://support.office.com/article/336e8e92-3e2d-4298-ae01-d404bbe751e0). To learn about modern web parts that have similar purposes to classic web parts, see [Classic and modern web part experiences](https://support.office.com/article/3fdae6c3-8fc1-49ab-8708-8c104b882e64).
 
-For developers, the [SharePoint Framework](/sharepoint/dev/spfx/sharepoint-framework-overview) allows for the building of custom modern web parts that appear alongside out-of-the-box web parts in the web part toolbox. The SharePoint Framework also allows for custom extensions, the [use of the Microsoft Graph API](/sharepoint/dev/spfx/use-aad-tutorial), as well as [secure access to third-party solutions and APIs secured by Azure Active Directory](/sharepoint/dev/spfx/use-aadhttpclient). Developers are encouraged to consult the [SharePoint starter kit](https://github.com/SharePoint/sp-starter-kit), where you'll find a fully built sample solution that includes numerous web parts, extensions, and other components that you can use as an example and inspiration for your own customizations. Additionally, find design guidance and standards for web parts at [Designing great SharePoint experiences](/sharepoint/dev/design/design-guidance-overview).
+For developers, the [SharePoint Framework](/sharepoint/dev/spfx/sharepoint-framework-overview) allows for the building of custom modern web parts that appear alongside out-of-the-box web parts in the web part toolbox. The SharePoint Framework also allows for custom extensions, the [use of the Microsoft Graph API](/sharepoint/dev/spfx/use-aad-tutorial), as well as [secure access to third-party solutions and APIs secured by Microsoft Entra ID](/sharepoint/dev/spfx/use-aadhttpclient). Developers are encouraged to consult the [SharePoint starter kit](https://github.com/SharePoint/sp-starter-kit), where you'll find a fully built sample solution that includes numerous web parts, extensions, and other components that you can use as an example and inspiration for your own customizations. Additionally, find design guidance and standards for web parts at [Designing great SharePoint experiences](/sharepoint/dev/design/design-guidance-overview).
 
 ### Web parts unique to publishing sites
 
@@ -229,4 +229,3 @@ To learn how to set up and use the multilingual feature for communication sites,
 
 > [!NOTE]
 > At this time, the multilingual feature is available for communication sites only.
-

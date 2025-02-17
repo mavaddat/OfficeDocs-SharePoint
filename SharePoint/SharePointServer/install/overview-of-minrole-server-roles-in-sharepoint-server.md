@@ -35,7 +35,7 @@ The following video gives a general overview what MinRole is and can do for your
 
 &nbsp;
   
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/05c5d811-fbce-4bac-b95e-820acf941b01?autoplay=false]
+> [!VIDEO c3596da7-a266-4eba-9064-8057b8cc2aaf]
 
 ## Benefits of using the MinRole farm topology
 

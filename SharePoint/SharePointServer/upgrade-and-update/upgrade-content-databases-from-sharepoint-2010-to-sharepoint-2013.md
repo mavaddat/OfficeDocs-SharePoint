@@ -40,7 +40,8 @@ This article does not provide steps for how to upgrade a site collection. The pr
   
 **Watch the SharePoint 2013 Upgrade: Phase 4 video**
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/e7caff67-2a76-44ad-9795-42cef5467d0c?autoplay=false]
+> [!VIDEO 9bc77a40-3007-4928-826c-d5462f90fdbb]
+
 ## Before you begin
 
 Before you attach and upgrade the content databases, review the following information and take any recommended actions.

@@ -1,7 +1,7 @@
 ---
 title: "View search usage reports in modern sites"
 ms.reviewer:
-ms.author: v-lsaldanha
+ms.author: ruihu
 author: lovina-saldanha
 manager: dansimp
 recommendations: true
@@ -12,7 +12,7 @@ f1.keywords:
 ms.topic: overview
 ms.service: sharepoint-online
 ms.collection: M365-collaboration
-localization_priority: Normal
+ms.localizationpriority: medium
 search.appverid:
 - SPO160
 - MET150

@@ -22,7 +22,7 @@ description: "How to configure SharePoint Server profile synchronization with Mi
 
 [!INCLUDE[appliesto-xxx-2016-2019-SUB-xxx-md](../includes/appliesto-xxx-2016-2019-SUB-xxx-md.md)]
   
-The article outlines a solution that will help you to install and synchronize accounts to SharePoint Server using Microsoft Identity Management, or MIM. MIM 2016 is the successor to a profile synchronization technology leveraged by previous versions of SharePoint Server that was known as Forefront Identity Manager, or FIM. FIM is no longer included as part of the product from SharePoint Server 2016. However, MIM is not the only synchronization solution that SharePoint Server offers. If you would prefer to use the Active Directory Direct Import that is built-in with SharePoint Server, please see the configuration article [here](./configure-profile-synchronization-by-using-sharepoint-active-directory-import.md). Otherwise, follow the steps in this article to configure a new installation of MIM for your User Profile Synchronization.
+The article outlines a solution that helps you to install and synchronize accounts to SharePoint Server using Microsoft Identity Management, or MIM. MIM 2016 is the successor to a profile synchronization technology used by previous versions of SharePoint Server that was known as Forefront Identity Manager, or FIM. FIM is no longer included as part of the product from SharePoint Server 2016. However, MIM isn't the only synchronization solution that SharePoint Server offers. If you would prefer to use the Active Directory Direct Import that is built in with SharePoint Server, please see the configuration article [here](./configure-profile-synchronization-by-using-sharepoint-active-directory-import.md). Otherwise, follow the steps in this article to configure a new installation of MIM for your User Profile Synchronization.
   
 - [Download the solutions files that you need](#download-the-solutions-files-that-you-need)
     
@@ -38,7 +38,7 @@ The article outlines a solution that will help you to install and synchronize ac
 ## Download the solutions files that you need
 <a name="BKMK_Download"> </a>
 
-Download the files used by this solution into a folder on SharePoint Server. Make certain you're logged in as a Farm Administrator and have a local administrator rights on this server.
+Download the files used by this solution into a folder on MIM Synchronization Server. Make certain you're logged in as a Farm Administrator and have a local administrator right on this server.
   
 1. **SharePointSync.psm1** - Microsoft PowerShell module for deploying and starting the synchronization solution. 
     
@@ -46,12 +46,12 @@ Download the files used by this solution into a folder on SharePoint Server. Mak
     
 3. **MA-SP.xml** - This is the MIM management agent for SharePoint Server. 
     
-4. **MV.xml** - This XML file contains additional User Profile Synchronization configuration. 
+4. **MV.xml** - This XML file contains more User Profile Synchronization configuration. 
     
 ## Gather the configuration details you need
 <a name="BKMK_Gather"> </a>
 
-To run the Microsoft PowerShell commands involved in this solution, you'll need to catalog some information from your Active Directory and your SharePoint Server configuration as well. You should include this information in any build-documentation you keep on the User Profile Synchronization process.
+To run the Microsoft PowerShell commands involved in this solution, you need to catalog some information from your Active Directory and your SharePoint Server configuration as well. You should include this information in any build-documentation you keep on the User Profile Synchronization process.
   
 **Active Directory**
 
@@ -93,7 +93,7 @@ Install-SharePointSyncConfiguration `
 ## Preview the impact of your SharePoint Synchronization
 <a name="BKMK_InstallConfigfile"> </a>
 
-Once the synchronization configuration is installed, it's ready to be started. Before you make further changes, you can examine the impact your synchronization will have by running the Start-SharePointSync cmdlet with '-WhatIf'.
+Once the synchronization configuration is installed, it's ready to be started. Before you make further changes, you can examine the impact your synchronization has by running the Start-SharePointSync cmdlet with '-WhatIf'.
   
 ```XML
 ### Run the Synchronization Service management agents
@@ -101,7 +101,7 @@ Start-SharePointSync -WhatIf -Verbose
 
 ```
 
-![Output of the Start-SharePointSync commandlet when run with the -Verbose and -Whatif switches.](../media/fdb59e3d-950a-49a7-b5e2-574ef76d78e2.PNG)
+:::image type="content" source="../media/fdb59e3d-950a-49a7-b5e2-574ef76d78e2.PNG" alt-text="Screenshot of the output of the Start-SharePointSync cmdlet when run with the -Verbose and -WhatIf switches." lightbox="../media/fdb59e3d-950a-49a7-b5e2-574ef76d78e2.PNG":::
   
 ## The Microsoft PowerShell to start the SharePoint Synchronization Configuration
 <a name="BKMK_StartSyncConfig"> </a>
@@ -114,7 +114,7 @@ Start-SharePointSync -Verbose
 
 ```
 
-![The output of running the Start-SharePointSync commandlet with -verbose switch to run the sync service management agent.](../media/7bafbb31-696f-4724-ab98-fa1859125523.PNG)
+:::image type="content" source="../media/7bafbb31-696f-4724-ab98-fa1859125523.PNG" alt-text="The output of running the Start-SharePointSync commandlet with the -Verbose switch to run the synchronization service management agent." lightbox="../media/7bafbb31-696f-4724-ab98-fa1859125523.PNG":::
   
 ## How to add more Active Directory Domains
 <a name="BKMK_StartSyncConfig"> </a>
@@ -131,9 +131,9 @@ Now that you've loaded the initial configuration, you can add more domains for s
     
 4. In the list of directory partitions, select any domain you want to synchronize (and remember that credentials for these domains may be required).
     
-5. Click **OK** to save the management agent properties. 
+5. Select **OK** to save the management agent properties. 
     
-Each run profile for the ADMA management agent must be updated for each domain that was added. To update your profiles do the following:
+Each run profile for the ADMA management agent must be updated for each domain that was added. To update your profiles, do the following:
   
  **2. Update your run profile**
   
@@ -143,7 +143,7 @@ Each run profile for the ADMA management agent must be updated for each domain t
     
 3. Choose a step type of **Full Import (Stage Only)** > **Next**.
     
-4. Choose the partition that matches the domain you just added and click **Finish**. The run profile should now have two steps.
+4. Choose the partition that matches the domain you just added and select **Finish**. The run profile should now have two steps.
     
 5. Select the **FullSync** run profile next > New Step. 
     
@@ -151,16 +151,16 @@ Each run profile for the ADMA management agent must be updated for each domain t
     
 7. Choose the partition that matches the domain you just added > **Finish**. The Run profile will now have two steps.
     
-8. Click **DeltaImport** in the run profiles next > New Step. 
+8. Select **DeltaImport** in the run profiles next > New Step. 
     
 9. Choose a step of type **Delta Import (Stage Only)** > **Next**.
     
-10. Choose the partition that matches the domain that was just added > **Finish**. The run profile should now have two steps.
+10. Choose the partition that matches the domain that was added > **Finish**. The run profile should now have two steps.
     
 11. Select the **DeltaSync** run profile > **New Step**.
     
 12. Choose a step of type **Delta Synchronization** > **Next**.
     
-13. Choose the partition that matches the domain that was just added > **Finish**. The run profile should now have two steps.
+13. Choose the partition that matches the domain that was added > **Finish**. The run profile should now have two steps.
     
-14. Click **Apply** to save all the run profile changes > **OK**.
+14. Select **Apply** to save all the run profile changes > **OK**.

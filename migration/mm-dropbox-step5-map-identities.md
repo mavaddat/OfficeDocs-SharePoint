@@ -2,15 +2,14 @@
 ms.date: 01/21/2021
 title: "Step 5: Map Dropbox identities with Migration Manager"
 ms.reviewer: jhendr
-author: JoanneHendrickson
-ms.author: jhendr
-manager: serdars
+author: MicrosoftHeidi
+ms.author: heidip
+manager: jtremper
 audience: ITPro
 f1.keywords:
 - CSH
 ms.topic: article
-ms.service: sharepoint-online
-ms.subservice: sharepoint-migration
+ms.service: microsoft-365-migration
 ms.localizationpriority: high
 ms.collection: 
 - m365solution-migratefileshares
@@ -19,6 +18,7 @@ ms.collection:
 - M365-collaboration
 - SPMigration
 - highpri
+- m365initiative-migratetom365
 search.appverid: MET150
 description: "Step 5:  Map Dropbox identities with Migration Manager." 
 ---
@@ -83,7 +83,3 @@ Upload your own users and groups mappings using the M
 ## [**Step 6: Migrate and monitor**](mm-Dropbox-step6-migrate-monitor.md)
 
 
->[!NOTE]
->Migration Manager Dropbox isn't available for users of Office 365 operated by 21Vianet in China.
->
-> This feature is also not supported for users of the Government Cloud, including GCC, Consumer, GCC High, or DoD.

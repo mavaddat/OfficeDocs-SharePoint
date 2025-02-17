@@ -1,10 +1,10 @@
 ---
 title: "Video demo of Zero Downtime Patching in SharePoint Server 2016"
 ms.reviewer: 
-ms.author: serdars
-author: SerdarSoysal
-manager: serdars
-ms.date: 3/12/2018
+ms.author: ruihu
+author: maggierui
+manager: jtremper
+ms.date: 12/2/2024
 audience: ITPro
 f1.keywords:
 - NOCSH
@@ -28,15 +28,15 @@ description: "Take a SharePoint tutorial that can help you learn how to patch a 
 
 One of the new features in SharePoint Server 2016 is Zero Downtime patching.
   
-Zero Downtime patching doesn't demand any server downtime while patching a SharePoint Server 2016 farm, but does require that your farm be set up in a Highly Available (HA) configuration (so that SharePoint roles are hosted on more than one server). That way, patching can be done in batches where certain of the redundant servers are taken out of load balancing, patched, replaced, and tested for soundness before the other servers follow through the same process.
+Zero Downtime patching doesn't demand any server downtime while patching a SharePoint Server 2016 farm. However, your farm needs to be set up in a Highly Available (HA) configuration (so that SharePoint roles are hosted on more than one server). That way, patching can be done in batches where certain of the redundant servers are taken out of load balancing, patched, replaced, and tested for soundness before the other servers follow through the same process.
   
-There's a two-step process to patch a server in a SharePoint Server 2016 farm. First, you install the binaries of the patch to each server, this is called the patch phase. Second, after you finish the patch phase, you must complete the update installation by starting the build-to-build upgrade phase.
+There's a two-step process to patch a server in a SharePoint Server 2016 farm. First, you install the binaries of the patch to each server. This step is called the patch phase. Second, after you finish the patch phase, you must complete the update installation by starting the build-to-build upgrade phase.
   
-During Zero downtime patching, users can add and edit files and use search as at any other time, accessing the servers still handled by the load balancer. Likewise, though the database schemas may differ between the patched and unpatched sides of the farm, SharePoint Server 2016 operates in a backward-compatible mode, and its databases are able to properly function, until patching completes.
+During Zero downtime patching, users can add and edit files and use search as at any other time, accessing the servers still handled by the load balancer. Likewise, though the database schemas may differ between the patched and unpatched sides of the farm, SharePoint Server 2016 operates in a backward-compatible mode. Its databases are able to properly function, until patching completes.
   
 This SharePoint tutorial explains how to patch a SharePoint Server 2016 HA farm from beginning to end, including the installation of the binary files on all servers, and the build-to-build (B2B) upgrade itself.
   
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/ec659395-d173-4c1b-bbcb-8a896498948c?autoplay=false]
+> [!VIDEO 4ee5cd7d-13a5-42ab-abaa-e98ed302d52c]
   
 > [!IMPORTANT]
 > During the demonstration, the graceful shut down of Distributed Cache Service was discussed and demonstrated. The environment depicted is a test farm and the process shown is NOT how a customer should do this in a live environment. 
@@ -147,8 +147,7 @@ Get-AzureVM -ServiceName $svc -Name $vmname | Add-AzureEndpoint -Name $epname -L
 
 ```
 
-
-For additional information about the Microsoft PowerShell for Azure cmdlets, see [Get-AzureVM](/previous-versions/azure/mt126007(v=azure.100)) and [Add-AzureEndpoint](/powershell/module/servicemanagement/azure.service/add-azureendpoint).
+For more information about the Microsoft PowerShell for Azure cmdlets, see [Get-AzureVM](/previous-versions/azure/mt126007(v=azure.100)).
 
 ## Related articles
 

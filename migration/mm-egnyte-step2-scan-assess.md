@@ -2,16 +2,15 @@
 ms.date: 08/07/2023
 title: "Step 2: Scan and assess Egnyte folders using Migration Manager"
 ms.reviewer: 
-ms.author: jhendr
-author: JoanneHendrickson
-manager: serdars
+ms.author: heidip
+author: MicrosoftHeidi
+manager: jtremper
 audience: ITPro
 f1.keywords:
 - NOCSH
 ms.topic: article
-ms.service: sharepoint-online
-ms.subservice: sharepoint-migration
-localization_priority: Priority
+ms.service: microsoft-365-migration
+ms.localizationpriority: medium
 ms.collection:
 - m365solution-migratefileshares
 - m365solution-migratetom365
@@ -19,6 +18,7 @@ ms.collection:
 - M365-collaboration
 - SPMigration
 - highpri
+- m365initiative-migratetom365
 search.appverid: MET150
 ROBOTS: NOINDEX
 description: "Step 2:  Scan and assess Egnyte folders using Migration Manager."
@@ -50,7 +50,3 @@ Summary and detailed scan reports are available to assist you in troubleshooting
 ## [**Step 3: Copy to migrations**](mm-egnyte-step3-copy-to-migrations.md)
 
 
->[!NOTE]
->Migration Manager Egnyte isn't available for users of Office 365 operated by 21Vianet in China.
->
-> This feature is also not supported for users of the Government Cloud, including GCC, Consumer, GCC High, or DoD.

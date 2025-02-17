@@ -37,13 +37,20 @@ There are two variants of hybrid search:
     
 ## What is cloud hybrid search?
 
-With the [cloud hybrid search solution](learn-about-cloud-hybrid-search-for-sharepoint.md) for SharePoint in Microsoft 365, you index all your crawled content, including on-premises content, in your search index in Office 365. When users enter a query in a search center, they get search results from the Microsoft 365 search index, and thus get results both from on-premises and Microsoft 365 content. 
+With the [cloud hybrid search solution](learn-about-cloud-hybrid-search-for-sharepoint.md) for SharePoint in Microsoft 365, you index all your crawled content, including on-premises content, in your search index in Office 365. When users enter a query in a search center, they get search results from the Microsoft 365 search index, and thus get results both from on-premises and Microsoft 365 content.
+
+> [!IMPORTANT]
+> Search Content Service (SCS), an internal component of Cloud Hybrid Search in SharePoint in Microsoft 365 will be retired starting June 30, 2025. To continue using Cloud Hybrid Search by then, upgrade your SharePoint Server farm to SharePoint Server Subscription Edition (SPSE) Version 25H1 available in March 2025 or later versions. Without this upgrade, all versions of SharePoint Server 2016/2019 and previous versions of SPSE can only search for on-premises and Microsoft 365 content separately through Hybrid Federated Search after this retirement.
   
 ![Figure showing on-premises and Microsoft 365 content feeding the Microsoft 365 search index, and search results coming from the Microsoft 365 search index.](../media/190a4c47-d434-4d9b-bb14-81138f245ffd.png)
   
 ## What is hybrid federated search?
 
 With the [hybrid federated search solution](learn-about-hybrid-federated-search-for-sharepoint.md) for SharePoint in Microsoft 365, you federate results from your search index in SharePoint Server 2013 and your search index in Office 365. When users enter a query in a search center, they get search results from the Microsoft 365 search index and from the SharePoint Server 2013 search index, and thus get results both from on-premises and Microsoft 365 content. 
+
+>[!IMPORTANT]
+>Hybrid Federated Search in SharePoint for Microsoft 365 (Inbound), the capability to display search results from SharePoint on-premises content in SharePoint Online, has been retired as of September 2024. Hybrid Federated Search for SharePoint Server (Outbound), the ability to view SharePoint Online search results in SharePoint on-premises, and Cloud hybrid search remain operational. If you need to display search results from external content in SharePoint Online, we recommend you use Microsoft Search Graph Connectors or Cloud hybrid search.
+
   
 ![Figure showing searches from Microsoft 365 getting results from the on-premises search index and the Microsoft 365 index, and searches from the on-premises index getting results from the on-premises search index and the Microsoft 365 index](../media/651bc6ac-5dbb-4266-83d6-be1bba093506.png)
   

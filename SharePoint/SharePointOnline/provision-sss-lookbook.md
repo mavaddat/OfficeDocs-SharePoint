@@ -1,10 +1,10 @@
 ---
 ms.date: 09/10/2020
-title: Provision the SharePoint Success Site from the look book
+title: Provision the SharePoint Success Site from SharePoint Look Book
 ms.reviewer: 
-ms.author: matteva
-author: MattEEvans
-manager: pamgreen
+ms.author: ruihu
+author: maggierui
+manager: jtremper
 recommendations: true
 audience: Admin
 f1.keywords:
@@ -18,10 +18,14 @@ ms.collection:
 search.appverid:
 - SPO160
 - MET150
-description: "Provision the SharePoint Success Site from the look book."
+description: "Learn how to provision the SharePoint Success Site from the SharePoint Look Book."
 ---
 
-# Provision the SharePoint Success Site from the look book
+# Provision the SharePoint Success Site from SharePoint Look Book
+
+> [!IMPORTANT]
+> Look book is currently unavailable, please follow [steps here](/sharepoint/dev/solution-guidance/applying-pnp-templates) to provision the SharePoint Success Site. 
+
 
 You can provision the SharePoint Success Site after you confirm that you *and* your tenant meet the following [prerequisites](./provision-sss.md#meet-the-requirements):
 
@@ -30,46 +34,41 @@ You can provision the SharePoint Success Site after you confirm that you *and* y
 - You're an administrator of the App Catalog.
 - Your tenant is provisioned with Microsoft 365 learning pathways version 4.0 or later.
 
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
-## Start provisioning from the look book
-If your tenant is already provisioned with Microsoft 365 learning pathways version 4.0 *or later*, you can provision the SharePoint Success Site from the look book. 
+## Start provisioning from the SharePoint Look Book
+
+If your tenant is already provisioned with Microsoft 365 learning pathways version 4.0 *or later*, you can provision the SharePoint Success Site from the [SharePoint Look Book](https://adoption.microsoft.com/sharepoint-look-book).
 
 If you aren't sure what version of Microsoft 365 learning pathways is installed on your tenant, review the [prerequisites](./provision-sss.md#meet-the-requirements). Then provision the SharePoint Success Site. 
 
-1. Go to the [look book](https://lookbook.microsoft.com/details/0b860749-56a0-4c4c-992c-536d56d9accf), and then select **Add to your tenant**.
+1. Navigate to the [custom PnP site templates](/sharepoint/dev/solution-guidance/applying-pnp-templates#available-templates) and select the template you need.
 
-   ![Image of the SharePoint Success Site look book page. The "Add to your tenant" button is highlighted.](media/sss-lookbook-add.png)
+2. To provision the template, follow the steps mentioned [here](/sharepoint/dev/solution-guidance/applying-pnp-templates#provisioning-a-template).
 
-2. Fill out the email and URL address sections, and then select **Provision**.
+3. Then, go to your tenant's learning pathways site.
 
-   ![Image of the SharePoint Success Site look book page details.](media/sss-lookbook-details.png)
-
-3. Select **Confirm**. When provisioning is complete, you see the following message:
-
-    ![Image of the provisioning confirmation message.](media/sss-sss-complete.png)
-
-5. Go to your tenant's learning pathways site.
-
-6. Select **Home** > **Learning pathways administration**.
+4. Select **Home** > **Learning pathways administration**.
 
     ![Image of the Microsoft 365 learning pathways admin page. The "Learning pathways administration" menu item is highlighted.](media/sss-sss-admin.png)
 
-7. Select the **More actions** (...) button, and then select **Add to Content Pack**.
+5. Select the **More actions** (...) button, and then select **Add to Content Pack**.
 
-8. Select **SharePoint Success Site**.
+6. Select **SharePoint Success Site**.
 
     ![Image of the content pack in the Microsoft 365 learning pathways admin page. The "SharePoint Success Site" selection is highlighted.](media/sss-content-pack.png)
 
-9. Go back to the Microsoft 365 learning pathways administration page.
+7. Go back to the Microsoft 365 learning pathways administration page.
 
-10. Select **Complete**, as the following image shows:
+8. Select **Complete**, as the following image shows:
 
     ![Image of the Microsoft 365 learning pathways solution Complete button.](media/sss-m365lp-confirm2.png)
 
     > [!IMPORTANT]
     > Make sure to select **Complete** to finish the provisioning process.
 
-11. To confirm that the SharePoint Success Site is successfully provisioned, go to the site, and then select **Get Started** > **Plan your site**. You should see the web part on the page, as the following image shows:
+9. To confirm that the SharePoint Success Site is successfully provisioned, go to the site, and then select **Get Started** > **Plan your site**. You should see the web part on the page, as the following image shows:
 
 
     ![Image of the SharePoint Success Site landing page, named Plan your site.](media/sss-content-landing.png)
@@ -110,11 +109,11 @@ Answer: The Global Administrator (formerly called the tenant admin).
 
 **Who has permission to customize the site template?**
 
-Answer: The Global Administrator (formerly called the tenant admin) or a user who has site-owner permissions.
+Answer: A user who has [SharePoint site owner](/sharepoint/site-permissions#site-owners) and [above](/sharepoint/site-permissions).
 
 **Who can create custom playlists and hide or show content in Microsoft 365 learning pathways?**
 
-Answer: The site-collection administrator and users who have site-owner permissions for Microsoft 365 learning pathways.
+Answer: A user who has [SharePoint site owner](/sharepoint/site-permissions#site-owners) and [above](/sharepoint/site-permissions) permissions for Microsoft 365 learning pathways.
 
 **Who has permissions to use the SharePoint Success Site as a user?**
 

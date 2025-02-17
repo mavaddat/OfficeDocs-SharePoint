@@ -27,6 +27,9 @@ description: Setting up cloud hybrid search for SharePoint in Microsoft 365 requ
 
 [!INCLUDE[appliesto-2013-2016-2019-SUB-SPO-md](../includes/appliesto-2013-2016-2019-SUB-SPO-md.md)]
 
+> [!IMPORTANT]
+> Search Content Service (SCS), an internal component of Cloud Hybrid Search in SharePoint in Microsoft 365 will be retired starting June 30, 2025. To continue using Cloud Hybrid Search by then, upgrade your SharePoint Server farm to SharePoint Server Subscription Edition (SPSE) Version 25H1 available in March 2025 or later versions. Without this upgrade, all versions of SharePoint Server 2016/2019 and previous versions of SPSE can only search for on-premises and Microsoft 365 content separately through Hybrid Federated Search after this retirement.
+
 Setting up [cloud hybrid search](learn-about-cloud-hybrid-search-for-sharepoint.md) for SharePoint in Microsoft 365 requires careful planning. This article helps you design a highly reliable, secure and scalable cloud hybrid search solution. 
   
 ## What search experiences do your users need?
@@ -65,7 +68,7 @@ Some of the search features you might be familiar with from SharePoint Server wo
   
 Some of the search features you might be familiar with from SharePoint Server aren't available with cloud hybrid search. Plan to inform your users.
   
- **Multi-tenancy on SharePoint Server 2013 or SharePoint Server 2016 farm** - A SharePoint Server 2013 orSharePoint Server 2016 farm can only attach to one tenant in SharePoint in Microsoft 365, therefore SharePoint can't preserve the tenant isolation of a multi-tenant SharePoint Server 2013 or SharePoint Server 2016 farm. 
+ **Multi-tenancy on SharePoint Server 2013 or SharePoint Server 2016 farm** - A SharePoint Server 2013 or SharePoint Server 2016 farm can only attach to one tenant in SharePoint in Microsoft 365, therefore SharePoint can't preserve the tenant isolation of a multi-tenant SharePoint Server 2013 or SharePoint Server 2016 farm. 
   
  **Custom entity extraction** - Custom entity extraction isn't available with cloud hybrid search because SharePoint in Microsoft 365 doesn't support custom entity extraction. 
   
@@ -156,7 +159,7 @@ You can influence crawl performance and search freshness by how you manage crawl
 ## Decide how to synchronize Active Directories
 <a name="BKMK_Decide_sync_AD"> </a>
 
-When your on-premises content is crawled, parsed and encrypted, the access control lists (ACLs) for each item are crawled too. The Microsoft 365 search index stores the ACLs together with the item, so the system needs to be able to recognize an on-premises user as the same person in Microsoft 365. When you've set up Active Directory synchronization between your on-premises network (Windows Server Active Directory) and your Microsoft 365 organization (Windows Azure Active Directory), the system maps and translates the ACLs to the right users, and the users get security trimmed search results from the Microsoft 365 index.
+When your on-premises content is crawled, parsed and encrypted, the access control lists (ACLs) for each item are crawled too. The Microsoft 365 search index stores the ACLs together with the item, so the system needs to be able to recognize an on-premises user as the same person in Microsoft 365. When you've set up Active Directory synchronization between your on-premises network (Windows Server Active Directory) and your Microsoft 365 organization (Microsoft Entra ID), the system maps and translates the ACLs to the right users, and the users get security trimmed search results from the Microsoft 365 index.
   
 There are two methods to synchronize Active Directories:
   
@@ -170,7 +173,7 @@ If you choose the SSO option, you can also configure password synchronization if
 
 Some organizations assign access rights to their on-premises content by using one of the default security groups in Windows Server Active Directory (AD), for example the Domain Users security group.
   
-The Azure Active Directory Connect synchronization tool by default excludes some objects from synchronization. Security groups that have the attribute IsCriticalSecurityObject=true is one set of objects that the tool excludes, and Domain Users is an example of such a security group. Therefore, the access rights for the members of Domain Users aren't available in Azure Active Directory (AAD). Even if users have access to on-premises content, they don't get search results when they search for that content.
+The Microsoft Entra Connect synchronization tool by default excludes some objects from synchronization. Security groups that have the attribute IsCriticalSecurityObject=true is one set of objects that the tool excludes, and Domain Users is an example of such a security group. Therefore, the access rights for the members of Domain Users aren't available in Microsoft Entra ID. Even if users have access to on-premises content, they don't get search results when they search for that content.
   
 Instead, assign access rights by using a group that doesn't have IsCriticalSecurityObject=true, for example the Everyone group, the Authenticated Users group, or a custom group. For a list of the conditions for excluding objects and more information about unexpected synchronization results, see [One or more objects don't sync when using the Azure Active Directory Sync tool](https://support.microsoft.com/kb/2643629).
   
@@ -191,7 +194,7 @@ Set up cloud hybrid search in combination with hybrid federated search.
   
 ![Illustration showing a combined set-up of cloud hybrid search, hybrid federated search, and enterprise search.](../media/5f6f87b3-55ab-4f95-b453-3877c1e3915b.png)
   
-- Plan content sources for the cloud Search service application (cloud SSA) in SharePoint Server that cover all on-premises content except the sensitive content. The metadata for the crawled content is added the search index in Office 365.
+- Plan content sources for the cloud Search service application (cloud SSA) in SharePoint Server that covers all on-premises content except the sensitive content. The metadata for the crawled content is added the search index in Office 365.
     
 - Plan enterprise search in SharePoint Server to crawl the sensitive, on-premises content, see [Plan search in SharePoint Server](../search/search-planning.md). Plan content sources for the SSA that cover the sensitive content. The metadata from the crawled, sensitive content is added to the search index in SharePoint Server.
     
@@ -226,4 +229,3 @@ Plan for a custom result source that limits your Search Centers in Office 365 to
   
 [Hybrid search in SharePoint](hybrid-search-in-sharepoint.md)
   
-

@@ -44,7 +44,8 @@ For a visual overview of the upgrade process, including site collection upgrade,
   
 **Watch the SharePoint 2013 Upgrade: Phase 5 video**
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/b45eae11-becb-44b5-9fec-f7b03fef1b7b?autoplay=false]
+> [!VIDEO c308331a-0cee-419d-a512-ab5ab70196e2]
+
 > [!IMPORTANT]
 > If you upgrade from SharePoint Server 2010 to SharePoint 2013, there are special considerations for My Sites. (My Sites are not available in SharePoint Foundation 2013.) Make sure that you upgrade the My Site Host site collection before you allow users to access their individual My Sites in SharePoint 2013. This makes sure that the server software and database changes are complete so that users can upgrade their individual My Sites successfully. > A user can upgrade his or her My Site by following the steps to upgrade a site collection later in this article, or a farm administrator can upgrade My Sites by using PowerShell. > 
   

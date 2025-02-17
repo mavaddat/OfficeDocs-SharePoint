@@ -2,14 +2,14 @@
 ms.date: 07/26/2021
 title: "Review communication tools"
 ms.reviewer: 
-ms.author: hokavian
-author: Holland-ODSP
-manager: pamgreen
+ms.author: ruihu
+author: maggierui
+manager: jtremper
 recommendations: true
 audience: Admin
 ms.topic: article
 ms.service: sharepoint-online
-localization_priority: Normal
+ms.localizationpriority: medium
 search.appverid: MET150
 ms.collection: 
   - m365solution-corpcomms
@@ -65,7 +65,7 @@ Build communities of interest, gather ideas, request feedback, and keep everyone
 
 | Logo                   | Details   | 
 | :------------------: | :------------------- |
-| ![Viva Engage logo.](media/logo-yammer-1.png)  |**Engagement options:**  <br> - [Join and create a community](https://support.microsoft.com/office/join-and-create-a-community-in-viva-engage-56aaf591-1fbc-4160-ba26-0c4723c23fd6) in Viva Engage to bring people together <br> - [Create polls, praise, announcements, and questions](https://support.microsoft.com/office/create-polls-praise-announcements-and-questions-in-viva-engage-4b30c7e0-f915-4c69-9582-ccbbd09a516b) in Viva Engage <br> - Integrate Viva Engage into Microsoft Teams by [adding a Viva Engage page to a Teams channel](https://support.microsoft.com/office/add-a-yammer-page-to-a-teams-channel-ca06ec83-f22d-4b76-83a5-c83aa2a33528) <br> - [Use a Viva Engage web part](https://support.microsoft.com/office/use-a-yammer-web-part-in-sharepoint-online-a53cfa0c-3d09-42c8-a286-1038a81c59da) to integrate conversations and highlights into a relevant SharePoint site <br> - Learn how to [organize a live event in Viva Engage](https://support.microsoft.com/office/organize-a-live-event-in-new-viva-engage-7338782a-4f0b-4fd0-a6c3-33625906ead1) <br> - Use the [Viva Engage community app in Microsoft Teams](https://support.microsoft.com/office/use-the-yammer-communities-app-for-microsoft-teams-930c86f1-e1e2-4e45-a66a-ce8faca71a21) <br><br> **Set up and maintenance options:** <br> - Enable people at your organization to [report concerns about Viva Engage conversations or replies]/viva/engage/manage-viva-engage-groups/configure-conversation-reporting.md) <br> - Plan to [engage new Viva Engage communities](https://onedrive.live.com/view.aspx?resid=1A3C1EAC795A049F!117&ithint=file%2cpptx&authkey=!AFaAWmDIAnUrWBA) until the conversation picks up naturally over time <br><br>  **Analytics:**  <br>  - View [insights about questions and answers](https://support.microsoft.com/office/view-insights-about-questions-and-answers-in-viva-engage-fcde33cf-ee3f-4cc8-aa47-c6d0f3fc5dc0) in Viva Engage <br> - View insights about [Viva Engage community or group activity](https://support.microsoft.com/office/view-community-or-group-insights-in-yammer-06c5494a-d77c-410c-9464-98bc0b9dad84) <br> - [Determine how many people have seen a Viva Engage conversation](/microsoft-365/admin/activity-reports/viva-engage-activity-report) 
+| ![Viva Engage logo.](media/logo-yammer-1.png)  |**Engagement options:**  <br> - [Join and create a community](https://support.microsoft.com/office/join-and-create-a-community-in-viva-engage-56aaf591-1fbc-4160-ba26-0c4723c23fd6) in Viva Engage to bring people together <br> - [Create polls, praise, announcements, and questions](https://support.microsoft.com/office/create-polls-praise-announcements-and-questions-in-viva-engage-4b30c7e0-f915-4c69-9582-ccbbd09a516b) in Viva Engage <br> - Integrate Viva Engage into Microsoft Teams by [adding a Viva Engage page to a Teams channel](https://support.microsoft.com/office/add-a-yammer-page-to-a-teams-channel-ca06ec83-f22d-4b76-83a5-c83aa2a33528) <br> - [Use a Viva Engage web part](https://support.microsoft.com/office/use-a-yammer-web-part-in-sharepoint-online-a53cfa0c-3d09-42c8-a286-1038a81c59da) to integrate conversations and highlights into a relevant SharePoint site <br> - Learn how to [organize a live event in Viva Engage](https://support.microsoft.com/office/organize-a-live-event-in-new-viva-engage-7338782a-4f0b-4fd0-a6c3-33625906ead1) <br> - Use the [Viva Engage community app in Microsoft Teams](https://support.microsoft.com/office/use-the-yammer-communities-app-for-microsoft-teams-930c86f1-e1e2-4e45-a66a-ce8faca71a21) <br><br> **Set up and maintenance options:** <br> - Enable people at your organization to [report concerns about Viva Engage conversations or replies]/viva/engage/manage-viva-engage-groups/configure-conversation-reporting.md) <br> - Plan to [engage new Viva Engage communities](https://onedrive.live.com/view.aspx?resid=1A3C1EAC795A049F!117&ithint=file%2cpptx&authkey=!AFaAWmDIAnUrWBA) until the conversation picks up naturally over time <br><br>  **Analytics:**  <br>  - View [insights about questions and answers](https://support.microsoft.com/office/view-insights-about-questions-and-answers-in-viva-engage-fcde33cf-ee3f-4cc8-aa47-c6d0f3fc5dc0) in Viva Engage <br> - View insights about [Viva Engage community or group activity](https://support.microsoft.com/office/view-community-or-group-insights-in-yammer-06c5494a-d77c-410c-9464-98bc0b9dad84) <br> - [Determine how many people have seen a Viva Engage conversation](https://support.microsoft.com/topic/analytics-in-viva-engage-0d9f6fd5-6b0c-45a2-a0aa-0576ae1f6895)
 
 
 
@@ -78,18 +78,16 @@ Outlook is a tried-and-true form of communication for many organizations. Email 
 | ![Microsoft Outlook logo.](media/logo-outlook-1.png)  |**Engagement options:**  <br> - Reach an unlimited number of recipients <br> - [Use @mentions](https://support.microsoft.com/office/use-mentions-to-get-someone-s-attention-90701709-5dc1-41c7-aa48-b01d4a46e8c7) to get the attention of somebody in an email <br> - Get more out of your email by [sharing the same message in Microsoft Teams](https://support.microsoft.com/office/share-an-email-to-teams-from-outlook-108fc274-1e64-4ea1-90bb-51c6c7f267e3) <br> - Choose when the message by be received by [scheduling email messages](https://support.microsoft.com/office/delay-or-schedule-sending-email-messages-026af69f-c287-490a-a72f-6c65793744ba) <br><br> **Set up and maintenance options:** <br> - Consider [setting up Outlook message templates](https://support.microsoft.com/office/create-an-email-message-template-43ec7142-4dd0-4351-8727-bd0977b6b2d1) to standardize corporate communications <br> - [Create Microsoft 365 groups in Outlook](https://support.microsoft.com/office/create-a-contact-group-or-distribution-list-in-outlook-for-pc-88ff6c60-0a1d-4b54-8c9d-9e1a71bc3023) to make reaching specific audiences more easily  <br><br>  **Analytics:**  <br>  - [Add and request read receipts](https://support.microsoft.com/office/add-and-request-read-receipts-and-delivery-notifications-a34bf70a-4c2c-4461-b2a1-12e4a7a92141) and delivery notifications <br> - [Create polls and view results in an email message](https://support.microsoft.com/office/create-a-poll-in-outlook-46893563-ab12-4bd0-aff7-26f5a488fea0)  | 
 
 
-
-
 ## Stream: Securely upload, organize, and share videos 
 Microsoft Stream is video service where people in your organization can upload, view, and share videos securely. You can share recordings of meetings, presentations, training sessions, or other videos that aid your team's collaboration. Use [Stream for live events](/stream/live-event-overview), or embed Stream content in [Microsoft Teams](/stream/embed-video-microsoft-teams) or [SharePoint](https://support.microsoft.com/office/use-the-stream-web-part-b97fa87c-1337-4271-a059-17f0d2b26e8b).
 <br>
 
 | Logo                   | Details   | 
 | :------------------: | :------------------- |
-| ![Microsoft Stream logo.](media/logo-stream-1.png)  |**Engagement options:**  <br> - [Share Stream videos](/stream/portal-share-video) in email, Teams channels and chats, or in Viva Engage <br> - [Use the Stream web part](https://support.microsoft.com/office/use-the-stream-web-part-b97fa87c-1337-4271-a059-17f0d2b26e8b) to embed a video in a SharePoint page or news post  <br> - [Upload recordings from Teams meetings into Stream](/stream/portal-upload-teams-meeting-recording) to organize and store content <br> - Consider using [Stream for live events](https://support.microsoft.com/office/get-started-with-microsoft-teams-live-events-d077fec2-a058-483e-9ab5-1494afda578a) when you need to reach large audiences and want to record the session to share with others <br><br> **Set up and maintenance options:** <br> - Stream uses [Microsoft 365 groups](/stream/portal-create-groups) and [channels](/stream/portal-create-channel) to make it easy to share and collaborate on content and manage access <br> - There are [video quotas and limitations](/stream/quotas-and-limitations) depending on your organization’s license. 
+| ![Microsoft Stream logo.](media/logo-stream-1.png)  |**Engagement options:**  <br> - [Share Stream videos](/stream/portal-share-video) in email, Teams channels and chats, or in Viva Engage <br> - [Use the Stream web part](https://support.microsoft.com/office/use-the-stream-web-part-b97fa87c-1337-4271-a059-17f0d2b26e8b) to embed a video in a SharePoint page or news post  <br> - [Upload recordings from Teams meetings into Stream](/stream/portal-upload-teams-meeting-recording) to organize and store content <br> - Consider using [Stream for live events](https://support.microsoft.com/office/get-started-with-microsoft-teams-live-events-d077fec2-a058-483e-9ab5-1494afda578a) when you need to reach large audiences and want to record the session to share with others <br><br> **Set up and maintenance options:** <br> - You can [share a video or audio file and manage its access](https://support.microsoft.com/office/share-a-video-or-audio-file-across-microsoft-365-0a67ab03-feef-4035-87cf-4347649abe00) just like you do with any other files in Microsoft 365 <br> - There are [video quotas and limitations](/stream/quotas-and-limitations) depending on your organization’s license. 
 
 ## Viva: Personalized employee experiences  
-Microsoft Viva is made up of several apps that focus on specific employee experience areas and can be accessed in Teams. Viva apps are integrated with existing M365 apps like SharePoint, Viva Engage, and Teams. Some Viva apps can help organize, personalize, and amplify organizational communications. Other Viva apps will compliment popular business scenarios and can be combined to create more powerful experiences. [Learn more about Microsoft Viva](/viva/microsoft-viva-overview).
+Microsoft Viva is made up of several apps that focus on specific employee experience areas and can be accessed in Teams. Viva apps are integrated with existing M365 apps like SharePoint, Viva Engage, and Teams. Some Viva apps can help organize, personalize, and amplify organizational communications. Other Viva apps will complement popular business scenarios and can be combined to create more powerful experiences. [Learn more about Microsoft Viva](/viva/microsoft-viva-overview).
 
 | Logo                   | Details   | 
 | :------------------: | :------------------- |
@@ -102,8 +100,3 @@ Microsoft Viva is made up of several apps that focus on specific employee experi
 <br>
 
 **Step 4:** [Get started planning for your scenario](choose-communication-method.md)
-
-
-<br>
-<br>
-

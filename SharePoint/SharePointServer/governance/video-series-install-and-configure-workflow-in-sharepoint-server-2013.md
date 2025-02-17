@@ -31,7 +31,8 @@ This video provides an overview of the installation and configuration process fo
   
 **This video provides an overview of the installation and configuration process for Workflow in SharePoint Server 2013.**
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/d54f5b42-4647-4193-ab64-c8ed3ba0a14a?autoplay=false]
+> [!VIDEO 83c8075e-310d-47c7-bcf4-66823cf8af23]
+
 ## Episode 2: Pre-install steps
 <a name="episode2"> </a>
 
@@ -39,7 +40,8 @@ This video provides a walkthrough of the pre-install steps that must be complete
   
 **This video provides a walkthrough of the pre-install steps that must be completed before installing and configuring Workflow in SharePoint Server 2013.**
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/b3319ca1-d901-49aa-88c8-544b8a35ec62?autoplay=false]
+> [!VIDEO ca64f4eb-7a25-47b9-a9a0-4f8088e1c252]
+
 ## Episode 3: Install and configure Workflow Manager
 <a name="episode3"> </a>
 
@@ -47,7 +49,8 @@ This video provides a walkthrough of the installation and configuration of Workf
   
 **This video provides a walkthrough of the installation and configuration of Workflow Manager.**
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/3fa7b4d8-9661-48e6-a82c-7b0bc24f07e1?autoplay=false]
+> [!VIDEO 63640770-3ddc-4b03-9e8c-bb4bbd7c8b3f]
+
 ## Episode 4: Install and configure Workflow Manager Client
 <a name="episode4"> </a>
 
@@ -55,7 +58,8 @@ This video provides a walkthrough of the installation of the Workflow Manager Cl
   
 **This video provides a walkthrough of the installation of the Workflow Manager Client in the SharePoint farm.**
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/8d77ff1f-1212-4be7-b78d-50098ed2fe76?autoplay=false]
+> [!VIDEO cda718f4-766c-402b-a29d-c3ae1fcce4c8]
+
 ## Episode 5: Configure the SharePoint farm with the workflow farm
 <a name="episode5"> </a>
 
@@ -63,7 +67,8 @@ This video provides a walkthrough on how to pair the SharePoint farm with the Wo
   
 **This video provides a walkthrough on how to pair the SharePoint farm with the Workflow farm in order to enable the SharePoint 2013 Workflow Platform.**
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/721a814b-7b00-458f-9248-27e3e7873848?autoplay=false]
+> [!VIDEO b31c981b-33e3-461f-880b-3b416bfe7485]
+
 ## Episode 6: Test workflow
 <a name="episode6"> </a>
 
@@ -71,7 +76,8 @@ This video provides a walkthrough of testing the SharePoint 2013 Workflow Platfo
   
 **This video provides a walkthrough of testing the SharePoint 2013 Workflow Platform using SharePoint Designer 2013 once it has been installed.**
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/f8ac338c-63e0-4026-9c34-d3749a90580d?autoplay=false]
+> [!VIDEO 2dffa83d-4664-4c4f-87e0-35854f336e48]
+
 ## See also
 <a name="episode6"> </a>
 

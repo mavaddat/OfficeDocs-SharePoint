@@ -1,10 +1,10 @@
 ---
-ms.date: 07/28/2023
+ms.date: 05/31/2024
 title: Teams and SharePoint integration
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: serdars
+ms.author: ruihu
+author: maggierui
+manager: jtremper
 recommendations: true
 audience: Admin
 f1.keywords:
@@ -37,6 +37,12 @@ Here are the basic parts of Teams and SharePoint and how they relate to each oth
 
 - **Team** - A team is a place in Teams where you can invite others to collaborate. Each team is connected to one or more SharePoint sites. These sites are where the team's files are stored.
 
+- **Public team** - A public team is a team that anyone in the organization can join. Public teams don't require a team owner to invite someone to the team.
+
+- **Private team** - A private team is a team that a person can only join when invited by a team owner. Both public teams and private teams offer the same channel types - standard, private, and shared.
+ 
+- **Parent site** - The SharePoint site that is created when you create the team. This site is used for file storage for all standard channels. All team owners and members have access to this site.
+  
 - **Channel** - A channel is a location in a team where you can collaborate with others on a specific thing. A team can have multiple channels for different purposes. For example, you might have a team for marketing with different channels for different products or events. There are three types of channels in Teams: *standard*, *private*, and *shared*.
 
 - **Standard channel** - A standard channel is a channel that all members of a team have access to. Each team comes with a standard channel called "General." Team owners and members can add additional standard channels. It always shows up first in a team's list of channels, and it can't be deleted (every team must have at least one channel).
@@ -45,25 +51,20 @@ Here are the basic parts of Teams and SharePoint and how they relate to each oth
 
 - **[Shared channels](/MicrosoftTeams/shared-channels)** - A shared channel is a channel that you can add anyone to, even if they're not a member of the team. It's used for broader collaboration with people outside the team. Each shared channel has its own SharePoint site for file storage. Only members of the shared channel can access this site.
 
-- **Parent site** - The SharePoint site that is created when you create the team. This site is used for file storage for all standard channels. All team owners and members have access to this site.
-
 - **Channel site** - The SharePoint site that is created when you create a private or shared channel in a team. Only owners and members of the private or shared channel have access to this site.
 
-- **Public team** - A public team is a team that anyone in the organization can join. Public teams don't require a team owner to invite someone to the team.
-
-- **Private team** - A private team is a team that a person can only join when invited by a team owner. Both public teams and private teams offer the same channel types - standard, private, and shared.
 
 - **[Microsoft 365 group](/microsoft-365/solutions/collaboration-governance-overview#why-microsoft-365-groups-are-important-in-collaboration-governance)** - A Microsoft 365 group is a membership group that gives people access to multiple Microsoft 365 services at the same time. The membership for each team is stored in a Microsoft 365 group and that group also gives those people access to the team's parent SharePoint site.
 
-- **Azure AD** - Azure AD is the directory service where Microsoft 365 user accounts are stored. (You can manage these accounts from Microsoft 365 as well.) Microsoft 365 groups are also stored in Azure AD. Azure AD allows administrators to manage users and groups and to apply business rules to user accounts, such as requiring multi-factor authentication.
+- **Microsoft Entra ID** - Microsoft Entra ID is the directory service where Microsoft 365 user accounts are stored. (You can manage these accounts from Microsoft 365 as well.) Microsoft 365 groups are also stored in Microsoft Entra ID. Microsoft Entra ID allows administrators to manage users and groups and to apply business rules to user accounts, such as requiring multi-factor authentication.
 
-![Image of how Azure AD, Teams, and SharePoint relate.](media/teams-sharepoint-interactions.png)
+![Image of how Microsoft Entra ID, Teams, and SharePoint relate.](media/teams-sharepoint-interactions.png)
 
-Each team is connected to a Microsoft 365 group in Azure AD where the team membership is stored. The files you see on the **Files** tab in a team are stored in a SharePoint site. All standard channels in a team share the same SharePoint site, but each private channel has its own site.
+Each team is connected to a Microsoft 365 group in Microsoft Entra ID where the team membership is stored. The files you see on the **Files** tab in a team are stored in a SharePoint site. All standard channels in a team share the same SharePoint site, but each private channel has its own site.
 
 <br>
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4Txae?autoplay=false]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=e4f94dfb-42ef-4616-9ded-3d3cd7040d2f]
 
 ## When do Teams and SharePoint get connected?
 

@@ -50,7 +50,8 @@ This video shows the steps involved in setting up Power Pivot for SharePoint 201
   
 **Video: Configure Power Pivot for SharePoint 2013**
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/8a5c81a1-3524-4fe9-9b7c-d71e59fcf8ef?autoplay=false]
+> [!VIDEO 20e36fec-d232-4ba0-a9ba-caa99246dc32]
+
 ## Prepare the farm
 <a name="proc1"> </a>
 

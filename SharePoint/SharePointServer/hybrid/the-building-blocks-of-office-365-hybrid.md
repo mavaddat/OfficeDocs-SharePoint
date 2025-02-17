@@ -33,5 +33,5 @@ If you're considering deploying a Microsoft 365 hybrid solution, watch this vide
   
 **Video: The building blocks of SharePoint hybrid**
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/49bc73aa-b5ab-497a-a54e-b70ddd7a4ace?autoplay=false]
+> [!VIDEO 9690d350-acea-46bb-a201-426e5804979a]
 

@@ -1,7 +1,7 @@
 ---
 title: "Installation overview for SharePoint Server Subscription Edition"
 ms.reviewer: 
-ms.author: v-nsatapathy
+ms.author: serdars
 author: nimishasatapathy
 manager: serdars
 ms.date: 6/24/2021
@@ -10,7 +10,7 @@ f1.keywords:
 - NOCSH
 ms.topic: landing-page
 ms.service: sharepoint-server-itpro
-localization_priority: Critical
+ms.localizationpriority: high
 ms.collection:
 - IT_Sharepoint_Server
 - IT_Sharepoint_Server_Top

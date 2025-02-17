@@ -1,14 +1,14 @@
 ---
-ms.date: 09/07/2021
+ms.date: 05/31/2024
 title: Intelligent intranet overview
-ms.author: matteva
-author: MattEEvans
-manager: pamgreen
+ms.author: ruihu
+author: maggierui
+manager: jtremper
 recommendations: true
 audience: Admin
 f1.keywords:
 - NOCSH
-ms.topic: article
+ms.topic: solution-overview
 ms.service: sharepoint-online
 ms.localizationpriority: high
 ms.collection:  
@@ -34,13 +34,13 @@ Keep employees informed and engaged by providing a shared place to securely view
 ![Intelligent intranet overview](media/intelligent_intranet_overview1.png)
  
 ### Build an intelligent intranet
-Learn how to move through the [process of creating an intranet](https://aka.ms/IntelligentIntranet) for your organization. Get familiar with [common intranet planning and creation roles](./intranet-roles-tasks.md), design stages, and the [intranet lifecycle](https://github.com/MicrosoftDocs/OfficeDocs-SharePoint/raw/public/SharePoint/SharePointOnline/spodownloads/Intranet%20lifecycle.pdf). Learn how to align goals into priority scenarios that you can [get started implementing](https://aka.ms/Implement-Intranet) quickly. Then, learn how to [engage with viewers](https://aka.ms/Engage-Intranet) and maintain your intranet over time as the organization changes and scales. 
+Learn how to move through the [process of creating an intranet](https://aka.ms/IntelligentIntranet) for your organization. Get familiar with [common intranet planning and creation roles](./intranet-roles-tasks.md), design stages, and the [intranet lifecycle](https://www.bing.com/ck/a?!&&p=a1804b93b80a14fdJmltdHM9MTcxMDg5MjgwMCZpZ3VpZD0zZTA2NDcwMC1kYzdiLTYyZGMtMWE2Ni01NjM2ZGQ1NzYzYzUmaW5zaWQ9NTI1MQ&ptn=3&ver=2&hsh=3&fclid=3e064700-dc7b-62dc-1a66-5636dd5763c5&psq=microsoft+intranet+lifecycle&u=a1aHR0cHM6Ly9kb3dubG9hZC5taWNyb3NvZnQuY29tL2Rvd25sb2FkL2QvZS8yL2RlMmMzMjRjLWVkZjMtNGZlMC1iYmJkLWY5OGM5MThkY2Y2YS9JbnRyYW5ldCUyMGxpZmVjeWNsZS5wZGY&ntb=1). Learn how to align goals into priority scenarios that you can [get started implementing](https://aka.ms/Implement-Intranet) quickly. Then, learn how to [engage with viewers](https://aka.ms/Engage-Intranet) and maintain your intranet over time as the organization changes and scales. 
 
 ### Help your organization engage and inform
 
 Use SharePoint and other Microsoft 365 products to create communication channels that serve specific audiences. Learn how to [create and share organizational news](https://support.microsoft.com/office/create-and-share-news-on-your-sharepoint-sites-495f8f1a-3bef-4045-b33a-55e5abe7aed7) and [use the News web part](https://support.microsoft.com/office/use-the-news-web-part-on-a-sharepoint-page-c2dcee50-f5d7-434b-8cb9-a7feefd9f165) into key landing pages and portals.
 
-Integrate [Viva Engage](https://support.microsoft.com/office/what-is-yammer-47526868-b136-40cc-a80d-c870eadd9ba5) and the [Viva Engage web parts](https://support.microsoft.com/office/use-a-yammer-web-part-in-sharepoint-online-a53cfa0c-3d09-42c8-a286-1038a81c59da) to embed conversations and highlights in sites. Use the power of video to [share pre-recorded messages](/stream/portal-upload-video) and [record organizational events](/stream/live-event-overview) for later viewing. Use content services like [audience targeting](https://support.microsoft.com/office/target-content-to-a-specific-audience-on-a-sharepoint-site-68113d1b-be99-4d4c-a61c-73b087f48a81) to make sure key audience are targeted specific content. 
+Integrate [Viva Engage](https://support.microsoft.com/viva-engage) and the [Viva Engage web parts](https://support.microsoft.com/office/use-a-yammer-web-part-in-sharepoint-online-a53cfa0c-3d09-42c8-a286-1038a81c59da) to embed conversations and highlights in sites. Use the power of video to [share pre-recorded messages](/stream/portal-upload-video) and [record organizational events](/stream/live-event-overview) for later viewing. Use content services like [audience targeting](https://support.microsoft.com/office/target-content-to-a-specific-audience-on-a-sharepoint-site-68113d1b-be99-4d4c-a61c-73b087f48a81) to make sure key audience are targeted specific content. 
 
 ### Enhance collaboration and sharing
 
@@ -50,7 +50,7 @@ Use [SharePoint team sites](https://support.microsoft.com/office/what-is-a-share
 
 ### Achieve specific outcomes
 
-Use SharePoint to achieve specific business outcomes like narrowing the distance between leadership teams and individual contributors by [creating a leadership site](https://support.microsoft.com/office/guided-walkthrough-creating-a-leadership-site-for-your-organization-e4a984db-d277-45ab-b18e-fa117b25bb4d) that encourages sharing news and starting conversations. Use SharePoint to unite and inform groups of people with related interests by [setting up news](https://support.microsoft.com/office/guided-walkthrough-setting-up-news-for-your-organization-using-a-hub-site-95a90834-96a2-463c-b741-31c4d2230706) for a hub site. View custom solutions in the [look book](https://lookbook.microsoft.com/details/8f8337d2-b1f6-4a84-91a4-9081f841f0f6) to help inspire your next site design or get help with [new employee onboarding](https://lookbook.microsoft.com/details/75e60a32-9849-4ed4-b83e-b2b08983ad19), [crisis communication](https://lookbook.microsoft.com/details/8f8337d2-b1f6-4a84-91a4-9081f841f0f6), and more.
+Use SharePoint to achieve specific business outcomes like narrowing the distance between leadership teams and individual contributors by [creating a leadership site](https://support.microsoft.com/office/guided-walkthrough-creating-a-leadership-site-for-your-organization-e4a984db-d277-45ab-b18e-fa117b25bb4d) that encourages sharing news and starting conversations. Use SharePoint to unite and inform groups of people with related interests by [setting up news](https://support.microsoft.com/office/guided-walkthrough-setting-up-news-for-your-organization-using-a-hub-site-95a90834-96a2-463c-b741-31c4d2230706) for a hub site. View custom solutions in the [SharePoint Look Book](https://adoption.microsoft.com/sharepoint-look-book) to help inspire your next site design or simply navigate to the [custom PnP site templates](/sharepoint/dev/solution-guidance/applying-pnp-templates) and select the template you need from the [available templates](/sharepoint/dev/solution-guidance/applying-pnp-templates#available-templates).
 
 ## Overview of how to set up an intelligent intranet
 
@@ -60,7 +60,7 @@ Harness the power of the intelligent intranet to communicate effectively across 
 
 ### 1 - Explore what's possible
 
-Start by getting inspired by what you can accomplish with SharePoint by viewing [compelling business scenarios](https://aka.ms/Explore-Intranet), the [SharePoint look book](https://lookbook.microsoft.com/), and [guided walkthroughs](https://support.microsoft.com/office/guided-walkthroughs-creating-sites-for-your-organization-7cc52ac9-394e-417e-85fe-33070e0cd13c). 
+Start by getting inspired by what you can accomplish with SharePoint by viewing [compelling business scenarios](https://aka.ms/Explore-Intranet), the [SharePoint Look Book](https://adoption.microsoft.com/sharepoint-look-book), and [guided walkthroughs](https://support.microsoft.com/office/guided-walkthroughs-creating-sites-for-your-organization-7cc52ac9-394e-417e-85fe-33070e0cd13c). 
 
 - Identify your key sponsors and stakeholders
 - [Organize priorities](https://aka.ms/Align-Intranet)
@@ -78,7 +78,7 @@ Learn more about [how to think about your intelligent intranet](./trad-vs-modern
 - Establish a [governance plan](./intranet-governance.md)
 - Plan [intranet hubs](./planning-hub-sites.md) and [branding](./branding-sharepoint-online-sites-modern-experience.md)
 
-Get familiar with the [intranet lifecycle](https://github.com/MicrosoftDocs/OfficeDocs-SharePoint/raw/public/SharePoint/SharePointOnline/spodownloads/Intranet%20lifecycle.pdf) and basic SharePoint intranet and [site building blocks](https://github.com/MicrosoftDocs/OfficeDocs-SharePoint/raw/public/SharePoint/SharePointOnline/spodownloads/Building%20blocks%20-%20sites%20and%20pages.pdf).
+Get familiar with the [intranet lifecycle](https://www.bing.com/ck/a?!&&p=a1804b93b80a14fdJmltdHM9MTcxMDg5MjgwMCZpZ3VpZD0zZTA2NDcwMC1kYzdiLTYyZGMtMWE2Ni01NjM2ZGQ1NzYzYzUmaW5zaWQ9NTI1MQ&ptn=3&ver=2&hsh=3&fclid=3e064700-dc7b-62dc-1a66-5636dd5763c5&psq=microsoft+intranet+lifecycle&u=a1aHR0cHM6Ly9kb3dubG9hZC5taWNyb3NvZnQuY29tL2Rvd25sb2FkL2QvZS8yL2RlMmMzMjRjLWVkZjMtNGZlMC1iYmJkLWY5OGM5MThkY2Y2YS9JbnRyYW5ldCUyMGxpZmVjeWNsZS5wZGY&ntb=1) and [site building blocks](/sharepoint/plan-intranet#choose-solution-components).
 
 ### 3 - Implement plans and start building
 
@@ -100,17 +100,17 @@ Measure intranet effectiveness by reviewing [Microsoft 365 usage analytics](/mic
 - Consider using [Microsoft Learning Pathways](/office365/customlearning/#:~:text=Microsoft%20365%20learning%20pathways%20is%20a%20customizable%2C%20on-demand,adoption%20of%20Microsoft%20365%20services%20in%20your%20organization) to surface training content on SharePoint pages
  
 
-|**Design process**|**Learn more**|
+| Design process | Learn more |
 |:-----|:-----|
-|Plan sites - Help site owners understand how to plan to create high impact sites that meet objectives.|[Plan your SharePoint communication site](https://support.microsoft.com/office/plan-your-sharepoint-communication-site-35d9adfe-d5cc-462f-a63a-bae7f2529182)<br>[Get inspired with the SharePoint look book](https://lookbook.microsoft.com/)<br>[Guided Walkthroughs: Creating sites for your organization](https://support.microsoft.com/office/guided-walkthroughs-creating-sites-for-your-organization-7cc52ac9-394e-417e-85fe-33070e0cd13c)|
+|Plan sites - Help site owners understand how to plan to create high impact sites that meet objectives.|[Plan your SharePoint communication site](https://support.microsoft.com/office/plan-your-sharepoint-communication-site-35d9adfe-d5cc-462f-a63a-bae7f2529182)<br>[Get inspired with the SharePoint Look Book](https://adoption.microsoft.com/sharepoint-look-book)<br>[Guided Walkthroughs: Creating sites for your organization](https://support.microsoft.com/office/guided-walkthroughs-creating-sites-for-your-organization-7cc52ac9-394e-417e-85fe-33070e0cd13c)|
 |Build sites - Learn how to create and customize sites that align with your organization.|[Create and use modern pages on a SharePoint site](https://support.microsoft.com/office/create-and-use-modern-pages-on-a-sharepoint-site-b3d46deb-27a6-4b1e-87b8-df851e503dec)<br>[Customize your SharePoint site](https://support.microsoft.com/office/customize-your-sharepoint-site-320b43e5-b047-4fda-8381-f61e8ac7f59b)<br>[Customize the navigation on your SharePoint site](https://support.microsoft.com/office/customize-the-navigation-on-your-sharepoint-site-3cd61ae7-a9ed-4e1e-bf6d-4655f0bf25ca)<br>[Using web parts on SharePoint pages](https://support.microsoft.com/office/using-web-parts-on-sharepoint-pages-336e8e92-3e2d-4298-ae01-d404bbe751e0)|
 |Manage sites - Show site owners how to maintain site content and use site analytics to engage viewers.|[Management and life cycle of a SharePoint modern page](https://support.microsoft.com/office/management-and-lifecycle-of-a-sharepoint-modern-page-3410a04c-3ca4-4a4c-b867-33ab5c8bdcf3)<br>[Manage your SharePoint site settings](https://support.microsoft.com/office/change-a-site-s-title-description-logo-and-site-information-settings-8376034d-d0c7-446e-9178-6ab51c58df42)<br>[View usage data for your SharePoint site](https://support.microsoft.com/office/view-usage-data-for-your-sharepoint-site-2fa8ddc2-c4b3-4268-8d26-a772dc55779e)|
 
-Learn more about forming a site owner or [intranet champions community](https://aka.ms/SharePoint-Adoption-Playbook) to ensure that site owners stay up to date of new capabilities and guidance. Learn more about how to improve [SharePoint adoption](https://resources.techcommunity.microsoft.com/intelligent-intranet/engage/#demos).
+Learn more about forming a site owner or [intranet champions community](https://adoption.microsoft.com/files/sharepoint/SharePoint-Adoption-Playbook.pptx) to ensure that site owners stay up to date of new capabilities and guidance. Learn more about how to improve [SharePoint adoption](https://resources.techcommunity.microsoft.com/intelligent-intranet/engage/#demos).
 
 ## SharePoint intranet key capabilities by enterprise product license
 
-|**Capability or feature**|**Description**|**Licensing**|
+| Capability or feature | Description | Licensing |
 |:-----|:-----|:-----|
 |Office apps|Office client apps – Word, Excel, PowerPoint, OneNote, Publisher, and Access on up to 5 PC/Macs, tablets, or mobile devices per person.|Microsoft 365 E5<br> Microsoft 365 E3|
 |Social and intranet|Use SharePoint and Viva Engage to connect and engage across your organization with an intelligent, mobile intranet and enterprise social networking.|Microsoft 365 E5<br> Microsoft 365 E3|
@@ -134,5 +134,5 @@ Learn more about forming a site owner or [intranet champions community](https://
 
 [Branding your SharePoint site](./branding-sharepoint-online-sites-modern-experience.md)<br>
 
-[SharePoint adoption resources](https://resources.techcommunity.microsoft.com/resources/sharepoint-adoption/)
+[SharePoint adoption resources](https://adoption.microsoft.com/en-us/intelligent-intranet/)
 
