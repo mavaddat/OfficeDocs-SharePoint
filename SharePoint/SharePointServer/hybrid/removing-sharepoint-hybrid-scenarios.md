@@ -35,8 +35,8 @@ Cloud Hybrid Search may be removed by deleting the Search Service Application.
 2. In the **Application Management** page, select **Manage service applications**.
 3. In the **Service Application** page, highlight your Cloud Hybrid Search Service Application. The name of the Service Application may vary, but the **Type** will be **Search Service Application**.
 
- > [!NOTE]
- > The **Type** is identical to the standard SharePoint in Microsoft 365 Search Service Application.
+  > [!NOTE]
+  > The **Type** is identical to the standard SharePoint in Microsoft 365 Search Service Application.
 
 4. On the ribbon, select **Delete**.
 5. You may then create a new non-Cloud Search Service Application. For info about how to create and manage your Search Service Application, see the SharePoint Server documentation in [Search](../search/search.md).
