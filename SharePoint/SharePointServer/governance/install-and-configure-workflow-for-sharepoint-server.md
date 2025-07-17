@@ -76,7 +76,7 @@ SharePoint Workflow Manager requires Azure Service Fabric, which must be install
 > SharePoint Workflow Manager supports the version 10.1 CU7 (10.1.2841.9590) of Azure Service Fabric and [higher versions](/azure/service-fabric/service-fabric-versions). 
 > 
 > If **Windows Fabric** is already installed on your machine, perform the following steps to do the upgrade:
-> 1. Open Workflow Manager Configuration and leave the farm.
+> 1. Open Workflow Manager Configuration and exit the farm.
 > 2. Uninstall old Microsoft Azure Service Fabric from the Control Panel.
 > 3. Restart the server.
 > 4. Run the following command to install Service Fabric using Workflow PowerShell opened as an administrator:<br>
