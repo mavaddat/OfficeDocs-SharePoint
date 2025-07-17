@@ -81,7 +81,7 @@ SharePoint Workflow Manager requires Azure Service Fabric, which must be install
 > 3. Restart the server.
 > 4. Run the following command to install Service Fabric using Workflow PowerShell opened as an administrator:<br>
      `.\MicrosoftServiceFabric.<higher_version>.exe /accepteula`
-> 5. Move the Service Fabric using the cd command to the same folder where the exe file is located.
+> 5. Move the installed Service Fabric using the cd command to the same folder where the exe file is located.
 > 6. Restart the server.
 > 7. Verify the Microsoft Azure Service Fabric version from the Control Panel.
 > 8. Rejoin the server using Workflow Configuration Manager.
