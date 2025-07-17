@@ -85,6 +85,7 @@ SharePoint Workflow Manager requires Azure Service Fabric, which must be install
 > 6. Restart the server.
 > 7. Verify the Microsoft Azure Service Fabric version from the Control Panel.
 > 8. Rejoin the server using Workflow Configuration Manager.
+>
 > It’s been reported that Azure Service Fabric might generate a large number of logs, reducing the disk space.  This can occur regardless of the SharePoint Workflow Manager workload.  You can identify this issue by looking at the files generated in the `%ProgramData%\Microsoft Service Fabric\Log\Traces` directory.  You can't control the log size through the [cluster configuration](/azure/service-fabric/service-fabric-cluster-fabric-settings#diagnostics), with only Azure Service Fabric Runtime installed. You might need to delete expired logs manually, or for example, create a periodic task through the Windows Task Scheduler to do it.
 ### Install SharePoint Workflow Manager
 
