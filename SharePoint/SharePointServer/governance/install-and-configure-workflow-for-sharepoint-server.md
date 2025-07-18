@@ -28,7 +28,7 @@ This article contains the information and procedures required to configure Share
 ## Overview
 <a name="section1"> </a>
 
-A new option exists when you build a workflow for SharePoint Server. This option is called **Platform Type**. The figure shows the **Platform Type** option when you're creating a new workflow by using SharePoint Designer 2013. 
+A new option exists when you build a workflow for SharePoint Server. This option is called **Platform Type**. The following figure shows the **Platform Type** option when you're creating a new workflow by using SharePoint Designer 2013:
   
 **Figure: SharePoint Server includes three workflow platform options.**
 
@@ -45,6 +45,7 @@ The only platform available when you first install SharePoint Server is the Shar
 |**SharePoint 2013 Workflow - Project Server** <br/> |Windows Workflow Foundation 4  <br/> |Requires SharePoint Workflow Manager or Microsoft Workflow Manager, and Project server.  <br/> |
 > [!NOTE]
 > SharePoint Workflow Manager must be downloaded and installed separately from SharePoint Server. It doesn't install automatically when you install SharePoint Server.
+> Project server also isn't installed auotmatically when you install SharePoint Server. You must install and download Project Server separately. For information on how to install Project server, see [Getting started developing Project Server workflows](/office/client-developer/project/getting-started-developing-project-server-workflows). 
 
 ## New installation of SharePoint Workflow Manager
 
@@ -241,8 +242,6 @@ Follow the steps below to uninstall Microsoft Workflow Manager and install Share
 <a name="section6"> </a>
 
 Follow these steps to validate that you have successfully installed and configured the required components.
-  
- **To validate the installation**
   
 1. Add a user to your SharePoint site and grant the user Site Designer permissions.   
 2. Install SharePoint Designer 2013 on a client machine and create a workflow based on the SharePoint 2013 Workflow platform. For more information, see [Creating a workflow by using SharePoint Designer 2013 and the SharePoint 2013 Workflow platform](/sharepoint/dev/general-development/creating-a-workflow-by-using-sharepoint-designer-and-the-sharepoint-wo).    
