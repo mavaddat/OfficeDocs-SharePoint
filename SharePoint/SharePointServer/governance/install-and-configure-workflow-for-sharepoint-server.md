@@ -45,7 +45,7 @@ The only platform available when you first install SharePoint Server is the Shar
 |**SharePoint 2013 Workflow - Project Server** <br/> |Windows Workflow Foundation 4  <br/> |Requires SharePoint Workflow Manager or Microsoft Workflow Manager, and Project server.  <br/> |
 > [!NOTE]
 > 1. SharePoint Workflow Manager must be downloaded and installed separately from SharePoint Server. It doesn't install automatically when you install SharePoint Server.
-> 2. Project server also isn't installed auotmatically when you install SharePoint Server. You must install and download Project Server separately. For information on how to install Project server, see [Getting started developing Project Server workflows](/office/client-developer/project/getting-started-developing-project-server-workflows). 
+> 2. Project server also isn't installed automatically when you install SharePoint Server. You must install and download Project Server separately. For information on how to install Project server, see [Getting started developing Project Server workflows](/office/client-developer/project/getting-started-developing-project-server-workflows).
 
 ## New installation of SharePoint Workflow Manager
 
