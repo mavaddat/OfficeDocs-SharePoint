@@ -22,7 +22,7 @@ description: "Learn how to install and configure workflow in SharePoint Server."
   
 This article contains the information and procedures required to configure SharePoint Workflow Manager (SPWFM) for SharePoint Server.
 > [!NOTE]
->There are two separate workflow engine products that power the SharePoint 2013 Workflow platform: Microsoft Workflow Manager ("Classic WFM") and SharePoint Workflow Manager (SPWFM). Microsoft Workflow Manager is no longer available to be installed, whereas SharePoint Workflow Manager has been released to replace it. Hence, the instructions outlined in this document explain how to install SharePoint Workflow Manager.
+> There are two separate workflow engine products that power the SharePoint 2013 Workflow platform: Microsoft Workflow Manager ("Classic WFM") and SharePoint Workflow Manager (SPWFM). Microsoft Workflow Manager is no longer available to be installed, whereas SharePoint Workflow Manager has been released to replace it. Hence, the instructions outlined in this document explain how to install SharePoint Workflow Manager.
   
  
 ## Overview
@@ -104,13 +104,13 @@ Install **only** the SharePoint Workflow Manager **Client** on all servers in th
 
 To create a SharePoint Workflow Manager farm and join your servers to the farm, you can configure SharePoint Workflow Manager through the Workflow Manager Configuration Wizard.
 
-Logon to the SharePoint Workflow Manager server, click on “Workflow Manager Configuration” and click on “Configure Workflow Manager with Default settings” or “Configure Workflow Manager with Custom Settings”, depending on the requirements. If you want to use different ports, custom certificates, or custom database names, you'll want to use the "Configure Workflow Manager with Custom Settings" option.
+Log on to the SharePoint Workflow Manager server, click on "Workflow Manager Configuration" and click on "Configure Workflow Manager with Default settings" or "Configure Workflow Manager with Custom Settings", depending on the requirements. If you want to use different ports, custom certificates, or custom database names, you'll want to use the "Configure Workflow Manager with Custom Settings" option.
 
 In this example, we will use the Default Settings option.
 
 :::image type="content" source="media/install-and-configure-workflow-for-sharepoint-server/configure-with-default-settings.png" alt-text="A screenshot showing the Configure Workflow Manager with Default settings selection in the SharePoint Workflow Manager configuration wizard.":::  
 > [!NOTE]
->  By default, only HTTPS (TLS / SSL) port 12290 is configured for the Workflow Management site.  If you'd like to also allow communication over unencrypted HTTP port 12291, you must select the "Allow Workflow Management over HTTP on this computer" check box.  This is a factor when running the Register-SPWorkflowService cmdlet later.
+> By default, only HTTPS (TLS / SSL) port 12290 is configured for the Workflow Management site. If you'd like to also allow communication over unencrypted HTTP port 12291, you must select the "Allow Workflow Management over HTTP on this computer" check box. This is a factor when running the Register-SPWorkflowService cmdlet later.
 Provide the necessary SQL Server and service account details in the workflow wizard.  
 
 :::image type="content" source="media/install-and-configure-workflow-for-sharepoint-server/configuration-wizard-details.png" alt-text="A screenshot showing the configuration options in the SharePoint Workflow Manager configuration wizard.":::
@@ -119,9 +119,9 @@ The configuration wizard will provide a summary of your choices before they're c
 
 :::image type="content" source="media/install-and-configure-workflow-for-sharepoint-server/configuration-wizard-summary.png" alt-text="A screenshot showing the summary page of the SharePoint Workflow Manager configuration wizard.":::  
 > [!NOTE]
-> Some of the values are selected for you when you use the “Configure Workflow Manager with Default settings” option.  If they aren't correct for your environment, you may have to start the wizard over and choose “Configure Workflow Manager with Custom Settings”.
+> Some of the values are selected for you when you use the "Configure Workflow Manager with Default settings" option. If they aren't correct for your environment, you may have to start the wizard over and choose "Configure Workflow Manager with Custom Settings".
 
-The configuration wizard should complete successfully.  If it fails, select the "View Log" link, find the problem and correct it before running the wizard again.
+The configuration wizard should complete successfully. If it fails, select the "View Log" link, find the problem and correct it before running the wizard again.
 
 :::image type="content" source="media/install-and-configure-workflow-for-sharepoint-server/configuration-wizard-completed.png" alt-text="A screenshot showing the SharePoint Workflow Manager configuration wizard completing successfully.":::
 
