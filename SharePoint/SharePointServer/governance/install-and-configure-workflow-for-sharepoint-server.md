@@ -47,7 +47,7 @@ The only platform available when you first install SharePoint Server is the Shar
 
 > [!NOTE]
 > 1. SharePoint Workflow Manager must be downloaded and installed separately from SharePoint Server. It doesn't install automatically when you install SharePoint Server.
-> 2. Project Server 2016 or higher has been integrated into SharePoint Server. Therefore, Projct Server needs to be activated first.
+> 2. Project Server 2016 or higher has been integrated into SharePoint Server. Therefore, Project Server needs to be activated first.
 > 3. Project server 2013 also isn't installed automatically when you install SharePoint Server. You must install and download Project Server 2013 separately. For information on how to install Project server, see [Getting started developing Project Server workflows](/office/client-developer/project/getting-started-developing-project-server-workflows).
 
 ## New installation of SharePoint Workflow Manager
@@ -121,7 +121,7 @@ The configuration wizard will provide a summary of your choices before they're c
 > [!NOTE]
 > Some of the values are selected for you when you use the “Configure Workflow Manager with Default settings” option.  If they aren't correct for your environment, you may have to start the wizard over and choose “Configure Workflow Manager with Custom Settings”.
 
-The configuration wizard should complete successfully.  If it fails, please select the "View Log" link, find the problem and correct it before running the wizard again.
+The configuration wizard should complete successfully.  If it fails, select the "View Log" link, find the problem and correct it before running the wizard again.
 
 :::image type="content" source="media/install-and-configure-workflow-for-sharepoint-server/configuration-wizard-completed.png" alt-text="A screenshot showing the SharePoint Workflow Manager configuration wizard completing successfully.":::
 
