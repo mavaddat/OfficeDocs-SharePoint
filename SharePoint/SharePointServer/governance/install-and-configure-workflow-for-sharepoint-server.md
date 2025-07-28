@@ -43,7 +43,7 @@ The only platform available when you first install SharePoint Server is the Shar
 |**SharePoint 2010 Workflow** <br/> |Windows Workflow Foundation 3  <br/> |Installs automatically with SharePoint Server.  <br/> |
 |**SharePoint 2013 Workflow** <br/> |Windows Workflow Foundation 4  <br/> |Requires SharePoint Workflow Manager or Microsoft Workflow Manager, and SharePoint Server.  <br/> |
 |**Project Server Workflow 2013** <br/> |Windows Workflow Foundation 4  <br/> |Requires Project server.  <br/> |
-|**Project Server Workflow 2016** <br/> |Windows Workflow Foundation 4  <br/> |Installs automatically with SharePoint Server.  <br/> |
+|**Project Server Workflow 2016 or higher** <br/> |Windows Workflow Foundation 4  <br/> |Installs automatically with SharePoint Server.  <br/> |
 
 > [!NOTE]
 > 1. SharePoint Workflow Manager must be downloaded and installed separately from SharePoint Server. It doesn't install automatically when you install SharePoint Server.
