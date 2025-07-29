@@ -59,7 +59,7 @@ For the best performance, reliability, and user experience, follow these "ideal 
 
 - **Always start OneDrive automatically when signing in to Windows**. When you enable the autostart configuration policy, OneDrive will automatically start every time users sign in to Windows. For more information, see [Start OneDrive automatically when signing in to Windows](use-group-policy.md#always-start-onedrive-automatically-when-signing-in-to-windows).
 
-## Known folder move
+## Known Folder Move
 
 Windows users are familiar and comfortable with saving files to their desktop, documents, and pictures folders from years of developing it as a habit. When you redirect and move these folders to OneDrive, users can continue saving files to these locations, and they're backed up and available from any device. For more information, see [Redirect known folders](redirect-known-folders.md).
 
