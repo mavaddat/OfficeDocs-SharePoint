@@ -49,7 +49,7 @@ For the best performance, reliability, and user experience, follow these "ideal 
 ## Files On-Demand and Storage Sense
 
 - **Keep Files On-Demand enabled**. OneDrive Files On-Demand helps users access all their files (individual or shared) without having to download them and use storage space. This setting is on by default for Windows 10 and Mac. To check this setting for Windows, see [Use OneDrive Files On-Demand](use-group-policy.md#use-onedrive-files-on-demand). To check it for Mac, see [Deploy and configure the new OneDrive sync app for Mac](deploy-and-configure-on-macos.md).
-- **Use Storage Sense policies on PCs**. These policies let you automatically clean up "locally available" files users haven't explicitly pinned as "always available". [More info about Storage policies](/windows/client-management/mdm/policy-csp-storage)
+- **Use Storage Sense policies on PCs**. These policies let you automatically clean up "locally available" files users haven't explicitly pinned as "always available." [More info about Storage policies](/windows/client-management/mdm/policy-csp-storage)
 
 ## Silent account configuration
 
@@ -57,11 +57,11 @@ For the best performance, reliability, and user experience, follow these "ideal 
 
 ## Application start-up
 
-- **Always start OneDrive automatically when signing in to Windows**. When you enable the auto-start configuration policy, OneDrive will automatically start every time users sign in to Windows. For more information, see [Start OneDrive automatically when signing in to Windows](use-group-policy.md#always-start-onedrive-automatically-when-signing-in-to-windows).
+- **Always start OneDrive automatically when signing in to Windows**. When you enable the autostart configuration policy, OneDrive will automatically start every time users sign in to Windows. For more information, see [Start OneDrive automatically when signing in to Windows](use-group-policy.md#always-start-onedrive-automatically-when-signing-in-to-windows).
 
-## Known Folder Move
+## Known folder move
 
-Windows users are familiar and comfortable with saving files to their Desktop, Documents, and Pictures folders from years of developing it as a habit. When you redirect and move these folders to OneDrive, users can continue saving files to these locations, and they're backed up and available from any device. For more information, see [Redirect known folders](redirect-known-folders.md).
+Windows users are familiar and comfortable with saving files to their desktop, documents, and pictures folders from years of developing it as a habit. When you redirect and move these folders to OneDrive, users can continue saving files to these locations, and they're backed up and available from any device. For more information, see [Redirect known folders](redirect-known-folders.md).
 
 - **On new PCs, enable the silent policy**. [Silently move Windows known folders to OneDrive](use-group-policy.md#silently-move-windows-known-folders-to-onedrive)
 - **On existing PCs, gradually enable the prompt and/or silent policy**. [About the Known Folder Move Group Policy objects](redirect-known-folders.md#about-the-known-folder-move-policies)
@@ -71,7 +71,7 @@ Windows users are familiar and comfortable with saving files to their Desktop, D
 - **Keep Office file collaboration enabled** Office uses differential sync to sync only changes instead of the entire file each time. This makes sync faster and reduces network bandwidth. For more information, see [Coauthor and share in Office desktop apps](use-group-policy.md#coauthor-and-share-in-office-desktop-apps). For information about this setting for Mac, see [Deploy and configure the new OneDrive sync app for Mac](deploy-and-configure-on-macos.md).
 
   > [!NOTE]
-  > As of May 2025, the coauthoring and in-app sharing of Office files setting is enabled by default for all tenants. If this setting is disabled, Office file collaboration will be turned off, and when file conflicts occur, both versions of the file are kept. If the setting is not previously disabled by organizations, end users should not experience any changes.
+  > As of May 2025, the coauthoring and in-app sharing of Office files setting is enabled by default for all tenants. If this setting is disabled, Office file collaboration is turned off, and when file conflicts occur, both versions of the file are kept. If the setting isn't previously disabled by organizations, end users shouldn't experience any changes.
   
 ## Offline mode
 
@@ -84,7 +84,7 @@ Users have two options when syncing files in SharePoint libraries and Teams. The
 - [Add shortcuts to libraries and folders to their OneDrive](https://support.microsoft.com/office/d66b1347-99b7-4470-9360-ffc048d35a33).
 - [Use the Sync button in the document library](https://support.microsoft.com/office/6de9ede8-5b6e-4503-80b2-6190f3354a88).
 
-It is recommended to use shortcuts instead of using the Sync button. Shortcuts are more performant because rather than syncing the entire library, only the specific folder is synced. Additionally, because the shortcuts are added to a user's OneDrive rather than to the device, it is easier to access content across all devices.
+It's recommended to use shortcuts instead of using the Sync button. Shortcuts are more performant because rather than syncing the entire library, only the specific folder is synced. Additionally, because the shortcuts are added to a user's OneDrive rather than to the device, it's easier to access content across all devices.
 
 If you're an admin and want to hide the Sync button in document libraries, use the following PowerShell command:
 
