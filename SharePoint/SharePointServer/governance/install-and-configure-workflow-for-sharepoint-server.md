@@ -22,13 +22,13 @@ description: "Learn how to install and configure workflow in SharePoint Server."
   
 This article contains the information and procedures required to configure SharePoint Workflow Manager (SPWFM) for SharePoint Server.
 > [!NOTE]
->There are two separate workflow engine products that power the SharePoint 2013 Workflow platform: Microsoft Workflow Manager ("Classic WFM") and SharePoint Workflow Manager (SPWFM). Microsoft Workflow Manager is no longer available to be installed, whereas SharePoint Workflow Manager has been released to replace it. Hence, the instructions outlined in this document explain how to install SharePoint Workflow Manager.
+> There are two separate workflow engine products that power the SharePoint 2013 Workflow platform: Microsoft Workflow Manager ("Classic WFM") and SharePoint Workflow Manager (SPWFM). Microsoft Workflow Manager is no longer available to be installed, whereas SharePoint Workflow Manager has been released to replace it. Hence, the instructions outlined in this document explain how to install SharePoint Workflow Manager.
   
  
 ## Overview
 <a name="section1"> </a>
 
-A new option exists when you build a workflow for SharePoint Server. This option is called **Platform Type**. The figure shows the **Platform Type** option when you're creating a new workflow by using SharePoint Designer 2013. 
+A new option exists when you build a workflow for SharePoint Server. This option is called **Platform Type**. The following figure shows the **Platform Type** option when you're creating a new workflow by using SharePoint Designer 2013:
   
 **Figure: SharePoint Server includes three workflow platform options.**
 
@@ -42,15 +42,19 @@ The only platform available when you first install SharePoint Server is the Shar
 |:-----|:-----|:-----|
 |**SharePoint 2010 Workflow** <br/> |Windows Workflow Foundation 3  <br/> |Installs automatically with SharePoint Server.  <br/> |
 |**SharePoint 2013 Workflow** <br/> |Windows Workflow Foundation 4  <br/> |Requires SharePoint Workflow Manager or Microsoft Workflow Manager, and SharePoint Server.  <br/> |
-|**SharePoint 2013 Workflow - Project Server** <br/> |Windows Workflow Foundation 4  <br/> |Requires SharePoint Workflow Manager or Microsoft Workflow Manager, and Project server.  <br/> |
+|**Project Server Workflow 2013** <br/> |Windows Workflow Foundation 4  <br/> |Requires Project server.  <br/> |
+|**Project Server Workflow 2016 or higher** <br/> |Windows Workflow Foundation 4  <br/> |Installs automatically with SharePoint Server.  <br/> |
+
 > [!NOTE]
-> SharePoint Workflow Manager must be downloaded and installed separately from SharePoint Server. It does not install automatically when you install SharePoint Server.
+> 1. SharePoint Workflow Manager must be downloaded and installed separately from SharePoint Server. It doesn't install automatically when you install SharePoint Server.
+> 2. Project Server 2016 or higher has been integrated into SharePoint Server; Project Server needs to be activated first when it's installed automatically upon the installation of SharePoint Server.
+> 3. Project server 2013 also isn't installed automatically when you install SharePoint Server. You must install and download Project Server 2013 separately. For information on how to install Project server, see [Getting started developing Project Server workflows](/office/client-developer/project/getting-started-developing-project-server-workflows).
 
 ## New installation of SharePoint Workflow Manager
 
 SharePoint Workflow Manager may be installed on the same servers as SharePoint or on separate, dedicated servers.  It's recommended that SharePoint Workflow Manager is installed on its own dedicated servers for performance and reliability reasons. 
 > [!NOTE]
-> SharePoint Workflow Manager is supported in farms having an odd number of hosts, for example, 1, 3, or 5.  A farm with 2 or 4 SharePoint Workflow Manager hosts is not supported.
+> SharePoint Workflow Manager is supported in farms having an odd number of hosts, for example, 1, 3, or 5.  A farm with 2 or 4 SharePoint Workflow Manager hosts isn't supported.
    
 ### Prerequisites
 
@@ -62,7 +66,7 @@ SharePoint Workflow Manager requires the server role of Web Server (IIS). If you
 
 :::image type="content" source="media/install-and-configure-workflow-for-sharepoint-server/iis-features-required.png" alt-text="A screenshot of the Web Server features that are required for SharePoint Workflow Manager.":::
 > [!NOTE]
-> SharePoint Workflow Manager may not be installed and configured correctly with only RODCs (read-only domain controllers) available in the network environment.  It requires a RWDC (read/write domain controller).
+> SharePoint Workflow Manager may not be installed and configured correctly with only RODCs (read-only domain controllers) available in the network environment.  It requires an RWDC (read/write domain controller).
 SharePoint Workflow Manager requires Azure Service Fabric, which must be installed before you run SharePoint Workflow Manager setup. If the Azure Service Fabric Runtime isn't already installed, follow these steps below to install it:
 
 1. The minimum version of Azure Service Fabric Runtime supported by SharePoint Workflow Manager is 9.1.1583.9590, and you can download it from [Azure Service Fabric Runtime](https://download.microsoft.com/download/b/8/a/b8a2fb98-0ec1-41e5-be98-9d8b5abf7856/MicrosoftServiceFabric.9.1.1583.9590.exe). Or you can find and download any higher version of its Windows Installer from [here](/azure/service-fabric/service-fabric-get-started#install-the-sdk-and-tools).
@@ -73,10 +77,18 @@ SharePoint Workflow Manager requires Azure Service Fabric, which must be install
 
 3. To verify the Azure Service Fabric is installed, you should be able to find it in the Programs and Features of the Control Panel.
 > [!NOTE]
-> SharePoint Workflow Manager supports the version 9.1 CU2 (9.1.1583.9590) of Azure Service Fabric and [higher versions](/azure/service-fabric/service-fabric-versions). 
+> SharePoint Workflow Manager supports the version 10.1 CU7 (10.1.2841.9590) of Azure Service Fabric and [higher versions](/azure/service-fabric/service-fabric-versions). 
 > 
-> If **Windows Fabric** is already installed on your machine, you must uninstall it before installing Azure Service Fabric.
-> 
+> If **Windows Fabric** is already installed on your machine, perform the following steps to do the upgrade:
+> 1. Open Workflow Manager Configuration and exit the farm.
+> 2. Uninstall old Microsoft Azure Service Fabric from the Control Panel.
+> 3. Restart the server.
+> 4. Run the following command to install Service Fabric using Workflow PowerShell opened as an administrator:<br>
+     `.\MicrosoftServiceFabric.<higher_version>.exe /accepteula`
+> 5. Restart the server.
+> 6. Verify the Microsoft Azure Service Fabric version from the Control Panel.
+> 7. Rejoin the server using Workflow Configuration Manager.
+>
 > It’s been reported that Azure Service Fabric might generate a large number of logs, reducing the disk space.  This can occur regardless of the SharePoint Workflow Manager workload.  You can identify this issue by looking at the files generated in the `%ProgramData%\Microsoft Service Fabric\Log\Traces` directory.  You can't control the log size through the [cluster configuration](/azure/service-fabric/service-fabric-cluster-fabric-settings#diagnostics), with only Azure Service Fabric Runtime installed. You might need to delete expired logs manually, or for example, create a periodic task through the Windows Task Scheduler to do it.
 ### Install SharePoint Workflow Manager
 
@@ -86,41 +98,41 @@ Install **both** SharePoint Workflow Manager and SharePoint Workflow Manager Cli
 
 Install **only** the SharePoint Workflow Manager **Client** on all servers in the **SharePoint Server** farm.
 > [!NOTE]
-> Though it is supported to install SharePoint Workflow Manager on servers running SharePoint Server, it is recommended that SharePoint Workflow Manager is installed on its own dedicated servers for performance and reliability reasons.
+> Though it's supported to install SharePoint Workflow Manager on servers running SharePoint Server, it's recommended that SharePoint Workflow Manager is installed on its own dedicated servers for performance and reliability reasons.
 
 ### Configure SharePoint Workflow Manager farm
 
 To create a SharePoint Workflow Manager farm and join your servers to the farm, you can configure SharePoint Workflow Manager through the Workflow Manager Configuration Wizard.
 
-Logon to the SharePoint Workflow Manager server, click on “Workflow Manager Configuration” and click on “Configure Workflow Manager with Default settings” or “Configure Workflow Manager with Custom Settings”, depending on the requirements. If you want to use different ports, custom certificates, or custom database names, you'll want to use the "Configure Workflow Manager with Custom Settings" option.
+Log on to the SharePoint Workflow Manager server, click on "Workflow Manager Configuration" and click on "Configure Workflow Manager with Default settings" or "Configure Workflow Manager with Custom Settings", depending on the requirements. If you want to use different ports, custom certificates, or custom database names, you'll want to use the "Configure Workflow Manager with Custom Settings" option.
 
 In this example, we will use the Default Settings option.
 
 :::image type="content" source="media/install-and-configure-workflow-for-sharepoint-server/configure-with-default-settings.png" alt-text="A screenshot showing the Configure Workflow Manager with Default settings selection in the SharePoint Workflow Manager configuration wizard.":::  
 > [!NOTE]
->  By default, only HTTPS (TLS / SSL) port 12290 is configured for the Workflow Management site.  If you'd like to also allow communication over unencrypted HTTP port 12291, you must select the "Allow Workflow Management over HTTP on this computer" check box.  This is a factor when running the Register-SPWorkflowService cmdlet later.
+> By default, only HTTPS (TLS / SSL) port 12290 is configured for the Workflow Management site. If you'd like to also allow communication over unencrypted HTTP port 12291, you must select the "Allow Workflow Management over HTTP on this computer" check box. This is a factor when running the Register-SPWorkflowService cmdlet later.
 Provide the necessary SQL Server and service account details in the workflow wizard.  
 
 :::image type="content" source="media/install-and-configure-workflow-for-sharepoint-server/configuration-wizard-details.png" alt-text="A screenshot showing the configuration options in the SharePoint Workflow Manager configuration wizard.":::
 
-The configuration wizard will provide a summary of your choices before they are committed.  
+The configuration wizard will provide a summary of your choices before they're committed.  
 
 :::image type="content" source="media/install-and-configure-workflow-for-sharepoint-server/configuration-wizard-summary.png" alt-text="A screenshot showing the summary page of the SharePoint Workflow Manager configuration wizard.":::  
 > [!NOTE]
-> Some of the values are selected for you when you use the “Configure Workflow Manager with Default settings” option.  If they are not correct for your environment, you may have to start the wizard over and choose “Configure Workflow Manager with Custom Settings”.
+> Some of the values are selected for you when you use the "Configure Workflow Manager with Default settings" option. If they aren't correct for your environment, you may have to start the wizard over and choose "Configure Workflow Manager with Custom Settings".
 
-The configuration wizard should complete successfully.  If it fails, please select the "View Log" link, find the problem and correct it before running the wizard again.
+The configuration wizard should complete successfully. If it fails, select the "View Log" link, find the problem and correct it before running the wizard again.
 
 :::image type="content" source="media/install-and-configure-workflow-for-sharepoint-server/configuration-wizard-completed.png" alt-text="A screenshot showing the SharePoint Workflow Manager configuration wizard completing successfully.":::
 
-If you are creating a multi-server SharePoint Workflow Manager farm, you must run the workflow configuration wizard on the other nodes and chose the "Join an Existing Workflow Manager Farm" option.
+If you're creating a multi-server SharePoint Workflow Manager farm, you must run the workflow configuration wizard on the other nodes and chose the "Join an Existing Workflow Manager Farm" option.
 
 
 ### Configure App Management and Subscriptions Settings services in the SharePoint farm
 The App Management and Subscription Settings services are required in the SharePoint farm for SharePoint 2013-platform workflows to function.
 If not already set up in the SharePoint farm, on the SharePoint server, set up App Management and Subscription Settings services, service applications and service application proxies. 
 
-The App Managment service can be created using Central Administration.
+The App Management service can be created using Central Administration.
 
 You can use PowerShell to create a Subscription Settings Service application:
 
@@ -187,17 +199,17 @@ Consider the following key factors before configuring SharePoint Workflow Manage
 
 ## Upgrade existing Microsoft Workflow Manager
 
-Microsoft Workflow Manager cannot be upgraded in-place, and SharePoint Workflow Manager can't be placed on top of Microsoft Workflow Manager. In order to update Microsoft Workflow Manager (Classic WFM) to SharePoint Workflow Manager (SPWFM), you must uninstall any prior versions of Workflow Manager, Workflow Manager Client, and Service Bus.
+Microsoft Workflow Manager can't be upgraded in-place, and SharePoint Workflow Manager can't be placed on top of Microsoft Workflow Manager. In order to update Microsoft Workflow Manager (Classic WFM) to SharePoint Workflow Manager (SPWFM), you must uninstall any prior versions of Workflow Manager, Workflow Manager Client, and Service Bus.
 
 > [!NOTE]
 > You can upgrade to SharePoint Workflow Manager from any version of Microsoft Workflow Manager. 
-> Because you are upgrading an existing "Classic WFM" farm to SPWFM, the WFM databases will be reused, and your existing registration and workflows should remain intact.
+> Because you're upgrading an existing "Classic WFM" farm to SPWFM, the WFM databases will be reused, and your existing registration and workflows should remain intact.
 
 Follow the steps below to uninstall Microsoft Workflow Manager and install SharePoint Workflow Manager:
 
 > [!IMPORTANT]
-> Because the upgrade steps require that you disjoin and then rejoin an existing WFM farm, you will need the WFM "Certificate Generation Key", when rejoining. If you are not sure what that key is, and have not documented it somewhere, you may need to [Reset Certificate Generation Key](/SharePoint/governance/reset-certificate-generation-key-sharepoint-workflow-manager) before proceeding. 
-> You will not be able to join the existing workflow farm without a valid Certificate Generation Key.
+> Because the upgrade steps require that you disjoin and then rejoin an existing WFM farm, you will need the WFM "Certificate Generation Key", when rejoining. If you aren't sure what that key is, and haven't documented it somewhere, you may need to [Reset Certificate Generation Key](/SharePoint/governance/reset-certificate-generation-key-sharepoint-workflow-manager) before proceeding. 
+> You won't be able to join the existing workflow farm without a valid Certificate Generation Key.
 
 1. Run the Workflow Manager Configuration Wizard.
 
@@ -209,7 +221,7 @@ Follow the steps below to uninstall Microsoft Workflow Manager and install Share
    > Each database used by Workflow Manager and Service Bus will need to be specified when rejoining the farm with SharePoint Workflow Manager. For example, the SQL Server instance and database name for the Workflow Manager farm management database and the Service Bus farm management database.
 1. Uninstall Microsoft Workflow Manager, Workflow Manager Client, Service Bus for Windows Server, and Windows Fabric if they're installed. You can uninstall them from the Control Panel. If Windows Fabric is installed, ensure you install Azure Service Fabric after uninstalling Windows Fabric.  
    > [!IMPORTANT]
-   > If you are installing SharePoint Workflow Manager on a SharePoint server, you may see both "Windows Fabric" and "AppFabric 1.1 for Windows Server" installed. Be sure to only uninstall Windows Fabric. **Do not uninstall AppFabric 1.1**. It is a different service, and is required for SharePoint Distributed Cache.
+   > If you're installing SharePoint Workflow Manager on a SharePoint server, you may see both "Windows Fabric" and "AppFabric 1.1 for Windows Server" installed. Be sure to only uninstall Windows Fabric. **Do not uninstall AppFabric 1.1**. It's a different service, and is required for SharePoint Distributed Cache.
 1. If the folders "*%ProgramFiles%\Workflow Manager\1.0"*  or *"%Program Files%\Service Bus\1.0"* already exist, you must manually remove them for the next steps to succeed.
 
 1. Reboot the SharePoint Workflow Manager server.
@@ -220,7 +232,7 @@ Follow the steps below to uninstall Microsoft Workflow Manager and install Share
 
 1. Run the Workflow Manager Configuration Wizard and choose the "Join an Existing Workflow Manager Farm" to rejoin the previous farm.  Use the database, service account, and Certificate Generation Key information used in the previous "Classic WFM" farm.  
    > [!NOTE]
-   > When upgrading, there is typically no need to delete the existing Workflow Service Application Proxy and reconnect using the Register-SPWorkflowService cmdlet. If you encounter the invalidity of the Certificate Generation Key for SharePoint Workflow Manager and Service Bus, you may need to reset it, see [Reset Certificate Generation Key](/SharePoint/governance/reset-certificate-generation-key-sharepoint-workflow-manager).
+   > When upgrading, there's typically no need to delete the existing Workflow Service Application Proxy and reconnect using the Register-SPWorkflowService cmdlet. If you encounter the invalidity of the Certificate Generation Key for SharePoint Workflow Manager and Service Bus, you may need to reset it, see [Reset Certificate Generation Key](/SharePoint/governance/reset-certificate-generation-key-sharepoint-workflow-manager).
 1. Rerun the Workflow Manager Configuration Wizard, select **Upgrade Workflow Manager Farm**, and confirm subsequent steps until the end.  
    > [!NOTE]
    > This step should be run on all servers in the SharePoint Workflow Manager farm.
@@ -233,8 +245,6 @@ Follow the steps below to uninstall Microsoft Workflow Manager and install Share
 <a name="section6"> </a>
 
 Follow these steps to validate that you have successfully installed and configured the required components.
-  
- **To validate the installation**
   
 1. Add a user to your SharePoint site and grant the user Site Designer permissions.   
 2. Install SharePoint Designer 2013 on a client machine and create a workflow based on the SharePoint 2013 Workflow platform. For more information, see [Creating a workflow by using SharePoint Designer 2013 and the SharePoint 2013 Workflow platform](/sharepoint/dev/general-development/creating-a-workflow-by-using-sharepoint-designer-and-the-sharepoint-wo).    
