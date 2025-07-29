@@ -49,7 +49,7 @@ For the best performance, reliability, and user experience, follow these "ideal 
 ## Files On-Demand and Storage Sense
 
 - **Keep Files On-Demand enabled**. OneDrive Files On-Demand helps users access all their files (individual or shared) without having to download them and use storage space. This setting is on by default for Windows 10 and Mac. To check this setting for Windows, see [Use OneDrive Files On-Demand](use-group-policy.md#use-onedrive-files-on-demand). To check it for Mac, see [Deploy and configure the new OneDrive sync app for Mac](deploy-and-configure-on-macos.md).
-- **Use Storage Sense policies on PCs**. These policies let you automatically clean up "locally available" files users haven't explicitly pinned as "always available." [More info about Storage policies](/windows/client-management/mdm/policy-csp-storage)
+- **Use Storage Sense policies on PCs**. These policies let you automatically clean up "locally available" files users haven't explicitly pinned as "always available." For additional information, see [More info about Storage policies](/windows/client-management/mdm/policy-csp-storage).
 
 ## Silent account configuration
 
