@@ -1,5 +1,6 @@
 ---
 ms.date: 7/14/2025
+ms.update-cycle: 180-days
 title: Microsoft 365 Copilot - best practices with SharePoint
 ms.reviewer: 
 ms.author: ruihu

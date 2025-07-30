@@ -1,5 +1,6 @@
 ---
 ms.date: 06/04/2025
+ms.update-cycle: 180-days
 title: Monitor SharePoint agent Usage
 ms.reviewer:
 ms.author: ruihu

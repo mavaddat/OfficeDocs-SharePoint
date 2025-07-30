@@ -1,5 +1,6 @@
 ---
 ms.date: 01/24/2025
+ms.update-cycle: 180-days
 title: Get started with SharePoint agents
 ms.reviewer:
 ms.author: ruihu

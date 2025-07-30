@@ -1,5 +1,6 @@
 ---
 ms.date: 12/19/2024
+ms.update-cycle: 180-days
 title: Microsoft 365 pay-as-you-go pricing
 ms.reviewer:
 ms.author: ruihu
