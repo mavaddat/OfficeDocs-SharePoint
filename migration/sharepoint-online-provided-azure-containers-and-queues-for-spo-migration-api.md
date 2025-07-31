@@ -57,7 +57,7 @@ When the data is deleted, the files are delinked and later soft deleted from dis
   
 ## Key to the container
 
-The default key is generated programmatically, and is only valid for three days. This key is the only way to gain access to the container. It's generated randomly and not reused. The container itself lives longer than the key, as the container is purged using SharePoint standard methods between 30-90 days from creation. SharePoint never stores the key, though potentially they could find the container. The container is housed in a shared Microsoft storage, technically outside the tenant (but within the region), and is protected using the API key.
+The default key is generated programmatically, and is only valid for three days. This key is the only way to gain access to the container. It's generated randomly and not reused. The container itself lives longer than the key, as the container is purged using SharePoint standard methods within 7 days of creation. SharePoint never stores the key, though potentially they could find the container. The container is housed in a shared Microsoft storage, technically outside the tenant (but within the region), and is protected using the API key.
   
 Only those who have the key have access. Other users in the subscription or the tenant don't have access.
   
