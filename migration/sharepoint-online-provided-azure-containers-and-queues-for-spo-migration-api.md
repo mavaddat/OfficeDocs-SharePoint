@@ -53,7 +53,7 @@ Each container is exclusively assigned to the customer it was provisioned for an
 When the data is deleted, the files are delinked and later soft deleted from disk. A file in an account and on-disk are may be shared across many servers. The same process is used for replicas, including backup copies (geo-replicated data if it applies).
   
 > [!NOTE]
-> Due to data churn, it is likely that all or parts of the file will be overwritten at some point following soft delete. 
+> Due to data churn, it's likely that all or parts of the file will be overwritten at some point following soft delete. 
   
 ## Key to the container
 
