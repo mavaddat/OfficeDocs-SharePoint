@@ -76,7 +76,7 @@ Now, users can select different connection encryption settings per database, whi
   > [!NOTE]
   > DatabaseConnectionEncryption and/or DatabaseServerCertificateHostName are the same as configuration database by default in case you don't specify it.
 
-- To create a new content datbase, in Central Administration, add two settings on the page.
+- To create a new content database, in Central Administration, add two settings on the page.
 
   <img width="675" height="547" alt="image" src="https://github.com/user-attachments/assets/31877a29-4375-45fe-a36b-aedd5de0f83b" />
 
