@@ -78,7 +78,7 @@ Now, users can select different connection encryption settings per database, whi
 
 - To create a new content database, in Central Administration, add two settings on the page.
 
-  <img src="https://github.com/user-attachments/assets/31877a29-4375-45fe-a36b-aedd5de0f83b" width="675" height="547" alt="image" />
+  <img width="675" height="547" alt="image" src="https://github.com/user-attachments/assets/31877a29-4375-45fe-a36b-aedd5de0f83b" />
 
 #### Create a new service application with different encryption database
 
@@ -99,7 +99,7 @@ Now, users can select different connection encryption settings per database, whi
 
 - To create a new service application that has its customized database, in Central Administration, add the same two settings as content database on the page.
 
-  <img src="https://github.com/user-attachments/assets/09f09d1c-0689-4990-90ee-6374fa4be5d3" width="589" height="187" alt="image" />
+  <img width="589" height="187" alt="image" src="https://github.com/user-attachments/assets/09f09d1c-0689-4990-90ee-6374fa4be5d3" />
 
 #### Edit an existing database attached to a service application
 
