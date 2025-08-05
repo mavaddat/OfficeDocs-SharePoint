@@ -62,7 +62,7 @@ Databases that are part of a SharePoint farm will be configured to use **Optiona
 
 Previously, the settings for all databases are based on the configuration database's settings. Newly created databases that are added to a farm are configured to use the same encryption settings with farm configuration database.
 
-Since 2025 September PU, users can select different connection encryption settings per database, which can be particularly useful when databases are stored on different SQL servers or serve different purposes. This behavious is applicable to both content database and service application database.
+Since 2025 September PU, users can select different connection encryption settings per database, which can be particularly useful when databases are stored on different SQL servers or serve different purposes. This behavior is applicable to both content database and service application database.
 
 #### Create a new content database (only applicable after 2025 September PU)
 
