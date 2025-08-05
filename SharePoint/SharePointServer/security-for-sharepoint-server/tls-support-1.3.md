@@ -62,9 +62,9 @@ Databases that are part of a SharePoint farm will be configured to use **Optiona
 
 Previously, the settings for all databases are based on the configuration database's settings. Newly created databases that are added to a farm are configured to use the same encryption settings with farm configuration database.
 
-Now, users can select different connection encryption settings per database, which can be particularly useful when databases are stored on different SQL servers or serve different purposes. This behavious is applicable to both content database and service application database.
+Since 2025 September PU, users can select different connection encryption settings per database, which can be particularly useful when databases are stored on different SQL servers or serve different purposes. This behavious is applicable to both content database and service application database.
 
-#### Create a new content database
+#### Create a new content database (only applicable after 2025 September PU)
 
 - To create a new content database, in PowerShell, add the following optional parameters to the `New-SPContentDatabase` cmdlet:
 
@@ -80,7 +80,7 @@ Now, users can select different connection encryption settings per database, whi
 
   :::image type="content" source="media/add-content-db.png" alt-text="Screenshot of add a content database.":::
 
-#### Create a new service application with different encryption database
+#### Create a new service application with different encryption database (only applicable after 2025 September PU)
 
 - To create a new service application that has its customized database, in PowerShell, add the following optional parameters to the PowerShell cmdlets:
 
@@ -101,7 +101,7 @@ Now, users can select different connection encryption settings per database, whi
 
   :::image type="content" source="media/new-svc-app.png" alt-text="Screenshot of create a service application.":::
 
-#### Edit an existing database attached to a service application
+#### Edit an existing database attached to a service application (only applicable after 2025 September PU)
 
 - To edit a database belongs to a service application, in PowerShell, add the following optional parameters to the PowerShell cmdlets:
 
