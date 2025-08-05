@@ -1,9 +1,9 @@
 ---
 title: "Transport Layer Security (TLS) 1.3 Support"
 ms.reviewer: 
-ms.author: qizu
-author: qizu
-manager: gli
+ms.author: serdars
+author: serdars
+manager: serdars
 ms.date: 08/05/2025
 audience: ITPro
 f1.keywords:
@@ -78,7 +78,7 @@ Now, users can select different connection encryption settings per database, whi
 
 - To create a new content database, in Central Administration, add two settings on the page.
 
-  :::image type="content" source="media/add_content_db.png" alt-text="Screenshot of add a content database.":::
+  :::image type="content" source="media/add-content-db.png" alt-text="Screenshot of add a content database.":::
 
 #### Create a new service application with different encryption database
 
@@ -99,7 +99,7 @@ Now, users can select different connection encryption settings per database, whi
 
 - To create a new service application that has its customized database, in Central Administration, add the same two settings as content database on the page.
 
-  :::image type="content" source="media/new_svc_app.png" alt-text="Screenshot of create a service application.":::
+  :::image type="content" source="media/new-svc-app.png" alt-text="Screenshot of create a service application.":::
 
 #### Edit an existing database attached to a service application
 
