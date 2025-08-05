@@ -1,6 +1,6 @@
 ---
 title: Translate documents in OneDrive
-ms.author: mactra
+ms.author: chucked
 author: MachelleTranMSFT
 manager: jtremper
 ms.reviewer: karlha
