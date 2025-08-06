@@ -1,10 +1,10 @@
 ---
-ms.date: 11/19/2024
+ms.date: 07/23/2025
 title: "Initiate site access reviews for Data access governance reports"
 ms.reviewer: pullabhk
-ms.author: mactra
-author: MachelleTranMSFT
-manager: jtremper
+ms.author: ruihu
+author: maggierui
+manager: dansimp
 recommendations: true
 audience: Admin
 f1.keywords: NOCSH
@@ -17,6 +17,7 @@ ms.collection:
 - Tier2
 - M365-sam
 - M365-collaboration
+- trust-pod
 ms.custom:
 - admindeeplinkSPO
 search.appverid:
@@ -39,7 +40,7 @@ This review process is crucial because:
 Before initiating a site access review, ensure that you meet the following requirements:
 
 - A [Microsoft SharePoint Premium - SharePoint Advanced Management](advanced-management.md) subscription.
-- A nongovernment cloud tenant environment. Site access reviews aren't supported in government cloud environments (GCCH, GCC-Moderate, DoD, Gallatin).
+- A nongovernment cloud tenant environment or GCC-Moderate government cloud environment. Site access reviews aren't supported in government cloud environments (GCCH, DoD, Gallatin).
 - Site access review is supported only for SharePoint sites. It is currently not supported for OneDrive accounts.
 - Admin credentials for accessing the SharePoint admin center.
 - Site owners are available to respond to review requests, take necessary actions, and complete the review.

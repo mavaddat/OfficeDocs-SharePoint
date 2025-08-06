@@ -31,13 +31,13 @@ One of the requirements for using the SharePoint Migration API is the use of an 
   
 Important key aspects include:
   
-- The containers and queues are unique per request and not reused. Once a container is given to a customer this container won't be reused or shared.
+- Containers and queues are unique per request and not reused. Once a container is assigned to a customer this container won't be reused or shared.
     
-- The containers and queue are automatically deleted. As per the standard SharePoint compliance, Microsoft will automatically destroy the container within 30 to 90 days.
+- Containers and queues are automatically deleted in accordance with standard SharePoint compliance. Specifically, Microsoft ensures that each container is destroyed within 7 days of its creation.
     
-- The containers and queues are in the customer's datacenter location. We make sure to provision containers that are in the same physical location as their SharePoint tenant.
+- Containers and queues are in the customer's datacenter location. We make sure to provision containers that are in the same physical location as their SharePoint tenant.
     
-- The containers and queues can be obtained programmatically through SharePoint.
+- Containers and queues can be obtained programmatically through SharePoint.
     
 ## Encryption process
 
@@ -48,16 +48,16 @@ Before the Migration API can accept a migration job from a SharePoint-provided A
   
 No one has direct access to the storage accounts or the containers. The SharePoint service has access to the storage accounts; and while a select number of engineers can run maintenance commands against them, they also don't have direct access to the accounts. Datacenter technicians aren't prepped with knowledge of how data is laid out on disk, and don't have ready access to equipment to mount disks. All drives are physically destroyed before leaving the datacenter. Physical security is also in place across all of our datacenters.
   
-Each container is dedicated to the customer who it was provided to and not reused. The data is stored in the Azure blob anywhere from 30 to 90 days after which it's deleted.
+Each container is exclusively assigned to the customer it was provisioned for and is never reused. The data stored in the associated Azure Blob will be automatically deleted within 7 days of the container's creation.
   
 When the data is deleted, the files are delinked and later soft deleted from disk. A file in an account and on-disk are may be shared across many servers. The same process is used for replicas, including backup copies (geo-replicated data if it applies).
   
 > [!NOTE]
-> Due to data churn, it is likely that all or parts of the file will be overwritten at some point following soft delete. 
+> Due to data churn, it's likely that all or parts of the file will be overwritten at some point following soft delete. 
   
 ## Key to the container
 
-The default key is generated programmatically, and is only valid for three days. This key is the only way to gain access to the container. It's generated randomly and not reused. The container itself lives longer than the key, as the container is purged using SharePoint standard methods between 30-90 days from creation. SharePoint never stores the key, though potentially they could find the container. The container is housed in a shared Microsoft storage, technically outside the tenant (but within the region), and is protected using the API key.
+The default key is generated programmatically, and is only valid for three days. This key is the only way to gain access to the container. It's generated randomly and not reused. The container itself lives longer than the key, as the container is purged using SharePoint standard methods within 7 days of creation. SharePoint never stores the key, though potentially they could find the container. The container is housed in a shared Microsoft storage, technically outside the tenant (but within the region), and is protected using the API key.
   
 Only those who have the key have access. Other users in the subscription or the tenant don't have access.
   
