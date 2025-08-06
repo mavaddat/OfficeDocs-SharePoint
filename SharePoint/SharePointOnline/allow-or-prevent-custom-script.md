@@ -37,7 +37,7 @@ As a [SharePoint Administrator](./sharepoint-admin-role.md) in Microsoft 365, yo
 > [!NOTE]
 > For simple ways to change the look and feel of a site, see [Change the look of your SharePoint site](https://support.office.com/article/06bbadc3-6b04-4a60-9d14-894f6a170818). 
   
-By default, script is not allowed on almost all sites that admins create using the SharePoint admin center and all sites created using the New-SPOSite PowerShell command. Same applies to OneDrive, sites users create themselves, modern team and communication sites, and the root site for your organization. For more info about the security implications of custom script, see [Security considerations of allowing custom script](security-considerations-of-allowing-custom-script.md).
+By default, script isn't allowed on almost all sites that admins create using the SharePoint admin center and all sites created using the New-SPOSite PowerShell command. Same applies to OneDrive, sites users create themselves, modern team and communication sites, and the root site for your organization. For more info about the security implications of custom script, see [Security considerations of allowing custom script](security-considerations-of-allowing-custom-script.md).
   
 > [!IMPORTANT]
 > If SharePoint was set up for your organization before 2015, your custom script settings might still be set to _Not Configured_ even though in the SharePoint admin center they appear to be set to prevent users from running custom script. In this case, users can't copy items between SharePoint sites and between OneDrive and SharePoint. On the <a href="https://go.microsoft.com/fwlink/?linkid=2185072" target="_blank">Settings page in the SharePoint admin center</a>, to accept the custom script settings as they appear, select **OK**, and enable cross-site copying. For more info about copying items between OneDrive and SharePoint, see [Copy files and folders between OneDrive and SharePoint sites](https://support.office.com/article/67a6323e-7fd4-4254-99a8-35613492a82f). 
@@ -92,18 +92,20 @@ The column can be added to any view. A new **Custom script allowed sites** is al
 
 ### Change custom script settings
 
-In the **Active sites** page, upon selecting a site, under **settings**, a **Custom scripts** setting is available for administrators:
+In the **Active sites** page, select a site and under **Settings** > **Custom scripts**, you can edit whether custom scripts are allowed or blocked.
 
 :::image type="content" alt-text="Screenshot of the 'Custom scripts' setting." source="media/7a9c6b79-db8b-4577-9a8c-978f011196a9.png":::
 
-Administrators can control custom script settings for a specific site; deciding if they want to allow or block custom script on a specific site:
+You can control custom script settings for a specific site; deciding if they want to allow or block custom script on a specific site:
 
-:::image type="content" alt-text="Screenshot of 'Custom scripts' values." source="media/05b24a6e-7dec-4b50-80e8-f09fe18e7dd4.png" lightbox="media/05b24a6e-7dec-4b50-80e8-f09fe18e7dd4.png":::
+![Screenshot that shows the custom script settings.](media/allow-or-prevent-custom-script/image.png)
 
-By default, any changes to custom script settings for a specific site only last for a maximum of 24 hours. After that time, the setting resets to its original value for that specific site.
+
+
+By default, any changes to custom script settings for a specific site only last for a maximum of 24 hours. After that time, the setting resets to **Blocked** for that specific site.
 
 > [!IMPORTANT]
-If the site is locked, either because it is in *ReadOnly* or *NoAccess" state, changes to the Custom Script settings won't be reflected in SharePoint Tenant Administration. However, as soon as the state of the site goes back to *Unlock*, Custom Script setting immediately turns to "Not allowed" before any user can access to the site  
+> If the site is locked, either because it is in *ReadOnly* or *NoAccess" state, changes to the Custom Script settings won't be reflected in SharePoint Tenant Administration. However, as soon as the state of the site goes back to *Unlock*, Custom Script setting immediately turns to "Not allowed" before any user can access to the site  
 
 ## Features affected when custom script is blocked
 
@@ -119,17 +121,19 @@ The following site settings are unavailable when users are prevented from runnin
 |Theme Gallery  |No longer available in Site Settings  |Users can still use themes created before custom script was blocked.  |
 |Help Settings  |No longer available in Site Settings  |Users can still access help file collections available before custom script was blocked.  |
 |Sandbox solutions  |Solution Gallery is no longer available in Site Settings  |Users can't add, manage, or upgrade sandbox solutions. They can still run sandbox solutions that were deployed before custom script was blocked.  |
-|SharePoint Designer  |Pages that are not HTML can no longer be updated.  <br/> Handling List: **Create Form** and **Custom Action** will no longer work.  <br/> Subsites: **New Subsite** and **Delete Site** redirect to the **Site Settings** page in the browser.  <br/> Data Sources: **Properties** button is no longer available.  |Users can still open some data sources. To open a site that does not allow custom script in SharePoint Designer, you must first open a site that does allow custom script.  |
-|Uploading files that potentially include script  |The following file types cannot open from a library  <br/> .asmx  <br/> .ascx  <br/> .aspx  <br/> .htc  <br/> .jar  <br/> .master  <br/> .swf  <br/> .xap  <br/> .xsf  |Existing files in the library are not impacted.  |
+|SharePoint Designer  |Pages that aren't HTML can no longer be updated.  <br/> Handling List: **Create Form** and **Custom Action** will no longer work.  <br/> Subsites: **New Subsite** and **Delete Site** redirect to the **Site Settings** page in the browser. <br/> Data Sources: **Properties** button is no longer available.  |Users can still open some data sources. To open a site that doesn't allow custom script in SharePoint Designer, you must first open a site that does allow custom script.  |
+|Operating files that potentially include script|The following file types can't be uploaded, copied, moved or opened in a library.<br/> .asmx  <br/> .ascx  <br/> .aspx  <br/> .htc  <br/> .jar  <br/> .master  <br/> .swf  <br/> .xap  <br/> .xsf  |Existing files in the library aren't impacted.  |
 |Uploading Documents to Content Types  |Access denied message when attempting to attach a document template to a Content Type. |We recommend using Document Library document templates. |
 |Publishing of SharePoint 2010 Workflows |Access denied message when attempting to publish a SharePoint 2010 Workflow. | |
+|Custom Actions|Access denied message when attempting to create new custom actions.|Existing custom actions aren't impacted.|
+|Design Manager|Access denied message when attempting to create new layout, master page or design package.|Users can still use page designs created before custom script was blocked.|
 
 Updating Site property bag is by default not allowed when users are prevented from running custom script. Tenant Administrators can change that behavior by running the following command
 
 ```PowerShell
     Set-SPOTenant -AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled $True
 ```
-For more information see [AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabeld option](/powershell/module/sharepoint-online/set-spotenant#-allowwebpropertybagupdatewhendenyaddandcustomizepagesisenabled)
+For more information, see [AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabeld option](/powershell/module/sharepoint-online/set-spotenant#-allowwebpropertybagupdatewhendenyaddandcustomizepagesisenabled).
    
 The following web parts and features are unavailable to site admins and owners when you prevent them from running custom script.
 
@@ -150,8 +154,8 @@ The following web parts and features are unavailable to site admins and owners w
 
 Furthermore, SharePoint Framework web parts that have the _requiresCustomScript_ value set to **true** behave as following:   
 
-- The web part is not available in the web part picker
-- Every instance of the web part that was added to the page while custom scripts that were allowed to run, will no longer surface in those pages. Author still can remove them while editing the page 
+- The web part isn't available in the web part picker.
+- Every instance of the web part that was added to the page while custom scripts that were allowed to run, will no longer surface in those pages. Author still can remove them while editing the page.
 
 ## Best practice for communicating script setting changes to users
 
