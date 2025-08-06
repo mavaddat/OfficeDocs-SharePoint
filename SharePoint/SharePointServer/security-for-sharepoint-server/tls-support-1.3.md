@@ -4,7 +4,7 @@ ms.reviewer:
 ms.author: serdars
 author: serdars
 manager: serdars
-ms.date: 03/11/2025
+ms.date: 08/05/2025
 audience: ITPro
 f1.keywords:
 - NOCSH
@@ -58,10 +58,65 @@ The database connectivity layer has the following properties for each SharePoint
 
 Databases that are part of a SharePoint farm will be configured to use **Optional** encryption by default. This is to ensure the SharePoint farm remains compatible with the existing SQL Servers in its farm in case they don't support the newer TDS 8.0 and TLS 1.3 protocols. This means SharePoint will continue to use TDS 7.4 when connecting to those databases. If connection encryption is used to connect to those databases, it will be based on TLS 1.2 or lower. 
 
-### Behaviors when adding a database to a farm 
+### Behaviors when adding/editing a database to a farm 
 
-The settings for all databases are based on the configuration database's settings.
-Newly created databases that are added to a farm are configured to use the same encryption settings with farm configuration database. For instance, if configuration database uses Mandatory encryption, then all databases use Mandatory encryption as well.
+Previously, the settings for all databases are based on the configuration database's settings. Newly created databases that are added to a farm are configured to use the same encryption settings with farm configuration database.
+
+Since 2025 September PU, users can select different connection encryption settings per database, which can be particularly useful when databases are stored on different SQL servers or serve different purposes. This behavior is applicable to both content database and service application database.
+
+#### Create a new content database (only applicable after 2025 September PU)
+
+- To create a new content database, in PowerShell, add the following optional parameters to the `New-SPContentDatabase` cmdlet:
+
+  ```powershell
+  -DatabaseConnectionEncryption {Mandatory | Optional | Strict}
+  -DatabaseServerCertificateHostName <String>
+  ```
+
+  > [!NOTE]
+  > DatabaseConnectionEncryption and/or DatabaseServerCertificateHostName are the same as configuration database by default in case you don't specify it.
+
+- To create a new content database, in Central Administration, add two settings on the page.
+
+  :::image type="content" source="media/add-content-db.png" alt-text="Screenshot of add a content database.":::
+
+#### Create a new service application with different encryption database (only applicable after 2025 September PU)
+
+- To create a new service application that has its customized database, in PowerShell, add the following optional parameters to the PowerShell cmdlets:
+
+   ```powershell
+  -DatabaseConnectionEncryption {Mandatory | Optional | Strict}
+  -DatabaseServerCertificateHostName <String>
+  ```
+   
+  > [!NOTE]
+  > DatabaseConnectionEncryption and/or DatabaseServerCertificateHostName are the same as configuration database by default in case you don't specify it.
+  
+  For example:
+  ```powershell
+  New-SPMetadataServiceApplication -Name "MetadataServiceApp1" -ApplicationPool "AppPool1" -DatabaseName "MetadataDB1" -DatabaseConnectionEncryption "Mandatory" -DatabaseServerCertificateHostName "SQL-01.internal.contoso.com"
+  ```
+
+- To create a new service application that has its customized database, in Central Administration, add the same two settings as content database on the page.
+
+  :::image type="content" source="media/new-svc-app.png" alt-text="Screenshot of create a service application.":::
+
+#### Edit an existing database attached to a service application (only applicable after 2025 September PU)
+
+- To edit a database belongs to a service application, in PowerShell, add the following optional parameters to the PowerShell cmdlets:
+
+  ```powershell
+  -DatabaseConnectionEncryption {Mandatory | Optional | Strict}
+  -DatabaseServerCertificateHostName <String>
+  ```
+
+  For example:
+  ```powershell
+  $sa = Get-SPMetadataServiceApplication -Identity "Managed Metadata Service Application"
+  Set-SPMetadataServiceApplication -Identity $sa -DatabaseName "MetadataDB2" -DatabaseConnectionEncryption "Optional"
+  ```
+
+- To edit a database belongs to a service application, in Central Administration, You can change encryption settings by clicking the 'Properties' button.
 
 ### Specify encryption settings during PSConfig
 
