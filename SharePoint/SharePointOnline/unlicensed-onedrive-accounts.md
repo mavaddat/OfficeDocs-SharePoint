@@ -1,7 +1,7 @@
 ---
 ms.date: 04/16/2025
 title: "Manage unlicensed OneDrive user accounts"
-ms.author: mactra
+ms.author: chucked
 author: MachelleTranMSFT
 ms.reviewer: trgreen
 manager: jtremper
