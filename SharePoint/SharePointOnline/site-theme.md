@@ -80,7 +80,7 @@ Visit the SharePoint or Viva Connections branding experiences and select **New t
 * **Step 1**: Select your primary, secondary colors using your brand colors or by adding a custom color. Add up to 16 combinations within the primary and secondary colors. In each color combination, you can switch around the background/accent color.
 * **Step 2**: Name your theme and preview in SharePoint experiences.
 
-![Screenshot of creating a new theme](media/brand-center-new-theme-2025.png)
+![Screenshot of creating a new theme.](media/brand-center-new-theme-2025.png)
  
 ## Pay attention to accessibility
 Color and contrast are important for accessibility. People with low vision, such as those with macular degeneration, need a certain amount of contrast to be able to see what’s on the screen. It’s also important to be careful with color selection, because color blind people can’t tell the differences between certain colors. For example, someone who has red-green color-blindness sees red and green as the same color.
