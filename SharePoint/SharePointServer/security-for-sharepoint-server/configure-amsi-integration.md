@@ -34,7 +34,7 @@ The AMSI integration functionality is designed to prevent malicious web requests
 Starting with SharePoint Server Subscription Edition (SPSE) Version 25H1, the AMSI extends its scanning capabilities to include the bodies of HTTP requests. This request body scan feature is useful for detecting and mitigating threats that may be embedded in request payloads, providing a more comprehensive security solution.
 
 > [!NOTE]
-> The new request body scan feature is available for SharePoint Server Subscription Edition users only.
+> The new request body scan feature is available for SharePoint Server Subscription Edition users only. It has been available in the Early Release ring until now and will be included in the Standard ring starting with the SPSE 2025 September PU.
 
 ## AMSI integration with SharePoint Server
 

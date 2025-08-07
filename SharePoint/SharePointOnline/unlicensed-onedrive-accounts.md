@@ -1,7 +1,7 @@
 ---
 ms.date: 04/16/2025
 title: "Manage unlicensed OneDrive user accounts"
-ms.author: mactra
+ms.author: chucked
 author: MachelleTranMSFT
 ms.reviewer: trgreen
 manager: jtremper
@@ -78,7 +78,7 @@ Once you delete the unlicensed account, both the OneDrive account and its files 
 
 ### Archive unlicensed OneDrive account
 
-If no action is taken, the account remains archived through [Microsoft 365 Archive](/microsoft-365/syntex/archive/archive-overview). Archiving the account lets you keep the OneDrive account and its data for long periods of time in case you need to retrieve it later.
+If no action is taken, the account remains archived through [Microsoft 365 Archive](/microsoft-365/archive/archive-overview). Archiving the account lets you keep the OneDrive account and its data for long periods of time in case you need to retrieve it later.
 
 For newly unlicensed OneDrive accounts, it will be after 93 days of the license removal or user deletion. For example, a OneDrive account that became unlicensed on August 1, 2025, will be inaccessible to users as of November 2, 2025. 
 
@@ -86,9 +86,9 @@ For newly unlicensed OneDrive accounts, it will be after 93 days of the license 
 
 **Accessing an Archived OneDrive Account:**
 
-- To access data from an archived OneDrive account, reactivation is required. Follow these prerequisites to set up [Microsoft 365 Archive:](/microsoft-365/syntex/archive/archive-setup)
+- To access data from an archived OneDrive account, reactivation is required. Follow these prerequisites to set up [Microsoft 365 Archive:](/microsoft-365/archive/archive-setup)
 
-  1. Set up and link an [Azure subscription in Syntex pay-as-you-go](/microsoft-365/syntex/syntex-azure-billing).
+  1. Set up and link an [Azure subscription in pay-as-you-go](/microsoft-365/documentprocessing/syntex-azure-billing).
   
   1. Ensure you have Global admin or SharePoint admin permissions.
   
