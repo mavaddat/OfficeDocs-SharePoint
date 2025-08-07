@@ -1,5 +1,6 @@
 ---
 ms.date: 06/27/2025
+ms.update-cycle: 180-days
 title: Manage access to SharePoint agents
 ms.reviewer:
 ms.author: ruihu
