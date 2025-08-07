@@ -1,5 +1,6 @@
 ---
 ms.date: 06/04/2025
+ms.update-cycle: 180-days
 title: Set up SharePoint agents for pay-as-you-go billing
 ms.reviewer:
 ms.author: ruihu

@@ -1,5 +1,6 @@
 ---
 ms.date: 7/14/2025
+ms.update-cycle: 180-days
 title: Get ready for Microsoft 365 Copilot with SharePoint Advanced Management
 ms.reviewer: 
 ms.author: ruihu

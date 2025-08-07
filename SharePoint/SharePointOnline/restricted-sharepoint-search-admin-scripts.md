@@ -1,5 +1,6 @@
 ---
 ms.date: 6/28/2025
+ms.update-cycle: 180-days
 title: "Restricted SharePoint Search Admin PowerShell Scripts"
 ms.reviewer: 
 ms.author: ruihu
