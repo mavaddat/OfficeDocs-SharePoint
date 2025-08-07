@@ -74,7 +74,7 @@ You can disable the integration by running [`Set-SPOTenant`](/powershell/module/
 
 ## Frequently Asked Questions: 
 
-The following questions address a change that requires resharing content with external users after enabling Microsoft SharePoint integration with Entra B2B.
+The following questions address a change that requires resharing content with external users when considering enabling Microsoft SharePoint integration with Entra B2B.
 
 **1. How can I check if my tenant has enabled SharePoint and OneDrive integration with Entra B2B?**
 
